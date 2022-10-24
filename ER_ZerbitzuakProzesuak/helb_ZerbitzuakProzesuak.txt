@@ -1,0 +1,4 @@
+ZERBITZU ETA PROZESUEN PROGRAMAZIOA
+
+1. Ikasketa Emaitza: Hainbat prozesuz osatutako aplikazioak garatzen ditu, eta programazio paraleloko printzipioak
+ezagutzen eta aplikatzen ditu

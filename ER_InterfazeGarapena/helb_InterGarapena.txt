@@ -1,0 +1,13 @@
+INTERFAZE GARAPENA
+
+	1. Erabiltzaileko interfaze-grafikoak sortzen ditu ikus-editoreen bitartez, editorearen funtzionaltasuna
+erabiliz eta sortutako kodea egokituz.
+
+	2. Ikasketa Emaitza: XMLen oinarritutako erabiltzaileko interfaze grafikoak sortzen ditu, eta, horretarako,
+tresna espezifikoak erabiltzen du eta sortutako XML dokumentua egokitzen du.
+
+	3. Ikus-osagaiak sortzen ditu, tresna espezifikoak baloratuz eta erabiliz
+
+	6. Aplikazioak dokumentatzen ditu, eta, horretarako, berariazko tresnak hautatzen eta erabiltzen ditu.
+
+	7. Aplikazioak banaketarako prestatzen ditu, berariazko tresnak ebaluatuz eta erabiliz

@@ -1,0 +1,7 @@
+DATU-ATZIPENA
+
+	1. Fitxategietan biltegiratutako informazioa kudeatzen duten aplikazioak garatzea, horien aplikazio-eremua
+identifikatuz eta berariazko klaseak erabiliz.
+
+	2. Datu-base erlazionaletan biltegiratuko informazioa kudeatzen duten aplikazioak garatzen ditu,
+konexio-mekanismoak identifikatuz eta erabiliz.
