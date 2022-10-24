@@ -1,0 +1,11 @@
+ENPRESA-KUDEAKETAKO SISTEMAK
+
+	1. Ikasketa Emaitza: Enpresa-baliabideak planifikatzeko eta bezeroekiko harremanak kudeatzeko sistemak
+(ERPCRM) identifikatzen ditu, horien ezaugarriak ezagutuz eta informatika-sistemaren konfigurazioa
+egiaztatuz.
+
+	2. Ikasketa Emaitza: ERP-CRM sistemak ezartzen ditu, eta, horretarako, dokumentazio teknikoa interpretatzen
+du eta aukerak eta moduluak identifikatzen ditu.
+
+	4. ERP-CRM sistemak egokitzen ditu, eta, horretarako, enpresa-suposizio baten eskakizunak identifikatzen ditu eta
+sistema horiek emandako tresnak erabiltzen ditu.
