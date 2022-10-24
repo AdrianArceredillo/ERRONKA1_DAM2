@@ -1,0 +1,11 @@
+--------------------
+REGISTROS DE PRUEBA:
+--------------------
+
+	PRODUKTUAK:
+
+INSERT INTO public."Produktua" OVERRIDING SYSTEM VALUE VALUES (1, 'PR 0', 'Producto prueba 0', 4.20, 50, 10);
+INSERT INTO public."Produktua" OVERRIDING SYSTEM VALUE VALUES (2, 'PR 2', 'Segundo Producto', 90.56, 10, 2);
+INSERT INTO public."Produktua" OVERRIDING SYSTEM VALUE VALUES (3, 'PR 3', 'Prod 3', 16, 45, 6);
+INSERT INTO public."Produktua" OVERRIDING SYSTEM VALUE VALUES (4, 'PR 4', 'Cuartro Producto', 9.20, 25, 12);
+INSERT INTO public."Produktua" OVERRIDING SYSTEM VALUE VALUES (5, 'PR 5', 'PR 5 - Prod cinco', 3.50, 150, 38);

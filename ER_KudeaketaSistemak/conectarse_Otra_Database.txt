@@ -1,0 +1,6 @@
+
+Search: "odoo connect to external database":
+
+
+- https://apps.odoo.com/apps/modules/12.0/base_external_dbsource/
+
