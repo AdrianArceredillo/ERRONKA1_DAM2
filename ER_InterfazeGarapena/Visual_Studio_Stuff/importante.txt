@@ -1,0 +1,3 @@
+TABLAS DE ODOO EN POSTGRESQL:
+
+	- https://www.moldeointeractive.com.ar/blog/moldeo-interactive-1/post/entendiendo-el-modelo-de-datos-de-odoo-1098
