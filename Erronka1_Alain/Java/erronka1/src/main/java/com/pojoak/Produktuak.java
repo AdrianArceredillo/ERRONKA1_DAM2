@@ -1,4 +1,4 @@
-package com.dambi.pojoak;
+package com.pojoak;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +22,7 @@ public class Produktuak {
 
     public void add(Produktua produktua) {
         if (this.produktuak == null) {
-            this.produktuak = new ArrayList<produktua>();
+            this.produktuak = new ArrayList<Produktua>();
         }
         this.produktuak.add(produktua);
 

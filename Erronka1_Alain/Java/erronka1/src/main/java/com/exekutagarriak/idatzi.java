@@ -1,7 +1,8 @@
-package com.dambi.exekutagarriak;
+package com.exekutagarriak;
 
 import java.sql.Statement;
-import com.dambi.konexioa.Konekzioa;
+
+import com.konexioa.Konekzioa;
 
 
 /**

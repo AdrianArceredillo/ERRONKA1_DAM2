@@ -1,11 +1,14 @@
-package com.dambi.exekutagarriak;
+package com.exekutagarriak;
+
+
 
 import java.sql.Statement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-
 import com.dambi.konexioa.Konekzioa;
+
+
 
 
 /**
