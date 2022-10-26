@@ -1,11 +1,11 @@
-package com.dambi;
+package com.dambi.exekutagarriak;
 
 import java.sql.Statement;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ArrayList;
 
-import javax.print.event.PrintEvent;
+
+import com.dambi.konexioa.Konekzioa;
 
 
 /**

@@ -1,6 +1,4 @@
-package com.dambi;
-
-
+package com.dambi.konexioa;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
