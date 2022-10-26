@@ -1,4 +1,6 @@
-package com.dambi.pojoak;
+package com.pojoak;
+
+
 
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
@@ -29,7 +31,7 @@ public class Produktua {
     public String getIzena() {
         return izena;
     }
-    public void setMendia(String izena) {
+    public void setIzena(String izena) {
         this.izena = izena;
     }
 

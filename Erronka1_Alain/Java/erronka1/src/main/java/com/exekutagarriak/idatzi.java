@@ -20,9 +20,9 @@ public class idatzi
         insertTaula("product_product");
     }
     public static void insertTaula(String taula){
-        //String sql = "INSERT INTO public.\"" + taula +"\" VALUES('Proba','12',NULL, true);"; // AAAAAAAAA taulan sartzeko datuak
+        String sql = "INSERT INTO public.\"" + taula +"\" VALUES('Proba','12',NULL, true);"; // AAAAAAAAA taulan sartzeko datuak
         //String sql = "INSERT INTO public.\"" + taula +"\" VALUES(NULL, NULL, 'Proba_Izena', 1, '<p><br></p>', NULL, NULL, 'product', 'product', 1, 420, 10, 10, true, 1, 1, NULL, true, NULL, NULL, false, false, 0, 2, '2022-10-26 08:32:55.509688', 0, 'none', NULL, NULL, NULL, 'receive', 'no-message', NULL, 'manual', 'no-message', NULL, 'no', 'order', NULL);";
-        String sql = "INSERT INTO public.\"" + taula +"\" VALUES();"; // AAAAAAAAA taulan sartzeko datuak
+        //String sql = "INSERT INTO public.\"" + taula +"\" VALUES();"; 
         Konekzioa konekzioa = new Konekzioa();
         Statement st;
         try{

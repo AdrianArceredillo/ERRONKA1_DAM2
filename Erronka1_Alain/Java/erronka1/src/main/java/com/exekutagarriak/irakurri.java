@@ -6,7 +6,8 @@ import java.sql.Statement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-import com.dambi.konexioa.Konekzioa;
+import com.konexioa.Konekzioa;
+
 
 
 
@@ -38,7 +39,7 @@ public class irakurri
             st = konekzioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123").createStatement();
             ResultSet rs = st.executeQuery(sql);
             while(rs.next()){
-                modelo.add(rs.getString(3) + ";" + "Proba1" + ";" +  "Proba2" + ";" + "Proba3" + ";" + Integer.toString(rs.getShort(11)));
+                modelo.add(rs.getString("name") + ";" + rs.getString("id") +  ";" +  "Proba2" + ";" + "Proba3" + ";" + Integer.toString(rs.getShort("list_price"))); //rs.getShort(11) ere balio du
             }
         } catch(Exception ex){
             System.out.println("Exception : "+ex);
