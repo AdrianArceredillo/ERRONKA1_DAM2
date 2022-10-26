@@ -22,21 +22,23 @@ namespace PruebaGrafico0
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            using (var db = new Ariketa_1DbContext())
+            using (var db = new PruebaErronkaDbContext())
             {
-                var erosketenData = db.Producto
-                    .Include("Compra")
-                    .GroupBy(b => b.Id)
-                    .ToDictionary(g => g.Key, g => g.Count());
+                var salmentaData = db.Salmentak
+                    //.GroupBy(b => b.product_id)
+                    .GroupBy(b => b.name)
+                    .ToDictionary(g => g.Key, g => g.Sum(b => b.price_subtotal));
 
-                if (erosketenData != null)
+                if (salmentaData != null)
                 {
-                    if (erosketenData.Count > 0)
+                    if (salmentaData.Count > 0)
                     {
-                        var kontrolak = pruebaErronkaDll1.Controls.OfType<System.Windows.Forms.DataVisualization.Charting.Chart>(); foreach (var kontrola in kontrolak)
+                        //var kontrolak = pruebaErronkaDll1.Controls.OfType<System.Windows.Forms.DataVisualization.Charting.Chart>();
+                        var kontrolak = pruebaErronkaDll2.Controls.OfType<System.Windows.Forms.DataVisualization.Charting.Chart>();
+                        foreach (var kontrola in kontrolak)
                         {
                             kontrola.Titles[0].Text = "Productos Comprados - Odoo";
-                            kontrola.DataSource = erosketenData;
+                            kontrola.DataSource = salmentaData;
                             kontrola.Series[0].YValueMembers = "Value";
                             kontrola.Series[0].XValueMember = "Key";
                             kontrola.DataBind();
@@ -44,6 +46,9 @@ namespace PruebaGrafico0
 
                     }
                 }
+
+
+                //grafikoa_Bigarrena1
 
             }
         }

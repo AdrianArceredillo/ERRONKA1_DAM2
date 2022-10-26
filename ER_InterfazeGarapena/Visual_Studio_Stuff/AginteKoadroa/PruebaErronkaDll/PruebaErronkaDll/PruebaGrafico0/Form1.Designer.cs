@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.pruebaErronkaDll1 = new PruebaErronkaDll.PruebaErronkaDll();
+            this.pruebaErronkaDll2 = new PruebaErronkaDll.PruebaErronkaDll();
             this.SuspendLayout();
             // 
-            // pruebaErronkaDll1
+            // pruebaErronkaDll2
             // 
-            this.pruebaErronkaDll1.Location = new System.Drawing.Point(24, 126);
-            this.pruebaErronkaDll1.Name = "pruebaErronkaDll1";
-            this.pruebaErronkaDll1.Size = new System.Drawing.Size(547, 307);
-            this.pruebaErronkaDll1.TabIndex = 0;
+            this.pruebaErronkaDll2.Location = new System.Drawing.Point(12, 126);
+            this.pruebaErronkaDll2.Name = "pruebaErronkaDll2";
+            this.pruebaErronkaDll2.Size = new System.Drawing.Size(547, 307);
+            this.pruebaErronkaDll2.TabIndex = 1;
             // 
             // Form1
             // 
@@ -47,7 +47,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(797, 445);
-            this.Controls.Add(this.pruebaErronkaDll1);
+            this.Controls.Add(this.pruebaErronkaDll2);
             this.DoubleBuffered = true;
             this.HelpButton = true;
             this.Name = "Form1";
@@ -60,7 +60,7 @@
         #endregion
 
         private System.Windows.Forms.HelpProvider helpProvider1;
-        private PruebaErronkaDll.PruebaErronkaDll pruebaErronkaDll1;
+        private PruebaErronkaDll.PruebaErronkaDll pruebaErronkaDll2;
     }
 }
 

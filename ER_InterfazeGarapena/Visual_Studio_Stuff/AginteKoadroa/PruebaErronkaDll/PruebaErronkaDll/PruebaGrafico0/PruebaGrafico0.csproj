@@ -45,6 +45,9 @@
     <Reference Include="EntityFramework6.Npgsql, Version=6.4.3.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
       <HintPath>..\..\packages\EntityFramework6.Npgsql.6.4.3\lib\net461\EntityFramework6.Npgsql.dll</HintPath>
     </Reference>
+    <Reference Include="GrafikoaDll_Bigarrena">
+      <HintPath>..\..\..\..\..\..\..\DAM_2\Desarrollo_Interface\Erronka_1\CSharp_Projects\GrafikoaDll_Bigarrena\GrafikoaDll_Bigarrena\bin\Debug\GrafikoaDll_Bigarrena.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Bcl.AsyncInterfaces.1.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -99,13 +102,29 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Ariketa_1DbContext.cs" />
-    <Compile Include="Models\Compra.cs" />
-    <Compile Include="Models\Producto.cs" />
+    <Compile Include="LoginForm\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\purchase_order_line.cs" />
+    <Compile Include="Models\product_template.cs" />
+    <Compile Include="Models\PruebaErronkaDbContext.cs" />
+    <Compile Include="Models\sale_order_line.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewProductCatalog\frmViewProductCatalog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewProductCatalog\frmViewProductCatalog.Designer.cs">
+      <DependentUpon>frmViewProductCatalog.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -116,6 +135,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ViewProductCatalog\frmViewProductCatalog.resx">
+      <DependentUpon>frmViewProductCatalog.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -8,12 +8,13 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace PruebaGrafico0.Models
 {
-    public class Ariketa_1DbContext : DbContext
+    public class PruebaErronkaDbContext : DbContext
     {
-        public Ariketa_1DbContext() : base(nameOrConnectionString: "Ariketa_1DbContext")
+        public PruebaErronkaDbContext() : base(nameOrConnectionString: "PruebaErronkaDbContext")
         { }
-        public DbSet<Producto> Producto { get; set; }
-        public DbSet<Compra> Compra { get; set; }
+        public DbSet<sale_order_line> Salmentak { get; set; }
+        public DbSet<product_template> Produktuak { get; set; }
+        public DbSet<purchase_order_line> Erosketak { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.HasDefaultSchema("public");

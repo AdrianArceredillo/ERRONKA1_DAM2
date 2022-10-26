@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PruebaGrafico0.LoginForm;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,13 @@ namespace PruebaGrafico0
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            //----------------------------
+            //Formularios de la aplicación
+            //----------------------------
+
+            Application.Run(new frmLogin());
+            //Application.Run(new Form1());
         }
     }
 }
