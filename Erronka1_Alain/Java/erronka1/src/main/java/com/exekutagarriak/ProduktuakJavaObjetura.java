@@ -55,17 +55,6 @@ public class ProduktuakJavaObjetura {
         // Orain nahi dugun formatuan ahal dugu esportatu
         return produktuak;
 
-        //////////////////////////////////////
-        
-        // Csva csva = new Csva(produktuak, "data/Produktuak.csv");
-        // csva.idatzi();
-
-        // Xmla xmla = new Xmla(produktuak, "data/Produktuak.xml");
-        // xmla.idatzi();
-
-        // Jsona jsona = new Jsona(produktuak, "data/Produktuak.json");
-        // jsona.idatzi();
-
     }
 
     public static ArrayList<String> irakurriTaulaP(String taula) {
