@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Produktuak>
+    <Produktua>
+        <Id>1</Id>
+        <Izena>Hamburguesa de queso</Izena>
+        <Stocka>420</Stocka>
+        <Prezioa>1</Prezioa>
+    </Produktua>
+    <Produktua>
+        <Id>2</Id>
+        <Izena>ProzesagailuAAAA</Izena>
+        <Stocka>4</Stocka>
+        <Prezioa>200</Prezioa>
+    </Produktua>
+    <Produktua>
+        <Id>3</Id>
+        <Izena>EEPROM Memoria</Izena>
+        <Stocka>55</Stocka>
+        <Prezioa>26</Prezioa>
+    </Produktua>
+    <Produktua>
+        <Id>4</Id>
+        <Izena>Produktua 1</Izena>
+        <Stocka>20</Stocka>
+        <Prezioa>11</Prezioa>
+    </Produktua>
+    <Produktua>
+        <Id>5</Id>
+        <Izena>Produktua 2</Izena>
+        <Stocka>25</Stocka>
+        <Prezioa>1</Prezioa>
+    </Produktua>
+</Produktuak>

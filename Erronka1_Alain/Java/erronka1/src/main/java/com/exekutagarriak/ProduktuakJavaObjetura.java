@@ -8,7 +8,11 @@ import com.konexioa.Konekzioa;
 import com.pojoak.Produktua;
 import com.pojoak.Produktuak;
 
-public class ProduktuakCsvra {
+import com.atzipenekoak.Csva;
+import com.atzipenekoak.Jsona;
+import com.atzipenekoak.Xmla;
+
+public class ProduktuakJavaObjetura {
     public static void main(String[] args) {
 
         ArrayList<String> product_template = new ArrayList<String>(); // Produktuen informazioa gordeko den Arraylist-a
@@ -21,7 +25,7 @@ public class ProduktuakCsvra {
                                                                // product_template deitzen den Arraylist-ean gorde
         stock_quant = irakurriTaulaS("stock_quant"); // stock_quant taula irakurri, eta bere datuak stock_quant deitzen
                                                      // den Arraylist-ean gorde
-        int kont = 0;
+        
         Produktuak produktuak = new Produktuak(); // Produktua objetuak edukiko duen ArrayList-a sortu
         // Objetua sortu
         for (String string : product_template) { // product_template ArrayList-eko elementu bakoitzeko egin hurrengoa
@@ -39,15 +43,22 @@ public class ProduktuakCsvra {
                         produktua.setIzena(zatiak[1]); // zatiak[1] posizioan produktuaren izena dago
                         produktua.setStocka(Integer.parseInt(zatiak2[1])); // zatiak2[1] posizioan stock-a dago gordeta
                         produktua.setPrezioa(Integer.parseInt(zatiak[2])); // zatiak[2] posizioan prezioa dago gordeta
-                        produktuak.add(produktua);
-                        kont++;
-                        
-                    } else{kont++;}
+                        produktuak.add(produktua);}
                 }
             
         }
-        System.out.println(kont);
-        System.out.println(produktuak); // Kontsolan inprimatzen ditu datuak, CSV-ra pasatzea geratzen da
+        System.out.println(produktuak); // Kontsolan inprimatzen ditu datuak, orain nahi dugun formatuan ahal dugu exportatu
+
+        //////////////////////////////////////
+        
+        Csva csva = new Csva(produktuak, "data/Produktuak.csv");
+        csva.idatzi();
+
+        Xmla xmla = new Xmla(produktuak, "data/Produktuak.xml");
+        xmla.idatzi();
+
+        Jsona jsona = new Jsona(produktuak, "data/Produktuak.json");
+        jsona.idatzi();
     }
 
     public static ArrayList<String> irakurriTaulaP(String taula) {
