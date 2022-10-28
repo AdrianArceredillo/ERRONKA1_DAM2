@@ -13,7 +13,12 @@ import com.atzipenekoak.Jsona;
 import com.atzipenekoak.Xmla;
 
 public class ProduktuakJavaObjetura {
-    public static void main(String[] args) {
+
+    ProduktuakJavaObjetura(){
+
+    }
+
+    public static Produktuak ProduktuenJavaObjetua(){
 
         ArrayList<String> product_template = new ArrayList<String>(); // Produktuen informazioa gordeko den Arraylist-a
                                                                       // sortu, String bezala gordetzen da informazioa
@@ -47,18 +52,20 @@ public class ProduktuakJavaObjetura {
                 }
             
         }
-        System.out.println(produktuak); // Kontsolan inprimatzen ditu datuak, orain nahi dugun formatuan ahal dugu exportatu
+        // Orain nahi dugun formatuan ahal dugu esportatu
+        return produktuak;
 
         //////////////////////////////////////
         
-        Csva csva = new Csva(produktuak, "data/Produktuak.csv");
-        csva.idatzi();
+        // Csva csva = new Csva(produktuak, "data/Produktuak.csv");
+        // csva.idatzi();
 
-        Xmla xmla = new Xmla(produktuak, "data/Produktuak.xml");
-        xmla.idatzi();
+        // Xmla xmla = new Xmla(produktuak, "data/Produktuak.xml");
+        // xmla.idatzi();
 
-        Jsona jsona = new Jsona(produktuak, "data/Produktuak.json");
-        jsona.idatzi();
+        // Jsona jsona = new Jsona(produktuak, "data/Produktuak.json");
+        // jsona.idatzi();
+
     }
 
     public static ArrayList<String> irakurriTaulaP(String taula) {
