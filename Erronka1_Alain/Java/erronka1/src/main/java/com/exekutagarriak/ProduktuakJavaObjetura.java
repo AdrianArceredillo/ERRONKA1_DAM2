@@ -47,13 +47,15 @@ public class ProduktuakJavaObjetura {
                 }
             }
         }
-        // Produktuak Arraylist-a prestatu ondoren, nahi dugun formatura ahal dugu esportatu
+        // Produktuak Arraylist-a prestatu ondoren, nahi dugun formatura ahal dugu
+        // esportatu
         return produktuak;
     }
 
     public static ArrayList<String> irakurriTaulaP(String taula) {
         Konexioa konexioa = new Konexioa(); // Konexio motako objetu berri bat sortu
-        String sql = "SELECT * FROM public.\"" + taula + "\""; // sql agindua nahi dugun taulako informazio guztia agertzeko
+        String sql = "SELECT * FROM public.\"" + taula + "\""; // sql agindua nahi dugun taulako informazio guztia
+                                                               // agertzeko
         ArrayList<String> datuak = new ArrayList<String>(); // Datuak gordetzeko Arraylist bat sortu
         Statement st;
         try {
@@ -61,8 +63,9 @@ public class ProduktuakJavaObjetura {
             ResultSet rs = st.executeQuery(sql); // sql exekutatu
             while (rs.next()) { // Taulan informazioa dagoen bitartean egin hurrengoa
                 datuak.add(rs.getString("id") + ";" + rs.getString("name") + ";"
-                        + Integer.toString(rs.getShort("list_price"))); // id, izena eta prezioa lortu eta datuak Arraylist-ean gorde
-                                                                                    // Taula onetan ez dago stock-aren datua
+                        + Integer.toString(rs.getShort("list_price"))); // id, izena eta prezioa lortu eta datuak
+                                                                        // Arraylist-ean gorde
+                                                                        // Taula onetan ez dago stock-aren datua
             }
         } catch (Exception ex) {
             System.out.println("Exception : " + ex);

@@ -55,18 +55,18 @@ public class Menua {
             aukera = in.nextInt();
             switch (aukera) {
                 case 1:
-                garbitu();
+                    garbitu();
                     System.out.println();
                     datuakEsportatu.produktuakImprimatu();
                     break;
                 case 2:
-                garbitu();
+                    garbitu();
                     break;
                 case 3:
-                garbitu();
+                    garbitu();
                     break;
                 default:
-                garbitu();
+                    garbitu();
                     System.out.println("Aukera okerra. Saiatu berriz.");
             }
         } while (aukera != 3);
@@ -119,10 +119,10 @@ public class Menua {
                     garbitu();
                     datuakEsportatu.produktuakXmlra();
                     break;
-                    case 3:
-                        garbitu();
-                        datuakEsportatu.produktuakJsonera();
-                        break;
+                case 3:
+                    garbitu();
+                    datuakEsportatu.produktuakJsonera();
+                    break;
                 case 4:
                     garbitu();
                     datuakEsportatu.produktuakDenetara();
