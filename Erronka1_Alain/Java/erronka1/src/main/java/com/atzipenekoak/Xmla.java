@@ -7,7 +7,6 @@ import com.pojoak.Produktuak;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Marshaller;
-import jakarta.xml.bind.Unmarshaller;
 
 public class Xmla {
 

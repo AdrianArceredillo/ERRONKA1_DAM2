@@ -6,7 +6,7 @@ import java.sql.Statement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-import com.konexioa.Konekzioa;
+import com.konexioa.Konexioa;
 
 
 
@@ -31,7 +31,7 @@ public class irakurri
         }
     }
     public static ArrayList <String> irakurriTaula(String taula){
-        Konekzioa konekzioa = new Konekzioa();
+        Konexioa konekzioa = new Konexioa();
         String sql = "SELECT * FROM public.\"" + taula +"\"";
         ArrayList <String> modelo = new ArrayList <String> ();
         Statement st;

@@ -2,14 +2,10 @@ package com.atzipenekoak;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileReader;
 
 import javax.json.Json;
 import javax.json.JsonArray;
 import javax.json.JsonArrayBuilder;
-import javax.json.JsonObject;
-import javax.json.JsonReader;
-import javax.json.JsonStructure;
 import javax.json.JsonWriter;
 
 import com.pojoak.Produktua;
