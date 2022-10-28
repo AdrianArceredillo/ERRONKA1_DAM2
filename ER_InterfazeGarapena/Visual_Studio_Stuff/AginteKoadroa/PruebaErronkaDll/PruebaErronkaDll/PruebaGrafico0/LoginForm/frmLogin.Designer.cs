@@ -32,11 +32,12 @@
             this.txtLoginUsername = new System.Windows.Forms.TextBox();
             this.txtLoginPassword = new System.Windows.Forms.TextBox();
             this.gbChooseUserType = new System.Windows.Forms.GroupBox();
-            this.rdbUserTypeBezeroa = new System.Windows.Forms.RadioButton();
             this.rdbUserTypeLangilea = new System.Windows.Forms.RadioButton();
+            this.rdbUserTypeBezeroa = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.gbChooseUserType.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,19 +67,6 @@
             this.gbChooseUserType.TabIndex = 2;
             this.gbChooseUserType.TabStop = false;
             // 
-            // rdbUserTypeBezeroa
-            // 
-            this.rdbUserTypeBezeroa.AutoSize = true;
-            this.rdbUserTypeBezeroa.Font = new System.Drawing.Font("Noto Kufi Arabic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbUserTypeBezeroa.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.rdbUserTypeBezeroa.Location = new System.Drawing.Point(6, 19);
-            this.rdbUserTypeBezeroa.Name = "rdbUserTypeBezeroa";
-            this.rdbUserTypeBezeroa.Size = new System.Drawing.Size(81, 25);
-            this.rdbUserTypeBezeroa.TabIndex = 0;
-            this.rdbUserTypeBezeroa.TabStop = true;
-            this.rdbUserTypeBezeroa.Text = "Bezeroa";
-            this.rdbUserTypeBezeroa.UseVisualStyleBackColor = true;
-            // 
             // rdbUserTypeLangilea
             // 
             this.rdbUserTypeLangilea.AutoSize = true;
@@ -91,6 +79,19 @@
             this.rdbUserTypeLangilea.TabStop = true;
             this.rdbUserTypeLangilea.Text = "Langilea";
             this.rdbUserTypeLangilea.UseVisualStyleBackColor = true;
+            // 
+            // rdbUserTypeBezeroa
+            // 
+            this.rdbUserTypeBezeroa.AutoSize = true;
+            this.rdbUserTypeBezeroa.Font = new System.Drawing.Font("Noto Kufi Arabic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbUserTypeBezeroa.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.rdbUserTypeBezeroa.Location = new System.Drawing.Point(6, 19);
+            this.rdbUserTypeBezeroa.Name = "rdbUserTypeBezeroa";
+            this.rdbUserTypeBezeroa.Size = new System.Drawing.Size(81, 25);
+            this.rdbUserTypeBezeroa.TabIndex = 0;
+            this.rdbUserTypeBezeroa.TabStop = true;
+            this.rdbUserTypeBezeroa.Text = "Bezeroa";
+            this.rdbUserTypeBezeroa.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -124,12 +125,22 @@
             this.button1.Text = "Sartu";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(32, 365);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(138, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Tema (color): 128; 128; 255";
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(797, 445);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -156,5 +167,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label3;
     }
 }

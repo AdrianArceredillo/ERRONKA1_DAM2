@@ -41,36 +41,38 @@
             this.PruebaErro.BackColor = System.Drawing.Color.Transparent;
             chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.Transparent;
             chartArea1.AxisX.MajorTickMark.LineColor = System.Drawing.Color.DimGray;
+            chartArea1.AxisY.MajorGrid.Enabled = false;
+            chartArea1.BackColor = System.Drawing.Color.Transparent;
             chartArea1.Name = "ChartArea1";
             this.PruebaErro.ChartAreas.Add(chartArea1);
             legend1.Enabled = false;
             legend1.Name = "Legend1";
             this.PruebaErro.Legends.Add(legend1);
-            this.PruebaErro.Location = new System.Drawing.Point(3, 3);
+            this.PruebaErro.Location = new System.Drawing.Point(0, 3);
             this.PruebaErro.Name = "PruebaErro";
             series1.ChartArea = "ChartArea1";
-            series1.Color = System.Drawing.Color.Magenta;
+            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             series1.IsValueShownAsLabel = true;
             series1.LabelForeColor = System.Drawing.Color.Orange;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.PruebaErro.Series.Add(series1);
-            this.PruebaErro.Size = new System.Drawing.Size(541, 300);
+            this.PruebaErro.Size = new System.Drawing.Size(474, 239);
             this.PruebaErro.TabIndex = 0;
             this.PruebaErro.Text = "chart1";
             title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             title1.ForeColor = System.Drawing.Color.Orange;
             title1.Name = "Title1";
-            title1.Text = "Productos / Stock";
             this.PruebaErro.Titles.Add(title1);
             // 
             // PruebaErronkaDll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.PruebaErro);
             this.Name = "PruebaErronkaDll";
-            this.Size = new System.Drawing.Size(547, 307);
+            this.Size = new System.Drawing.Size(509, 267);
             this.Load += new System.EventHandler(this.UserControl1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PruebaErro)).EndInit();
             this.ResumeLayout(false);

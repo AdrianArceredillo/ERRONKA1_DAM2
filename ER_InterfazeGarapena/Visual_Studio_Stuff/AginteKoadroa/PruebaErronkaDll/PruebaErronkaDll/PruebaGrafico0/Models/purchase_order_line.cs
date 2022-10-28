@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,7 +32,7 @@ namespace PruebaGrafico0.Models
         //public int qty_received { get; set; }
         //public int qty_received_manual { get; set; }
         //public int qty_to_invoice { get; set; }
-        //public int partner_id { get; set; }
+        public int partner_id { get; set; }
         //public int currency_id { get; set; }
         //public int product_packaging_id { get; set; }
         //public double product_packaging_qty { get; set; }
@@ -47,6 +48,8 @@ namespace PruebaGrafico0.Models
         public int sale_line_id { get; set; }
 
 
+        [ForeignKey("partner_id")]
+        public res_partner res_Partner { get; set; }
 
     }
 }

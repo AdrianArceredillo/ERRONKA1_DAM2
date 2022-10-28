@@ -1,0 +1,10 @@
+SELECT 
+public."res_partner"."name", public."sale_order_line"."order_partner_id", sum(public."sale_order_line"."price_total") as Gastado 
+FROM 
+public.sale_order_line, public.res_partner
+WHERE
+--public."sale_order_line"."price_total" < 100 and
+public."sale_order_line"."order_partner_id" = public."res_partner"."id"
+
+GROUP BY public."sale_order_line"."order_partner_id", public."res_partner"."name"
+ORDER BY Gastado DESC 

@@ -35,7 +35,7 @@
             // 
             // pruebaErronkaDll2
             // 
-            this.pruebaErronkaDll2.Location = new System.Drawing.Point(12, 126);
+            this.pruebaErronkaDll2.Location = new System.Drawing.Point(70, 126);
             this.pruebaErronkaDll2.Name = "pruebaErronkaDll2";
             this.pruebaErronkaDll2.Size = new System.Drawing.Size(547, 307);
             this.pruebaErronkaDll2.TabIndex = 1;

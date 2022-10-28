@@ -96,6 +96,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BezeroBakoitzarenGastuak\frmBezeroBakoitzarenGastuak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BezeroBakoitzarenGastuak\frmBezeroBakoitzarenGastuak.Designer.cs">
+      <DependentUpon>frmBezeroBakoitzarenGastuak.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,7 @@
     <Compile Include="Models\purchase_order_line.cs" />
     <Compile Include="Models\product_template.cs" />
     <Compile Include="Models\PruebaErronkaDbContext.cs" />
+    <Compile Include="Models\res_partner.cs" />
     <Compile Include="Models\sale_order_line.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -120,6 +127,9 @@
     <Compile Include="ViewProductCatalog\frmViewProductCatalog.Designer.cs">
       <DependentUpon>frmViewProductCatalog.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BezeroBakoitzarenGastuak\frmBezeroBakoitzarenGastuak.resx">
+      <DependentUpon>frmBezeroBakoitzarenGastuak.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +163,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\BezeroBakoitzarenErosketak\BezeroBakoitzarenErosketakDLL.csproj">
+      <Project>{646421CF-EEDD-492E-B9AA-78DADCD23B3A}</Project>
+      <Name>BezeroBakoitzarenErosketakDLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BezeroBakoitzarenGastuakDLL\BezeroBakoitzarenGastuakDLL.csproj">
+      <Project>{A963B773-0055-4D33-8852-FE32C0705744}</Project>
+      <Name>BezeroBakoitzarenGastuakDLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PruebaErronkaDll.csproj">
       <Project>{F4873146-19D0-4E23-88F7-28116B3C9B04}</Project>
       <Name>PruebaErronkaDll</Name>

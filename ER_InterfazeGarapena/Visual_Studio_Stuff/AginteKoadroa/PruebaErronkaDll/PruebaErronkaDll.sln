@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaGrafico0", "PruebaErr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ventas_GananciasProductoDLL", "Ventas_GananciasProductoDLL\Ventas_GananciasProductoDLL.csproj", "{FBDDD4BE-7E32-4A1C-BF93-810C0F66F9E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BezeroBakoitzarenGastuakDLL", "BezeroBakoitzarenGastuakDLL\BezeroBakoitzarenGastuakDLL.csproj", "{A963B773-0055-4D33-8852-FE32C0705744}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BezeroBakoitzarenErosketakDLL", "BezeroBakoitzarenErosketak\BezeroBakoitzarenErosketakDLL.csproj", "{646421CF-EEDD-492E-B9AA-78DADCD23B3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{FBDDD4BE-7E32-4A1C-BF93-810C0F66F9E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBDDD4BE-7E32-4A1C-BF93-810C0F66F9E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBDDD4BE-7E32-4A1C-BF93-810C0F66F9E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A963B773-0055-4D33-8852-FE32C0705744}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A963B773-0055-4D33-8852-FE32C0705744}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A963B773-0055-4D33-8852-FE32C0705744}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A963B773-0055-4D33-8852-FE32C0705744}.Release|Any CPU.Build.0 = Release|Any CPU
+		{646421CF-EEDD-492E-B9AA-78DADCD23B3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{646421CF-EEDD-492E-B9AA-78DADCD23B3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{646421CF-EEDD-492E-B9AA-78DADCD23B3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{646421CF-EEDD-492E-B9AA-78DADCD23B3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

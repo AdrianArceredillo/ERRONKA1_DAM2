@@ -1,4 +1,5 @@
 ﻿using PruebaGrafico0.LoginForm;
+using PruebaGrafico0.BezeroBakoitzarenGastuak;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,8 +23,9 @@ namespace PruebaGrafico0
             //Formularios de la aplicación
             //----------------------------
 
-            Application.Run(new frmLogin());
+            //Application.Run(new frmLogin());
             //Application.Run(new Form1());
+            Application.Run(new frmBezeroBakoitzarenGastuak());
         }
     }
 }
