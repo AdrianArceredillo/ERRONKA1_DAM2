@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -54,6 +55,7 @@ namespace PruebaGrafico0.Models
         //public string purchase_line_warn_msg { get; set; }
         //public bool service_to_purchase { get; set; }
 
+        
 
     }
 }

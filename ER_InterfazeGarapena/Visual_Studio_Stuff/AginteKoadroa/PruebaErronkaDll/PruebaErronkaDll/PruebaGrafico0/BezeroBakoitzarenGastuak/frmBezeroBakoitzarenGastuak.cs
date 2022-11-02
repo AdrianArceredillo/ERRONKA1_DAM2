@@ -77,8 +77,8 @@ namespace PruebaGrafico0.BezeroBakoitzarenGastuak
                 //    .ToDictionary(g => g.Key, g => g.Sum(b => b.price_subtotal));
 
                 var bezeroenEroskeraHistoria = db.Salmentak
-                    .Include("Bezeroak")
-                    .Where(b => b.res_Partner.id == b.order_partner_id)
+                    .Include("product_template")
+                    //.Where(b => b.res_Partner.id == b.order_partner_id)
                     .Where(b => b.res_Partner.name == "Biltegiko Nagusia")
                     .GroupBy(b => b.product_id)
                     .ToDictionary(g => g.Key, g => g.Count());
