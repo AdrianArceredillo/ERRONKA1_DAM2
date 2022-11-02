@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Pruebas_Erronka1</string>
+    <string name="app_name" translatable="true">Pruebas_Erronka1</string>
+
+    <string name="lblUsuario">Erabiltzailea:</string>
+    <string name="lblContraseña">Pasahitza:</string>
+    <string name="btnSartu">SARTU!</string>
 </resources>

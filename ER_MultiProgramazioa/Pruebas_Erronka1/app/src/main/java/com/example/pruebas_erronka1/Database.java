@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 
 public class Database {
 
-    private Connection connection;
+    private Connection connection = null;
 
     // For Amazon Postgresql
     // private final String host = "ssprojectinstance.csv2nbvvgbcb.us-east-2.rds.amazonaws.com"
@@ -14,11 +14,20 @@ public class Database {
     // private final String host = "35.44.16.169";
 
     // For Local PostgreSQL
-    private final String host = "10.0.2.2";
 
+
+    //private final String host = "192.168.65.5";
+    //private final String database = "Pekin_Bilbo_Store";
+    //private final int port = 5432;
+    //private final String user = "joseba";
+    //private final String pass = "joseba";
+    //private String url = "jdbc:postgresql://%s:%d/%s";
+    //private boolean status;
+
+    private final String host = "10.0.2.2";
     private final String database = "Ariketa_1";
     private final int port = 5433;
-    private final String user = "arceredillo.adrian@uni.eus";
+    private final String user = "openpg";
     private final String pass = "openpgpwd";
     private String url = "jdbc:postgresql://%s:%d/%s";
     private boolean status;
@@ -41,6 +50,7 @@ public class Database {
                 {
                     Class.forName("org.postgresql.Driver");
                     connection = DriverManager.getConnection(url, user, pass);
+                    //connection = DriverManager.getConnection(url);
                     status = true;
                     System.out.println("connected:" + status);
                 }
