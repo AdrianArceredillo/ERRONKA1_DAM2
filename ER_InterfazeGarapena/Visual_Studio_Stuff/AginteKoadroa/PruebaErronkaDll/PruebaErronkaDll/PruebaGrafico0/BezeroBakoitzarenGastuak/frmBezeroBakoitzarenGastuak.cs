@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Xml.Linq;
 
 //Total gastado por cada cliente
 /*
@@ -41,7 +42,7 @@ namespace PruebaGrafico0.BezeroBakoitzarenGastuak
                 var bezeroenGastuakData = db.Salmentak
                     .Include("Bezeroak")
                     //.Where(b => b.price_total >= 100)
-                    .Where(b => b.res_Partner.name == "Biltegiko Nagusia")
+                    .Where(b => b.res_Partner.name == "Cliente 01")
                     .GroupBy(b => b.res_Partner.name)
 
 
@@ -56,7 +57,7 @@ namespace PruebaGrafico0.BezeroBakoitzarenGastuak
                         var kontrolak = bezeroenGastuakChart1.Controls.OfType<System.Windows.Forms.DataVisualization.Charting.Chart>();
                         foreach (var kontrola in kontrolak)
                         {
-                            kontrola.Titles[0].Text = "Compras de Clientes - Odoo";
+                            kontrola.Titles[0].Text = "Productos Comprados por Cliente - Odoo";
                             kontrola.DataSource = bezeroenGastuakData;
                             kontrola.Series[0].YValueMembers = "Value";
                             kontrola.Series[0].XValueMember = "Key";
@@ -69,17 +70,16 @@ namespace PruebaGrafico0.BezeroBakoitzarenGastuak
                 //bigarren grafikoa
                 //BezeroBakoitzarenErosketakDLL
 
-                //var bezeroenEroskeraHistoria = db.Salmentak
-                //    .Include("Bezeroak")
-                //    .Where(b => b.res_Partner.id == b.order_partner_id)
-                //    .Where(b => b.res_Partner.name == "Biltegiko Nagusia")
-                //    .GroupBy(b => b.res_Partner.name)
-                //    .ToDictionary(g => g.Key, g => g.Sum(b => b.price_subtotal));
+                //sentencia sql PostgreSQL - contar LAS VECES (no unidades) que ha comprado cada producto
+
+                //SELECT product_id, public."sale_order_line"."name", count(*) FROM public.sale_order_line
+                //WHERE public."sale_order_line"."order_partner_id" = 9
+                //GROUP BY product_id, name
 
                 var bezeroenEroskeraHistoria = db.Salmentak
                     .Include("product_template")
                     //.Where(b => b.res_Partner.id == b.order_partner_id)
-                    .Where(b => b.res_Partner.name == "Biltegiko Nagusia")
+                    .Where(b => b.res_Partner.name == "Cliente 01")
                     .GroupBy(b => b.product_id)
                     .ToDictionary(g => g.Key, g => g.Count());
 
@@ -97,6 +97,8 @@ namespace PruebaGrafico0.BezeroBakoitzarenGastuak
                         }
                     }
                 }
+
+                
 
 
 

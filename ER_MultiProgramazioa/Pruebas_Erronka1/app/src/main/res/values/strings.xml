@@ -4,4 +4,17 @@
     <string name="lblUsuario">Erabiltzailea:</string>
     <string name="lblContraseña">Pasahitza:</string>
     <string name="btnSartu">SARTU!</string>
+
+    <!-- Catálogo -->
+    <string name="lblSaldoActualCuenta">Saldo actual:</string>
+    <string name="lblUsuarioCatalogo">Usuario:</string>
+
+    <string name="lblCantidadesPredeterminadas">Cantidades predeterminadas:</string>
+    <string name="spinnerProductoConcreto">Producto</string>
+    <string name="spinnerCantidadProductoConcreto">Uds.</string>
+
+    <string name="btnCancelarCompra">Salir sin guardar</string>
+    <string name="btnRealizarCompra">Realizar Operación</string>
+    <string name="btnValidarCompra">Ver Historial</string>
+
 </resources>

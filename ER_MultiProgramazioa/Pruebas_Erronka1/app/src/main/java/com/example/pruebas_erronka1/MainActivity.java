@@ -2,7 +2,9 @@ package com.example.pruebas_erronka1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,9 +15,10 @@ import java.sql.DriverManager;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    private static final String LOG_TAG = MainActivity.class.getSimpleName();   // Class name for Log tag
     private String usuarioCorrecto = "adrian";
     private String contraseña_Correcta = "password";
+    public static final int TEXT_REQUEST = 1;   // Unique tag for the intent reply
 
     public EditText mUsuario, mContraseña;
     public Button btnSartu;
@@ -74,6 +77,8 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
+
+
 
 
 
