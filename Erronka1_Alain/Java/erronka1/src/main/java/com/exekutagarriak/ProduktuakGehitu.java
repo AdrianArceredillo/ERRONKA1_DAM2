@@ -13,13 +13,12 @@ public class ProduktuakGehitu {
     public static void main(String[] args) {
         in = new Scanner(System.in);
 
-        int id;
+        int id = idLortu() + 1;
+
         String izena, deskripzioa;
         float prezioa;
 
-        System.out.println("Produktua gehitu:");
-        System.out.print("ID: ");
-        id = in.nextInt();
+        System.out.println("produktuaren id-a urrengoa izango da: "+id);
         System.out.print("Izena: ");
         izena = in.next();
         System.out.print("Deskripzioa: ");
@@ -31,7 +30,7 @@ public class ProduktuakGehitu {
 
     }
 
-    public static void produktuaGehitu (int id, String izena, String deskripzioa, float prezioa) {
+    public static void produktuaGehitu (int id, String izena, String deskripzioa, float prezioa) { 
         Konexioa konexioa = new Konexioa(); 
 
         String timeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new java.util.Date());;
@@ -66,5 +65,21 @@ public class ProduktuakGehitu {
         }        
     }
 
+    public static int idLortu(){
+        Konexioa konekzioa = new Konexioa();
+        String sql = "SELECT id FROM public.\"product_template\" ORDER BY id DESC LIMIT 1";
+        int id = 0;
+        Statement st;
+        try{
+            st = konekzioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123").createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next()){
+                id = rs.getInt(1);
+            }
+        } catch(Exception ex){
+            System.out.println("Exception : "+ex);
+        }        
+        return id;
+    }
 
 }
