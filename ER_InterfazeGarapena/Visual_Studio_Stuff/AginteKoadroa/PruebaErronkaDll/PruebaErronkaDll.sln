@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BezeroBakoitzarenGastuakDLL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BezeroBakoitzarenErosketakDLL", "BezeroBakoitzarenErosketak\BezeroBakoitzarenErosketakDLL.csproj", "{646421CF-EEDD-492E-B9AA-78DADCD23B3A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalmentakDenboraTarteanDLL", "SalmentakDenboraTarteanDLL\SalmentakDenboraTarteanDLL.csproj", "{154C8327-CCD6-4E16-97F7-EB11D9F03D0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{646421CF-EEDD-492E-B9AA-78DADCD23B3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{646421CF-EEDD-492E-B9AA-78DADCD23B3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{646421CF-EEDD-492E-B9AA-78DADCD23B3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{154C8327-CCD6-4E16-97F7-EB11D9F03D0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{154C8327-CCD6-4E16-97F7-EB11D9F03D0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{154C8327-CCD6-4E16-97F7-EB11D9F03D0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{154C8327-CCD6-4E16-97F7-EB11D9F03D0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PruebaGrafico0.SalmentakEpeak;
 
 namespace PruebaGrafico0
 {
@@ -25,7 +26,8 @@ namespace PruebaGrafico0
 
             //Application.Run(new frmLogin());
             //Application.Run(new Form1());
-            Application.Run(new frmBezeroBakoitzarenGastuak());
+            //Application.Run(new frmBezeroBakoitzarenGastuak());   //run this
+            Application.Run(new frmSalmentakEpeak());
         }
     }
 }

@@ -26,7 +26,7 @@ public class Database {
 
     private final String host = "10.0.2.2";
     private final String database = "Ariketa_1";
-    private final int port = 5433;
+    private final int port = 5432;
     private final String user = "openpg";
     private final String pass = "openpgpwd";
     private String url = "jdbc:postgresql://%s:%d/%s";
@@ -102,7 +102,7 @@ public class Database {
     //INFO INTERNET
     //Conexión a PostgreSQL desde Android Studio - https://medium.com/cyber-explorer/how-to-connect-an-android-project-to-a-postgresql-database-663cb0f5ba19
     //Conexión a PostgreSQL desde Android Studio 2 - https://www.cloudclusters.io/docs/postgresql/Connecting%20to%20PostgreSQL%20Database%20via%20Different%20Languages1605494263.html
-
+    //Conectarse a PostgreSQL - https://www.youtube.com/watch?v=THd1kOw24HY
 
 
 

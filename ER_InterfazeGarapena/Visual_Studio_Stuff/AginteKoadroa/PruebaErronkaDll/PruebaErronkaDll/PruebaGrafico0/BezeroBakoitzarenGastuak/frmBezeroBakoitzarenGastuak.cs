@@ -98,12 +98,13 @@ namespace PruebaGrafico0.BezeroBakoitzarenGastuak
                     }
                 }
 
-                
-
-
-
-
             }
+        }
+
+        private void btnFechaDPickerPrueba_Click(object sender, EventArgs e)
+        {
+            string theDate = dtpDatePickerPrueba.Value.ToString("yyyy-MM-dd");
+            this.lblFechaInicio.Text = theDate;
         }
     }
 }
@@ -111,3 +112,7 @@ namespace PruebaGrafico0.BezeroBakoitzarenGastuak
 
 //usar sentencias SQL de forma literal (sin llamadas a clases):
 //https://stackoverflow.com/questions/17838913/postgresql-create-database-table-dynamically
+
+
+//obtener el valor de un DateTimePicker
+//https://stackoverflow.com/questions/1138195/how-to-get-only-the-date-value-from-a-windows-forms-datetimepicker-control

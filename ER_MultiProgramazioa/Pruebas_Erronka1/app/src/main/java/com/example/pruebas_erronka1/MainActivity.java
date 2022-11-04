@@ -15,6 +15,8 @@ import java.sql.DriverManager;
 
 public class MainActivity extends AppCompatActivity {
 
+    MainActivity binding;
+
     private static final String LOG_TAG = MainActivity.class.getSimpleName();   // Class name for Log tag
     private String usuarioCorrecto = "adrian";
     private String contraseña_Correcta = "password";
@@ -30,13 +32,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         this.setTitle("HJAA Denda");
 
-        //Database db = new Database();
+        Database db = new Database();
 
         //asignar los elementos de la actividad
         mUsuario = findViewById(R.id.editTextErabiltzailea);
         mContraseña = findViewById(R.id.editTextPasahitza);
+
         btnPruebaActivar = findViewById(R.id.btnPruebaActivar);
         btnPruebaActivar.setEnabled(false);
+
         btnSartu = findViewById(R.id.btnIniciarSesion);
         btnSartu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +62,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnPruebaActivar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                abrirCatalogo_Prueba();
+            }
+        });
+
     }
 
 
@@ -76,6 +87,15 @@ public class MainActivity extends AppCompatActivity {
             mContraseña.setText("");
 
         }
+    }
+
+    public void abrirCatalogo_Prueba() {
+        Log.d(LOG_TAG, "Acceso correcto!");
+        Intent intentCatalogo2 = new Intent(this, Catalogo.class);
+
+
+        //startForResult.launch(intentCatalogo);
+        startActivityForResult(intentCatalogo2, TEXT_REQUEST);
     }
 
 
