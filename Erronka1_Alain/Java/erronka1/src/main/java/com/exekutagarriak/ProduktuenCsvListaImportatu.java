@@ -45,8 +45,6 @@ public class ProduktuenCsvListaImportatu {
             sql = sql.substring(0, sql.length() - 2);
             sql += ";";
 
-            System.out.println(sql);
-
             Konexioa konexioa = new Konexioa();
             Statement st;
             try {
@@ -63,7 +61,8 @@ public class ProduktuenCsvListaImportatu {
     public static Produktuak produktuenListaObjetura(){
         in = new Scanner(System.in);
         System.out.print("Fitxategiaren izena: ");
-        String fitxategia = in.nextLine();
+        //String fitxategia = in.nextLine();
+        String fitxategia = "produktuakR.csv";
         Csva csva= new Csva("data/importazioak/" + fitxategia);
         Produktuak produktuak = new Produktuak();
         return produktuak = csva.irakurri();
