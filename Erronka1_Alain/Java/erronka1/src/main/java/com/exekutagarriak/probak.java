@@ -1,15 +1,27 @@
 package com.exekutagarriak;
 
-import java.text.SimpleDateFormat;
+import java.sql.Statement;
+
+import com.konexioa.Konexioa;
 
 public class probak {
     public static void main(String[] args) {
         garbitu();
-        String timeStamp;
-        timeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new java.util.Date());
-        System.out.println(timeStamp);
-
+        insertAsko();
     }
+
+    public static void insertAsko(){
+        String sql = "INSERT INTO public.\"AAAAAAAAA\" VALUES('Proba','16',NULL, true, NULL), ('Proba','17',NULL, true, NULL);";
+        Konexioa konekzioa = new Konexioa();
+        Statement st;
+        try{
+            st = konekzioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123").createStatement();
+            System.out.println(st.executeQuery(sql)); 
+        } catch(Exception ex){
+            System.out.println("Exception: " + ex);
+        } 
+    }
+    
 
     private static void garbitu() {
         System.out.print("\033[H\033[2J");

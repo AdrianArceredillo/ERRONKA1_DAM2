@@ -15,6 +15,7 @@ public class ProduktuakGehitu {
 
         int id = idLortu() + 1;
 
+
         String izena, deskripzioa;
         float prezioa;
 
@@ -33,7 +34,7 @@ public class ProduktuakGehitu {
     public static void produktuaGehitu (int id, String izena, String deskripzioa, float prezioa) { 
         Konexioa konexioa = new Konexioa(); 
 
-        String timeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new java.util.Date());;
+        String timeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new java.util.Date());
          
         String sql = "INSERT INTO public.product_template VALUES( "+id+", NULL,'"+izena+"',1,'<p>"+deskripzioa+"</p>',NULL,NULL,'product','product',1,"+prezioa+",10,10,true,true,1,1,NULL,true,NULL,NULL,false,false,0,2,'"+timeStamp+"',2,'"+timeStamp+"',0,'none',NULL,NULL,NULL,'receive','no-message',NULL,'manual','no-message',NULL,'no','order',false);"; 
         Statement st;

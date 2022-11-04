@@ -15,7 +15,7 @@ public class Produktua {
     int id = 0;
     String izena;
     int stocka;
-    int prezioa;
+    float prezioa;
 
 
     @XmlElement(name = "Id")
@@ -44,10 +44,10 @@ public class Produktua {
     }
 
     @XmlElement(name = "Prezioa")
-    public int getPrezioa() {
+    public float getPrezioa() {
         return prezioa;
     }    
-    public void setPrezioa(int prezioa) {
+    public void setPrezioa(float prezioa) {
         this.prezioa = prezioa;
     }
 

@@ -2,32 +2,38 @@
 <Produktuak>
     <Produktua>
         <Id>1</Id>
-        <Izena>Hamburguesa de queso</Izena>
+        <Izena>Hamburguesa de quesoooooooo</Izena>
         <Stocka>69</Stocka>
-        <Prezioa>1</Prezioa>
+        <Prezioa>100.0</Prezioa>
     </Produktua>
     <Produktua>
         <Id>2</Id>
-        <Izena>ProzesagailuAAAA</Izena>
+        <Izena>Prozesagailuaaaaaa</Izena>
         <Stocka>4</Stocka>
-        <Prezioa>200</Prezioa>
+        <Prezioa>250.0</Prezioa>
     </Produktua>
     <Produktua>
         <Id>3</Id>
         <Izena>EEPROM Memoria</Izena>
-        <Stocka>55</Stocka>
-        <Prezioa>26</Prezioa>
+        <Stocka>50</Stocka>
+        <Prezioa>26.0</Prezioa>
     </Produktua>
     <Produktua>
         <Id>4</Id>
         <Izena>Produktua 1</Izena>
         <Stocka>20</Stocka>
-        <Prezioa>11</Prezioa>
+        <Prezioa>11.0</Prezioa>
     </Produktua>
     <Produktua>
         <Id>5</Id>
         <Izena>Produktua 2</Izena>
         <Stocka>25</Stocka>
-        <Prezioa>1</Prezioa>
+        <Prezioa>1.0</Prezioa>
+    </Produktua>
+    <Produktua>
+        <Id>6</Id>
+        <Izena>sdfkghskdjgfskjgdfg</Izena>
+        <Stocka>15</Stocka>
+        <Prezioa>123.0</Prezioa>
     </Produktua>
 </Produktuak>
