@@ -32,7 +32,6 @@ public class Csva {
     public Produktuak irakurri() {
         Produktuak produktuak = new Produktuak();
         produktuak = null;
-
         try (BufferedReader inputStream = new BufferedReader(new FileReader(strFileIn))) {
             String banatzailea = ";";
             String l;
@@ -44,7 +43,7 @@ public class Csva {
                     produktua.setId(Integer.parseInt(eremuak[0]));
                     produktua.setIzena(eremuak[1]);
                     produktua.setStocka(Integer.parseInt(eremuak[2]));
-                    produktua.setPrezioa(Float.parseFloat(eremuak[3].substring(0, eremuak[3].length() - 1))); //€ Simboloa ezabatu
+                    produktua.setPrezioa(Float.parseFloat(eremuak[3])); //€ Simboloa ezabatu
                     produktuak.add(produktua);
                 }
             }
@@ -52,6 +51,8 @@ public class Csva {
             System.out.println("Ez da " + strFileIn + " fitxategia aurkitu.");
         } catch (IOException e) {
             System.out.println("IOsalbuespena gertatu da.");
+        } catch(Exception e){
+            System.out.println("Errorea: " + e);
         }
         return produktuak;
     }

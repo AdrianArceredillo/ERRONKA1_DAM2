@@ -16,6 +16,7 @@ public class probak {
         al.add("Elena");
 try{
     System.out.println(al.get(3));
+    al.set(2, "Jose Antonio");
 } catch (Exception e){
     System.out.println("Arraytik kanpo");
     System.out.println(al.get(2));

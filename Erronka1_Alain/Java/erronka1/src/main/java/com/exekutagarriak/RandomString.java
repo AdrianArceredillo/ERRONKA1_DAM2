@@ -22,13 +22,15 @@ public class RandomString {
   }
 
   public static void main(String[] args) {
+
+    int produktuKopurua = 2000;  // <------------------------------- Balio hau aldatu
     String produktua = "";
 
     String strFileOut = "data/importazioak/produktuakR.csv";
 
     try (PrintWriter outputStream = new PrintWriter(new FileWriter(strFileOut))) {
       outputStream.println("ID;IZENA;STOCKA;PREZIOA");
-      for (int i = 0; i < 30; i++) {
+      for (int i = 0; i < produktuKopurua; i++) {
         int id = i;
         int n = 20;
         

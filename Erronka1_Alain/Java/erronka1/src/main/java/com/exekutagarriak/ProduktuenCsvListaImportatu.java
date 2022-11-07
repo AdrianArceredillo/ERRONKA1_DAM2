@@ -14,7 +14,11 @@ import com.pojoak.Produktuak;
 public class ProduktuenCsvListaImportatu {
     public static Scanner in;
 
+    public static Konexioa konexioa = new Konexioa();
+    public static Statement st;
+
     public static void main(String[] args) {
+        garbitu();
         Produktuak produktuak = new Produktuak();
 
         produktuak = produktuenListaObjetura();
@@ -31,76 +35,86 @@ public class ProduktuenCsvListaImportatu {
 
         int n = 0;
         boolean bukatuta = false;
-        // if (produktuKopurua == 0) {
-        // produktuKopurua++;
-        // }
-        while (!bukatuta) {
-            for (int i = 0; i < 10; i++) {
+
+        while (!bukatuta) { // Produktuen lista ez badago bukatuta, egin hurrengoa
+            sql = "INSERT INTO public.product_template VALUES";
+            for (int i = 0; i < 10; i++) { // 10 produktuko insert-a prestatzen da
+
                 try {
-                    Produktua p = produktuak.getProduktuak().get(n + i);
-                    
-                    sql = "INSERT INTO public.product_template VALUES";
+
+                    Produktua p = produktuak.getProduktuak().get(n + i); // n+i Array listean dagoen elementu kopurua
+                                                                         // baino
+                                                                         // handiagoa bada, erroreak egingo du salto eta
+                                                                         // catch-ean sartuko da
                     id += 1;
                     izena = p.getIzena();
                     deskripzioa = "<p><br><p>";
                     prezioa = p.getPrezioa();
                     timeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new java.util.Date());
 
-                    sql += "( " + id + ", NULL,'" + izena + "',1,'<p>" + deskripzioa
+                    sql += " ( " + id + ", NULL,'" + izena + "',1,'<p>" + deskripzioa
                             + "</p>',NULL,NULL,'product','product',1,"
                             + prezioa + ",10,10,true,true,1,1,NULL,true,NULL,NULL,false,false,0,2,'" + timeStamp
                             + "',2,'"
                             + timeStamp
                             + "',0,'none',NULL,NULL,NULL,'receive','no-message',NULL,'manual','no-message',NULL,'no','order',false)";
-                    sql += ", ";
+                    sql += ",";
 
-                    sql = sql.substring(0, sql.length() - 2);
-                    sql += ";";
-
-                    Konexioa konexioa = new Konexioa();
-                    Statement st;
-                    try {
-                        st = konexioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123")
-                                .createStatement();
-                        st.executeQuery(sql);
-                    } catch (Exception ex) {
-                        System.out.println("Exception : " + ex);
-                    }
-                } catch (Exception e) {
-                    try {
-                        bukatuta = true;
-                        Konexioa konexioa = new Konexioa();
-                        Statement st;
-                        st = konexioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123")
-                                .createStatement();
-                        st.executeQuery(sql);
-                    } catch (Exception ex) {
-                        System.out.println("Exception : " + ex);
-                    }
+                    produktuKopurua++;
+                } catch (Exception e) { // Catch honetan sartzen bada, nahi du esan ez dagoela beste produkturik
+                                        // gehitzeko sql aginduan, orduan azkenengo agindua da urrengoa. Horregatik
+                                        // bukatuta = true baliora aldatuko da
+                    bukatuta = true;
+                    sql = sqlaBukatu(sql);
+                    exekuzioa(sql, n);
 
                 }
             }
-            n += 10;
+            if (!bukatuta) { // Produktuen lista ez badago bukatuta, egin hurrengoa
+                sql = sqlaBukatu(sql);
+                exekuzioa(sql, n);
+            }
+            n += 10; 
+        }
+        System.out.println("\n" + produktuKopurua + " produktu gehitu dira datu basera");
+    }
+
+    public static String sqlaBukatu(String sql) { // Sql agindua ',' batekin amaitzen da. ',' hori ';' batekin aldatu
+                                                  // behar da
+        sql = sql.substring(0, sql.length() - 1);
+        sql += ";";
+        return sql;
+    }
+
+    public static void exekuzioa(String sql, int n) {
+        try {
+            st = konexioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123").createStatement();
+            st.executeQuery(sql);
+        } catch (Exception ex) {
+            if(n % 200 == 0){
+                System.out.println("Produktuak importatzen, mesedez itxaron...");
+            }
         }
     }
 
     public static Produktuak produktuenListaObjetura() {
         in = new Scanner(System.in);
         System.out.print("Fitxategiaren izena: ");
-        // String fitxategia = in.nextLine();
-        String fitxategia = "produktuakR.csv";
+        String fitxategia = in.nextLine();
         Csva csva = new Csva("data/importazioak/" + fitxategia);
+
         Produktuak produktuak = new Produktuak();
-        return produktuak = csva.irakurri();
+
+        produktuak = csva.irakurri();
+        return produktuak;
+
     }
 
     public static int idLortu() {
-        Konexioa konekzioa = new Konexioa();
         String sql = "SELECT id FROM public.\"product_template\" ORDER BY id DESC LIMIT 1";
         int id = 0;
-        Statement st;
         try {
-            st = konekzioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123").createStatement();
+            st = konexioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123").createStatement();
             ResultSet rs = st.executeQuery(sql);
             while (rs.next()) {
                 id = rs.getInt(1);
@@ -109,5 +123,10 @@ public class ProduktuenCsvListaImportatu {
             System.out.println("Exception : " + ex);
         }
         return id;
+    }
+
+    private static void garbitu() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
     }
 }
