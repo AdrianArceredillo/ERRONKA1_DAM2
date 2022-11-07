@@ -105,8 +105,8 @@ namespace PruebaGrafico0.SalmentakEpeak
                 var denboraTartekoSalmentak = db.SalmentakGeneral
                     .Include("Bezeroak")
                     //.Where(b => b.create_date < dt_Inicio && b.create_date >= dt_Fin)
-                    .Where(b => b.create_date > dt_Inicio)
-                    .GroupBy(b => b.create_date.Day.ToString())
+                    .Where(b => b.create_date > dt_Inicio && b.create_date < dt_Fin)
+                    .GroupBy(b => b.create_date.ToString())
 
 
                     //.GroupBy(b => b.name)

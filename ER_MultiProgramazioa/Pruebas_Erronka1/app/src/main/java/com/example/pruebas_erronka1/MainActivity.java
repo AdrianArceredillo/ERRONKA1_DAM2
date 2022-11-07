@@ -61,14 +61,6 @@ public class MainActivity extends AppCompatActivity {
                 comprobarInicioSesion();
             }
         });
-
-        btnPruebaActivar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                abrirCatalogo_Prueba();
-            }
-        });
-
     }
 
 
@@ -89,14 +81,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void abrirCatalogo_Prueba() {
-        Log.d(LOG_TAG, "Acceso correcto!");
-        Intent intentCatalogo2 = new Intent(this, Catalogo.class);
-
-
-        //startForResult.launch(intentCatalogo);
-        startActivityForResult(intentCatalogo2, TEXT_REQUEST);
-    }
 
 
 

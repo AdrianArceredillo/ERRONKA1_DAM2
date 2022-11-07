@@ -6,6 +6,7 @@ public class Menua {
     public static Scanner in;
 
     public static void main(String[] args) {
+        garbitu();
         in = new Scanner(System.in);
         int aukera = 0;
         do {

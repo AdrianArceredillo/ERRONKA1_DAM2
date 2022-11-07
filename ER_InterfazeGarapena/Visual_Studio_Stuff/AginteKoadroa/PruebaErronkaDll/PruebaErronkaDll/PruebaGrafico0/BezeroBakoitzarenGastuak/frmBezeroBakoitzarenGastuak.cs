@@ -63,7 +63,6 @@ namespace PruebaGrafico0.BezeroBakoitzarenGastuak
                             kontrola.Series[0].XValueMember = "Key";
                             kontrola.DataBind();
                         }
-
                     }
                 }
 
@@ -97,7 +96,6 @@ namespace PruebaGrafico0.BezeroBakoitzarenGastuak
                         }
                     }
                 }
-
             }
         }
 

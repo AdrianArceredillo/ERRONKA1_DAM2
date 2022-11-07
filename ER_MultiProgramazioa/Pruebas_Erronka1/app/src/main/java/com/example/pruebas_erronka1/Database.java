@@ -52,7 +52,7 @@ public class Database {
                     connection = DriverManager.getConnection(url, user, pass);
                     //connection = DriverManager.getConnection(url);
                     status = true;
-                    System.out.println("connected:" + status);
+                    System.out.println("connected:\n" + status);
                 }
                 catch (Exception e)
                 {

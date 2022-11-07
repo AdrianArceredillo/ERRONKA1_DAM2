@@ -21,7 +21,7 @@ public class datuakEsportatu {
         try {
             Produktuak produktuak = new Produktuak();
             produktuak = ProduktuakJavaObjetura.ProduktuenJavaObjetua();
-            Csva csva = new Csva(produktuak, "data/Produktuak.csv");
+            Csva csva = new Csva(produktuak, "data/exportazioak/Produktuak.csv");
             csva.idatzi();
             System.out.println("Datuak ondo esportatu dira");
         } catch (Exception e) {
@@ -34,7 +34,7 @@ public class datuakEsportatu {
         try {
             Produktuak produktuak = new Produktuak();
             produktuak = ProduktuakJavaObjetura.ProduktuenJavaObjetua();
-            Xmla xmla = new Xmla(produktuak, "data/Produktuak.xml");
+            Xmla xmla = new Xmla(produktuak, "data/exportazioak/Produktuak.xml");
             xmla.idatzi();
             System.out.println("Datuak ondo esportatu dira");
         } catch (Exception e) {
@@ -47,7 +47,7 @@ public class datuakEsportatu {
         try {
             Produktuak produktuak = new Produktuak();
             produktuak = ProduktuakJavaObjetura.ProduktuenJavaObjetua();
-            Jsona jsona = new Jsona(produktuak, "data/Produktuak.json");
+            Jsona jsona = new Jsona(produktuak, "data/exportazioak/Produktuak.json");
             jsona.idatzi();
             System.out.println("Datuak ondo esportatu dira");
         } catch (Exception e) {
@@ -60,11 +60,11 @@ public class datuakEsportatu {
         try {
             Produktuak produktuak = new Produktuak();
             produktuak = ProduktuakJavaObjetura.ProduktuenJavaObjetua();
-            Csva csva = new Csva(produktuak, "data/Produktuak.csv");
+            Csva csva = new Csva(produktuak, "data/exportazioak/Produktuak.csv");
             csva.idatzi();
-            Xmla xmla = new Xmla(produktuak, "data/Produktuak.xml");
+            Xmla xmla = new Xmla(produktuak, "data/exportazioak/Produktuak.xml");
             xmla.idatzi();
-            Jsona jsona = new Jsona(produktuak, "data/Produktuak.json");
+            Jsona jsona = new Jsona(produktuak, "data/exportazioak/Produktuak.json");
             jsona.idatzi();
             System.out.println("Datuak ondo esportatu dira");
         } catch (Exception e) {

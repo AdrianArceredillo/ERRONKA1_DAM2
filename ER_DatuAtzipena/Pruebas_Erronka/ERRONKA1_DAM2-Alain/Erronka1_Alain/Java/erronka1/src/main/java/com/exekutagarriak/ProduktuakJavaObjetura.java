@@ -41,7 +41,7 @@ public class ProduktuakJavaObjetura {
                     produktua.setId(Integer.parseInt(id)); // ID-a ezarri
                     produktua.setIzena(pZatiak[1]); // pZatiak[1] posizioan produktuaren izena dago
                     produktua.setStocka(Integer.parseInt(sZatiak[1])); // sZatiak2[1] posizioan stock-a dago gordeta
-                    produktua.setPrezioa(Integer.parseInt(pZatiak[2])); // pZatiak[2] posizioan prezioa dago gordeta
+                    produktua.setPrezioa(Float.parseFloat(pZatiak[2])); // pZatiak[2] posizioan prezioa dago gordeta
                     produktuak.add(produktua); // Aurreko datuak lortuta, produktuak objetua prest dago.
                                                // Orain produktuak Arraylist-era gehituko dugu
                 }
@@ -54,7 +54,7 @@ public class ProduktuakJavaObjetura {
 
     public static ArrayList<String> irakurriTaulaP(String taula) {
         Konexioa konexioa = new Konexioa(); // Konexio motako objetu berri bat sortu
-        String sql = "SELECT * FROM public.\"" + taula + "\""; // sql agindua nahi dugun taulako informazio guztia
+        String sql = "SELECT * FROM public.\"" + taula + "\" order by id asc"; // sql agindua nahi dugun taulako informazio guztia
                                                                // agertzeko
         ArrayList<String> datuak = new ArrayList<String>(); // Datuak gordetzeko Arraylist bat sortu
         Statement st;
@@ -63,7 +63,7 @@ public class ProduktuakJavaObjetura {
             ResultSet rs = st.executeQuery(sql); // sql exekutatu
             while (rs.next()) { // Taulan informazioa dagoen bitartean egin hurrengoa
                 datuak.add(rs.getString("id") + ";" + rs.getString("name") + ";"
-                        + Integer.toString(rs.getShort("list_price"))); // id, izena eta prezioa lortu eta datuak
+                        + Float.toString(rs.getFloat("list_price"))); // id, izena eta prezioa lortu eta datuak
                                                                         // Arraylist-ean gorde
                                                                         // Taula onetan ez dago stock-aren datua
             }
@@ -75,7 +75,7 @@ public class ProduktuakJavaObjetura {
 
     public static ArrayList<String> irakurriTaulaS(String taula) {
         Konexioa konexioa = new Konexioa();
-        String sql = "SELECT * FROM public.\"" + taula + "\" WHERE location_id = 8"; /*
+        String sql = "SELECT * FROM public.\"" + taula + "\" WHERE location_id = 8 order by id asc"; /*
                                                                                       * Produktu bakoitza bi aldiz
                                                                                       * agertzen da stock_quant taulan,
                                                                                       * location id ezberdin batekin,
