@@ -11,77 +11,103 @@ import com.konexioa.Konexioa;
 import com.pojoak.Produktua;
 import com.pojoak.Produktuak;
 
-
 public class ProduktuenCsvListaImportatu {
     public static Scanner in;
-        public static void main(String[] args) {
-            Produktuak produktuak = new Produktuak();
 
-            produktuak = produktuenListaObjetura();
+    public static void main(String[] args) {
+        Produktuak produktuak = new Produktuak();
 
-            String sql = "INSERT INTO public.product_template VALUES";
+        produktuak = produktuenListaObjetura();
 
-            int produktuKopurua = 0;
+        String sql = "INSERT INTO public.product_template VALUES";
 
-            int id=idLortu();
-            String izena ="";
-            String deskripzioa ="";
-            float prezioa = 0;
-            String timeStamp;
+        int produktuKopurua = 0;
 
-            for (Produktua p : produktuak.getProduktuak()) {
-                if (produktuKopurua==0){
-                    produktuKopurua++;
+        int id = idLortu();
+        String izena = "";
+        String deskripzioa = "";
+        float prezioa = 0;
+        String timeStamp;
+
+        int n = 0;
+        boolean bukatuta = false;
+        // if (produktuKopurua == 0) {
+        // produktuKopurua++;
+        // }
+        while (!bukatuta) {
+            for (int i = 0; i < 10; i++) {
+                try {
+                    Produktua p = produktuak.getProduktuak().get(n + i);
+                    
+                    sql = "INSERT INTO public.product_template VALUES";
+                    id += 1;
+                    izena = p.getIzena();
+                    deskripzioa = "<p><br><p>";
+                    prezioa = p.getPrezioa();
+                    timeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new java.util.Date());
+
+                    sql += "( " + id + ", NULL,'" + izena + "',1,'<p>" + deskripzioa
+                            + "</p>',NULL,NULL,'product','product',1,"
+                            + prezioa + ",10,10,true,true,1,1,NULL,true,NULL,NULL,false,false,0,2,'" + timeStamp
+                            + "',2,'"
+                            + timeStamp
+                            + "',0,'none',NULL,NULL,NULL,'receive','no-message',NULL,'manual','no-message',NULL,'no','order',false)";
+                    sql += ", ";
+
+                    sql = sql.substring(0, sql.length() - 2);
+                    sql += ";";
+
+                    Konexioa konexioa = new Konexioa();
+                    Statement st;
+                    try {
+                        st = konexioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123")
+                                .createStatement();
+                        st.executeQuery(sql);
+                    } catch (Exception ex) {
+                        System.out.println("Exception : " + ex);
+                    }
+                } catch (Exception e) {
+                    try {
+                        bukatuta = true;
+                        Konexioa konexioa = new Konexioa();
+                        Statement st;
+                        st = konexioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123")
+                                .createStatement();
+                        st.executeQuery(sql);
+                    } catch (Exception ex) {
+                        System.out.println("Exception : " + ex);
+                    }
+
                 }
-                id += 1;        
-                izena = p.getIzena();
-                deskripzioa = "<p><br><p>";
-                prezioa = p.getPrezioa();
-                timeStamp =  new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new java.util.Date());
-                
-                sql += "( "+id+", NULL,'"+izena+"',1,'<p>"+deskripzioa+"</p>',NULL,NULL,'product','product',1,"+prezioa+",10,10,true,true,1,1,NULL,true,NULL,NULL,false,false,0,2,'"+timeStamp+"',2,'"+timeStamp+"',0,'none',NULL,NULL,NULL,'receive','no-message',NULL,'manual','no-message',NULL,'no','order',false)";
-                sql += ", ";
             }
-            sql = sql.substring(0, sql.length() - 2);
-            sql += ";";
-
-            Konexioa konexioa = new Konexioa();
-            Statement st;
-            try {
-                st = konexioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123").createStatement(); 
-                st.executeQuery(sql); 
-            } catch (Exception ex) {
-                System.out.println("Exception : " + ex);
-            }
-                        
-            
-
-
+            n += 10;
+        }
     }
-    public static Produktuak produktuenListaObjetura(){
+
+    public static Produktuak produktuenListaObjetura() {
         in = new Scanner(System.in);
         System.out.print("Fitxategiaren izena: ");
-        //String fitxategia = in.nextLine();
+        // String fitxategia = in.nextLine();
         String fitxategia = "produktuakR.csv";
-        Csva csva= new Csva("data/importazioak/" + fitxategia);
+        Csva csva = new Csva("data/importazioak/" + fitxategia);
         Produktuak produktuak = new Produktuak();
         return produktuak = csva.irakurri();
     }
 
-    public static int idLortu(){
+    public static int idLortu() {
         Konexioa konekzioa = new Konexioa();
         String sql = "SELECT id FROM public.\"product_template\" ORDER BY id DESC LIMIT 1";
         int id = 0;
         Statement st;
-        try{
+        try {
             st = konekzioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123").createStatement();
             ResultSet rs = st.executeQuery(sql);
-            while(rs.next()){
+            while (rs.next()) {
                 id = rs.getInt(1);
             }
-        } catch(Exception ex){
-            System.out.println("Exception : "+ex);
-        }        
+        } catch (Exception ex) {
+            System.out.println("Exception : " + ex);
+        }
         return id;
     }
 }
