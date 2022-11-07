@@ -91,8 +91,8 @@ public class ProduktuenCsvListaImportatu {
             st = konexioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123").createStatement();
             st.executeQuery(sql);
         } catch (Exception ex) {
-            if(n % 200 == 0){
-                System.out.println("Produktuak importatzen, mesedez itxaron...");
+            if(n % 200 == 0 && !bukatuta){
+                System.out.println("Produktuak importatzen, mesedez itxaron... ( " + n + " produktu inportatuta)");
             }
         }
     }
