@@ -56,3 +56,4 @@ C:\Users\arceredillo.adrian\Documents\DAM_2\ERRONKA1_DAM2\ER_InterfazeGarapena\V
 C:\Users\arceredillo.adrian\Documents\DAM_2\ERRONKA1_DAM2\ER_InterfazeGarapena\Visual_Studio_Stuff\AginteKoadroa\PruebaErronkaDll\PruebaErronkaDll\PruebaGrafico0\bin\Debug\SalmentakDenboraTarteanDLL.pdb
 C:\Users\arceredillo.adrian\Documents\DAM_2\ERRONKA1_DAM2\ER_InterfazeGarapena\Visual_Studio_Stuff\AginteKoadroa\PruebaErronkaDll\PruebaErronkaDll\PruebaGrafico0\bin\Debug\SalmentakDenboraTarteanDLL.dll.config
 C:\Users\arceredillo.adrian\Documents\DAM_2\ERRONKA1_DAM2\ER_InterfazeGarapena\Visual_Studio_Stuff\AginteKoadroa\PruebaErronkaDll\PruebaErronkaDll\PruebaGrafico0\obj\Debug\PruebaGrafico0.SalmentakEpeak.frmSalmentakEpeak.resources
+C:\Users\arceredillo.adrian\Documents\DAM_2\ERRONKA1_DAM2\ER_InterfazeGarapena\Visual_Studio_Stuff\AginteKoadroa\PruebaErronkaDll\PruebaErronkaDll\PruebaGrafico0\obj\Debug\PruebaGrafico0.AtalNagusiaForm.frmAtalNagusia.resources

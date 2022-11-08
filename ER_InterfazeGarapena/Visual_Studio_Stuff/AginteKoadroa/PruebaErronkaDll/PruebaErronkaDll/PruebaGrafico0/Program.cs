@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PruebaGrafico0.SalmentakEpeak;
+using PruebaGrafico0.AtalNagusiaForm;
 
 namespace PruebaGrafico0
 {
@@ -24,10 +25,13 @@ namespace PruebaGrafico0
             //Formularios de la aplicación
             //----------------------------
 
-            //Application.Run(new frmLogin());
+            Application.Run(new frmLogin());
+            //Application.Run(new frmAtalNagusia());
+
+
             //Application.Run(new Form1());
             //Application.Run(new frmBezeroBakoitzarenGastuak());   //run this
-            Application.Run(new frmSalmentakEpeak());
+            //Application.Run(new frmSalmentakEpeak());
         }
     }
 }

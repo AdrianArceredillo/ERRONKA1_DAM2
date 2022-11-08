@@ -96,6 +96,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AtalNagusiaForm\frmAtalNagusia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AtalNagusiaForm\frmAtalNagusia.Designer.cs">
+      <DependentUpon>frmAtalNagusia.cs</DependentUpon>
+    </Compile>
     <Compile Include="BezeroBakoitzarenGastuak\frmBezeroBakoitzarenGastuak.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     <Compile Include="ViewProductCatalog\frmViewProductCatalog.Designer.cs">
       <DependentUpon>frmViewProductCatalog.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AtalNagusiaForm\frmAtalNagusia.resx">
+      <DependentUpon>frmAtalNagusia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BezeroBakoitzarenGastuak\frmBezeroBakoitzarenGastuak.resx">
       <DependentUpon>frmBezeroBakoitzarenGastuak.cs</DependentUpon>
     </EmbeddedResource>
