@@ -7,18 +7,36 @@ import com.pojoak.Produktuak;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Marshaller;
+import jakarta.xml.bind.Unmarshaller;
 
 public class Xmla {
 
     public Produktuak produktuak;
     public String strFileOut;
+    public String strFileIn;
 
+    public Xmla(String strFile) {
+        strFileIn = strFile;
+    }
 
     public Xmla(Produktuak produktuak, String strFileOut) {
         this.produktuak = produktuak;
         this.strFileOut = strFileOut;
     }
 
+
+    public Produktuak irakurri() {
+        Produktuak produktuak = null;
+        try {
+            JAXBContext jaxbContext = JAXBContext.newInstance(Produktuak.class);
+
+            Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+            produktuak = (Produktuak) jaxbUnmarshaller.unmarshal(new File(strFileIn));
+        } catch (Exception ex) {
+            System.out.println("Arazoren bat " + strFileIn + " irakurtzerakoan.");
+        }
+        return produktuak;
+    }
 
     public void idatzi() {
         //int produktuKopurua = 0;

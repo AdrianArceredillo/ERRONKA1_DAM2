@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Random;
 
-public class RandomString {
+public class ProduktuakAutomatikokiSortu {
 
   static String getAlphaNumericString(int n) {
 
@@ -23,10 +23,10 @@ public class RandomString {
 
   public static void main(String[] args) {
 
-    int produktuKopurua = 2000;  // <------------------------------- Balio hau aldatu
+    int produktuKopurua = 667;  // <------------------------------- Balio hau aldatu
     String produktua = "";
 
-    String strFileOut = "data/importazioak/produktuakR.csv";
+    String strFileOut = "data/importazioak/ProduktuakR.csv";
 
     try (PrintWriter outputStream = new PrintWriter(new FileWriter(strFileOut))) {
       outputStream.println("ID;IZENA;STOCKA;PREZIOA");
@@ -40,7 +40,7 @@ public class RandomString {
         int prezioa = r.nextInt(high - low) + low;
         int stocka = r.nextInt(high - low) + low;
 
-        produktua = id + ";" + RandomString.getAlphaNumericString(n)+ ";" + stocka + ";" + prezioa;
+        produktua = id + ";" + ProduktuakAutomatikokiSortu.getAlphaNumericString(n)+ ";" + stocka + ";" + prezioa;
 
         outputStream.println(produktua);
       }

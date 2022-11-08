@@ -31,7 +31,7 @@ public class Menua {
                     break;
                 case 3:
                     garbitu();
-                    // met3();
+                    datuakInportatu();
                     break;
                 case 4:
                     garbitu();
@@ -134,6 +134,34 @@ public class Menua {
             }
         } while (aukera != 5);
     }
+    
+    private static void datuakInportatu() {
+        int aukera;
+        do {
+            System.out.println("\nZe datu nahi duzu inportatu?");
+            System.out.println("1.- Produktuen datuak");
+            System.out.println("2.- beste datu batzuk (egiteko)");
+            System.out.println("3.- Atzera");
+            System.out.print("Aukeratu zenbaki bat: ");
+            aukera = in.nextInt();
+            switch (aukera) {
+                case 1:
+                    garbitu();
+                    ProduktuenListaImportatu.datuakInportatu();
+                    break;
+                case 2:
+                    garbitu();
+                    break;
+                case 3:
+                    garbitu();
+                    break;
+                default:
+                    garbitu();
+                    System.out.println("Aukera okerra. Saiatu berriz.");
+            }
+        } while (aukera != 3);
+    }
+    
 
     private static void garbitu() {
         System.out.print("\033[H\033[2J");
