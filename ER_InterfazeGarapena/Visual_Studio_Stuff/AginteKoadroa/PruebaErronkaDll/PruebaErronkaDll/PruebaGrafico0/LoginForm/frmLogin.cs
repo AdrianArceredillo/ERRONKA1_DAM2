@@ -59,7 +59,7 @@ namespace PruebaGrafico0.LoginForm
             }
 
             Thread.Sleep(2000);
-                        
+
             if (usuarioLogin.Equals(user_Usuario) && passwordLogin.Equals(user_Password))   //comprobación del login
             {
                 MessageBox.Show("Saio-hasiera zuzena. Ongi etorri! ", "Identifikazioa", MessageBoxButtons.OK);
@@ -87,15 +87,19 @@ namespace PruebaGrafico0.LoginForm
             }
         }
 
-        #region "DISEÑOS_Y_ESTÉTICA"
+        private void btnIrten_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
+
+        #region "DISEÑOS_Y_ESTÉTICA"
         private void PaintBorderlessGroupBox(object sender, PaintEventArgs p)
         {
             GroupBox box = (GroupBox)sender;
             box.BackColor = Color.Transparent;
             p.Graphics.Clear(SystemColors.ControlLightLight);
             //p.Graphics.DrawString(box.Text, box.Font, Brushes.Black, 0, 0);
-            
         }
 
         #endregion
