@@ -37,7 +37,7 @@ public class ProduktuBatInportatu {
             barraKodea = in.next();
             System.out.print("Lehentasuna (B/E): ");
             erantzuna = in.next();
-            if(erantzuna.equals("B") || erantzuna.equals("b")){
+            if(erantzuna.equals("B") || erantzuna.equals("b") || erantzuna.equals("1")){
                 lehentasuna = 1;
             } else{
                 lehentasuna = 0;
@@ -58,7 +58,7 @@ public class ProduktuBatInportatu {
             System.out.println("\nProduktu hau nahi duzu gehitu? B/E");
             erantzuna = in.next();
             in.nextLine();
-            if(erantzuna.equals("B") || erantzuna.equals("b")){
+            if(erantzuna.equals("B") || erantzuna.equals("b") || erantzuna.equals("1")){
                 ondo = true;
             }
         } while (!ondo);

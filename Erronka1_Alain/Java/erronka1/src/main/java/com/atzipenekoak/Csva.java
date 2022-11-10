@@ -11,7 +11,6 @@ import java.io.PrintWriter;
 import com.pojoak.Produktua;
 import com.pojoak.Produktuak;
 
-
 public class Csva {
 
     public Produktuak produktuak;
@@ -19,7 +18,7 @@ public class Csva {
     public String strFileOut;
 
     int produktuKopurua = 0;
-    
+
     public Csva(String strFileIn) {
         this.strFileIn = strFileIn;
     }
@@ -43,7 +42,7 @@ public class Csva {
                     produktua.setId(Integer.parseInt(eremuak[0]));
                     produktua.setIzena(eremuak[1]);
                     produktua.setStocka(Integer.parseInt(eremuak[2]));
-                    produktua.setPrezioa(Float.parseFloat(eremuak[3])); //€ Simboloa ezabatu
+                    produktua.setPrezioa(Float.parseFloat(eremuak[3]));
                     produktuak.add(produktua);
                 }
             }
@@ -51,26 +50,26 @@ public class Csva {
             System.out.println("Ez da " + strFileIn + " fitxategia aurkitu.");
         } catch (IOException e) {
             System.out.println("IOsalbuespena gertatu da.");
-        } catch(Exception e){
+        } catch (Exception e) {
             System.out.println("Errorea: " + e);
         }
         return produktuak;
     }
-    
 
     public void idatzi() {
         try (PrintWriter outputStream = new PrintWriter(new FileWriter(this.strFileOut))) {
             for (Produktua p : this.produktuak.getProduktuak()) {
-                if (produktuKopurua==0){
-                    outputStream.println("ID;IZENA;STOCKA;PREZIOA");
+                if (produktuKopurua == 0) {
+                    outputStream
+                            .println("ID;IZENA;DESKRIPZIOA;PREZIOA;KANTITATEA;BOLUMENA;PISUA;BARRAKODEA;LEHENTASUNA");
                 }
                 produktuKopurua++;
-                // "Produktua["+ id+", "+izena+", "+stocka+", "+prezioa+"]";
-                outputStream.println(p.getId()+";"+p.getIzena()+";"+p.getStocka()+";"+p.getPrezioa()+"€");
+                outputStream.println(p.getId() + ";" + p.getIzena() + ";" + p.getDeskripzioa() + ";"
+                        + p.getPrezioa() + ";" + p.getStocka() + ";" + p.getBolumena() + ";"
+                        + p.getPisua() + ";" + p.getBarraKodea() + ";" + p.getLehentasuna());
             }
         } catch (IOException e) {
             System.out.println(this.strFileOut + " fitxategiarekin arazoren bat egon da.");
         }
     }
 }
-
