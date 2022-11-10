@@ -18,10 +18,6 @@ public class ProduktuaEzabatu {
     }
 
 
-
-
-
-
     private static void produktuaEzabatu() {
         int id;
         System.out.print("Idatzi produktu baten ID-a ezabatzeko: ");

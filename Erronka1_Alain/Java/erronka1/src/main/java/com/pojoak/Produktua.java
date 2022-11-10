@@ -13,10 +13,9 @@ import jakarta.xml.bind.annotation.XmlType;
 public class Produktua {
 
     int id = 0;
-    String izena;
-    int stocka;
-    float prezioa;
-
+    String izena, deskripzioa, barraKodea;
+    float stocka, prezioa, bolumena, pisua;
+    int lehentasuna;
 
     @XmlElement(name = "Id")
     public int getId(){
@@ -26,7 +25,6 @@ public class Produktua {
         this.id = id;
     }
 
-
     @XmlElement(name = "Izena")
     public String getIzena() {
         return izena;
@@ -35,11 +33,27 @@ public class Produktua {
         this.izena = izena;
     }
 
+    @XmlElement(name = "Deskripzioa")
+    public String getDeskripzioa() {
+        return deskripzioa;
+    }
+    public void setDeskripzioa(String deskripzioa) {
+        this.deskripzioa = deskripzioa;
+    }
+
+    @XmlElement(name = "Barra_Kodea")
+    public String getBarraKodea() {
+        return barraKodea;
+    }
+    public void setBarraKodea(String barraKodea) {
+        this.barraKodea = barraKodea;
+    }
+
     @XmlElement(name = "Stocka")
-    public int getStocka() {
+    public float getStocka() {
         return stocka;
-    }    
-    public void setStocka(int stocka) {
+    }
+    public void setStocka(float stocka) {
         this.stocka = stocka;
     }
 
@@ -50,6 +64,31 @@ public class Produktua {
     public void setPrezioa(float prezioa) {
         this.prezioa = prezioa;
     }
+
+    @XmlElement(name = "Bolumena")
+    public float getBolumena() {
+        return bolumena;
+    }    
+    public void setBolumena(float bolumena) {
+        this.bolumena = bolumena;
+    }
+
+    @XmlElement(name = "Pisua")
+    public float getPisua() {
+        return prezioa;
+    }    
+    public void setPisua(float pisua) {
+        this.pisua = pisua;
+    }
+
+    @XmlElement(name = "Lehentasuna")
+    public float getLehentasuna() {
+        return lehentasuna;
+    }    
+    public void setLehentasuna(int lehentasuna) {
+        this.lehentasuna = lehentasuna;
+    }
+
 
 
     @Override

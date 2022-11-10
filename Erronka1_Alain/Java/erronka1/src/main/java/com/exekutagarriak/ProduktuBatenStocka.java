@@ -6,27 +6,25 @@ import java.text.SimpleDateFormat;
 
 import com.konexioa.Konexioa;
 
-public class probak {
+public class ProduktuBatenStocka {
     public static Konexioa konexioa = new Konexioa();
     public static Statement st;
 
-    public static void main(String[] args) {
+    public static void produktuaGehitu(String izena, String deskripzioa, String barraKodea, Float prezioa,
+            Float bolumena, Float pisua, Float kantitatea, int lehentasuna) {
         garbitu();
         int idPT = idLortuPT() + 1;
         int idPP = idLortuPP() + 1;
         int idSQ = idLortuSQ() + 1;
-        String izena = "PROBA_05";
-        String deskripzioa = "Deskripzioa";
-        float prezioa = 0;
         String timeStamp;
-        int kantitatea = 69;
         timeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new java.util.Date());
 
         String sqlPT = "INSERT INTO public.product_template VALUES"; // sqlPT -> SQL agiandua Product_Template
                                                                      // taularentzako
         sqlPT += " ( " + idPT + ", NULL,'" + izena + "',1,'<p>" + deskripzioa
                 + "</p>',NULL,NULL,'product','product',1,"
-                + prezioa + ",10,10,true,true,1,1,NULL,true,NULL,NULL,false,false,0,2,'" + timeStamp
+                + prezioa + "," + bolumena + "," + pisua + ",true,true,1,1,NULL,true,NULL,NULL,false,false,"+lehentasuna+",2,'"
+                + timeStamp
                 + "',2,'"
                 + timeStamp
                 + "',0,'none',NULL,NULL,NULL,'receive','no-message',NULL,'manual','no-message',NULL,'no','order',false)";
@@ -34,10 +32,10 @@ public class probak {
 
         String sqlPP = "INSERT INTO public.product_product VALUES"; // sqlPP -> SQL agindua Product_Product
                                                                     // taularentzako
-        sqlPP += "(" + idPP + ", null, null, true, " + idPT + ", null, '', null, null, false, 2, '" + timeStamp
+        sqlPP += "(" + idPP + ", null, null, true, " + idPT + ", '" + barraKodea + "', '', null, null, false, 2, '"
+                + timeStamp
                 + "', 2, '" + timeStamp + "')";
         exekuzioa(sqlPP, "PP");
-
 
         String sqlSQ = "INSERT INTO public.stock_quant VALUES"; // sqlSQ -> SQL agindua Stock_Quant taularentzako
         sqlSQ += "(" + idSQ + "      , " + idPP + ", 1,  8, null, null, null, " + kantitatea + "       , 0, '"
@@ -46,7 +44,7 @@ public class probak {
                 + "', null)";
         exekuzioa(sqlSQ, "SQ");
 
-        sqlSQ = "INSERT INTO public.stock_quant VALUES"; // Bigarren agindua taula berdinarentzako, zeren taula honeta,
+        sqlSQ = "INSERT INTO public.stock_quant VALUES"; // Bigarren agindua taula berdinarentzako, zeren taula honetan,
                                                          // produktu bakoitzeko 2 ilara idazten dira
         sqlSQ += "(" + (idSQ + 1) + ", " + idPP + ", 1, 14, null, null, null, " + (kantitatea * -1) + ", 0, '"
                 + timeStamp
