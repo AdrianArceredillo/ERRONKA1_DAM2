@@ -117,11 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Bezero jakin bat aukeratu eta gure enpresan utzi dituen estatistika batzuk ikusi.
+
+   1. Guztira zenbat diru gastatu duen
+   2. Zehaztutako bezeroaren erosketa-historia (produktuen arabera taldekatua)</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAy0AAAHkCAYAAAAzaMBTAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAuN1JREFUeF7t/Ye7bU9VJQzvf+n73q/j2zmHt9/u1g62OZPEgIgJBEUxt5JMCJgQ
+        DAAACwwBP0AiyAAAuN1JREFUeF7t/Ye7bU9VJQzvf+n73q/j2zmHt9/u1g62OZPEgIgJBEUxt5JMCJgQ
         UCSjApIEWgmiRAElo/DL8d5f5nw1q2rUGjXXrLXW3mefe885d4znGU/NGnPMWbXW3vecWvfsc+/u7/5/
         v3Bi/Dv/n0LETUM+8CDf4krvb0zaMJeIvjZyzB4m55Zqo3GU8zHmWcM48MziQOtypDG5hufQlvLQ2+j8
         PDIjjXUbRx6+DosjL+bwZL362I8R9Dp7ozmTa7Jmo/N6j42eLT/SaQRZX/TWPOdCXzBvWqCDvlc0Io7y

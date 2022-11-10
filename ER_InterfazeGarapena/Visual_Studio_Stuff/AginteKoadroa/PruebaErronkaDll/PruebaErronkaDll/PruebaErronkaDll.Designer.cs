@@ -57,7 +57,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.PruebaErro.Series.Add(series1);
-            this.PruebaErro.Size = new System.Drawing.Size(474, 239);
+            this.PruebaErro.Size = new System.Drawing.Size(421, 186);
             this.PruebaErro.TabIndex = 0;
             this.PruebaErro.Text = "chart1";
             title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -72,7 +72,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.PruebaErro);
             this.Name = "PruebaErronkaDll";
-            this.Size = new System.Drawing.Size(509, 267);
+            this.Size = new System.Drawing.Size(435, 208);
             this.Load += new System.EventHandler(this.UserControl1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PruebaErro)).EndInit();
             this.ResumeLayout(false);

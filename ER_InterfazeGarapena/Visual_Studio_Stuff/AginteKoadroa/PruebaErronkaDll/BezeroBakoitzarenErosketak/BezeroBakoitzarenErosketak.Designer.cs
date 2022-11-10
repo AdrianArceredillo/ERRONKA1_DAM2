@@ -32,46 +32,45 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.bezeroBakoitzarenGastuak = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            ((System.ComponentModel.ISupportInitialize)(this.bezeroBakoitzarenGastuak)).BeginInit();
             this.SuspendLayout();
             // 
-            // chart1
+            // bezeroBakoitzarenGastuak
             // 
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            this.bezeroBakoitzarenGastuak.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(3, 3);
-            this.chart1.Name = "chart1";
+            this.bezeroBakoitzarenGastuak.Legends.Add(legend1);
+            this.bezeroBakoitzarenGastuak.Location = new System.Drawing.Point(3, 3);
+            this.bezeroBakoitzarenGastuak.Name = "bezeroBakoitzarenGastuak";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
             series1.IsValueShownAsLabel = true;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             series1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(376, 187);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
+            this.bezeroBakoitzarenGastuak.Series.Add(series1);
+            this.bezeroBakoitzarenGastuak.Size = new System.Drawing.Size(322, 168);
+            this.bezeroBakoitzarenGastuak.TabIndex = 0;
+            this.bezeroBakoitzarenGastuak.Text = "chart1";
             title1.Name = "Title1";
-            title1.Text = "Erosketen Historia";
-            this.chart1.Titles.Add(title1);
+            this.bezeroBakoitzarenGastuak.Titles.Add(title1);
             // 
             // BezeroBakoitzarenErosketak
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.bezeroBakoitzarenGastuak);
             this.Name = "BezeroBakoitzarenErosketak";
-            this.Size = new System.Drawing.Size(393, 203);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.Size = new System.Drawing.Size(331, 178);
+            ((System.ComponentModel.ISupportInitialize)(this.bezeroBakoitzarenGastuak)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart bezeroBakoitzarenGastuak;
     }
 }

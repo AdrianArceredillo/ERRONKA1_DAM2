@@ -44,7 +44,7 @@
             legend1.Enabled = false;
             legend1.Name = "Legend1";
             this.salmentakDenboraTarteanChart.Legends.Add(legend1);
-            this.salmentakDenboraTarteanChart.Location = new System.Drawing.Point(0, 3);
+            this.salmentakDenboraTarteanChart.Location = new System.Drawing.Point(3, 3);
             this.salmentakDenboraTarteanChart.Name = "salmentakDenboraTarteanChart";
             series1.ChartArea = "ChartArea1";
             series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -52,7 +52,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.salmentakDenboraTarteanChart.Series.Add(series1);
-            this.salmentakDenboraTarteanChart.Size = new System.Drawing.Size(300, 300);
+            this.salmentakDenboraTarteanChart.Size = new System.Drawing.Size(253, 278);
             this.salmentakDenboraTarteanChart.TabIndex = 0;
             this.salmentakDenboraTarteanChart.Text = "chart1";
             // 
@@ -62,7 +62,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.salmentakDenboraTarteanChart);
             this.Name = "SalmentakDenboraTarteanDll";
-            this.Size = new System.Drawing.Size(324, 325);
+            this.Size = new System.Drawing.Size(263, 287);
             ((System.ComponentModel.ISupportInitialize)(this.salmentakDenboraTarteanChart)).EndInit();
             this.ResumeLayout(false);
 

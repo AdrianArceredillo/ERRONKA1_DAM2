@@ -55,11 +55,10 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(569, 212);
+            this.chart1.Size = new System.Drawing.Size(457, 162);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             title1.Name = "Title1";
-            title1.Text = "Bezeroen Gastuak";
             this.chart1.Titles.Add(title1);
             // 
             // bezeroenGastuakChart
@@ -68,7 +67,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.chart1);
             this.Name = "bezeroenGastuakChart";
-            this.Size = new System.Drawing.Size(591, 233);
+            this.Size = new System.Drawing.Size(470, 173);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
