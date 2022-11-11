@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 
 public class Database {
 
-    private Connection connection = null;
+    public Connection connection = null;
 
     // For Amazon Postgresql
     // private final String host = "ssprojectinstance.csv2nbvvgbcb.us-east-2.rds.amazonaws.com"
@@ -24,38 +24,32 @@ public class Database {
     //private String url = "jdbc:postgresql://%s:%d/%s";
     //private boolean status;
 
-    private final String host = "10.0.2.2";
-    private final String database = "Ariketa_1";
-    private final int port = 5432;
-    private final String user = "openpg";
-    private final String pass = "openpgpwd";
-    private String url = "jdbc:postgresql://%s:%d/%s";
+    public final String host = "10.0.2.2";
+    public final String database = "Ariketa_1";
+    public final int port = 5432;
+    public final String user = "openpg";
+    public final String pass = "openpgpwd";
+    public String url = "jdbc:postgresql://%s:%d/%s";
     private boolean status;
 
-    public Database()
-    {
+    public Database() {
         this.url = String.format(this.url, this.host, this.port, this.database);
         connect();
         //this.disconnect();
         System.out.println("connection status:" + status);
     }
 
-    private void connect()
-    {
+    private void connect() {
         Thread thread = new Thread(new Runnable() {
             @Override
-            public void run()
-            {
-                try
-                {
+            public void run() {
+                try {
                     Class.forName("org.postgresql.Driver");
                     connection = DriverManager.getConnection(url, user, pass);
                     //connection = DriverManager.getConnection(url);
                     status = true;
                     System.out.println("connected:\n" + status);
-                }
-                catch (Exception e)
-                {
+                } catch (Exception e) {
                     status = false;
                     System.out.print(e.getMessage());
                     e.printStackTrace();
@@ -63,27 +57,20 @@ public class Database {
             }
         });
         thread.start();
-        try
-        {
+        try {
             thread.join();
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
             this.status = false;
         }
     }
 
-    public Connection getExtraConnection()
-    {
+    public Connection getExtraConnection() {
         Connection c = null;
-        try
-        {
+        try {
             Class.forName("org.postgresql.Driver");
             c = DriverManager.getConnection(url, user, pass);
-        }
-        catch(Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -91,20 +78,23 @@ public class Database {
     }
 
 
+    public String getUrl() {
+        return url;
+    }
 
+    public String getUser() {
+        return user;
+    }
 
-
-
-
-
+    public String getPass() {
+        return pass;
+    }
 
 
     //INFO INTERNET
     //Conexión a PostgreSQL desde Android Studio - https://medium.com/cyber-explorer/how-to-connect-an-android-project-to-a-postgresql-database-663cb0f5ba19
     //Conexión a PostgreSQL desde Android Studio 2 - https://www.cloudclusters.io/docs/postgresql/Connecting%20to%20PostgreSQL%20Database%20via%20Different%20Languages1605494263.html
     //Conectarse a PostgreSQL - https://www.youtube.com/watch?v=THd1kOw24HY
-
-
 
 
 }
