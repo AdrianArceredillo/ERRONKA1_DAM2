@@ -60,7 +60,6 @@
             this.l = new System.Windows.Forms.Label();
             this.userControl12 = new Grafikoa3.UserControl1();
             this.userControl11 = new Grafikoa1.UserControl1();
-            this.grafikoa11 = new Grafikoa2.Grafikoa1();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -397,14 +396,6 @@
             this.userControl11.Size = new System.Drawing.Size(311, 293);
             this.userControl11.TabIndex = 10;
             // 
-            // grafikoa11
-            // 
-            this.grafikoa11.BackColor = System.Drawing.Color.Transparent;
-            this.grafikoa11.Location = new System.Drawing.Point(567, 410);
-            this.grafikoa11.Name = "grafikoa11";
-            this.grafikoa11.Size = new System.Drawing.Size(295, 293);
-            this.grafikoa11.TabIndex = 7;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,7 +408,6 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.userControl11);
             this.Controls.Add(this.userControl12);
-            this.Controls.Add(this.grafikoa11);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -478,7 +468,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label m;
         private System.Windows.Forms.Label l;
-        private Grafikoa2.Grafikoa1 grafikoa11;
     }
 }
 

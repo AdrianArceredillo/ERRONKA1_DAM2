@@ -135,17 +135,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Grafikoa1\Grafikoa1.csproj">
+    <ProjectReference Include="..\Grafikoa1\GrafikoaProductuenStock.csproj">
       <Project>{88DD57ED-796D-4839-AF42-024227BAF8D7}</Project>
-      <Name>Grafikoa1</Name>
+      <Name>GrafikoaProductuenStock</Name>
     </ProjectReference>
     <ProjectReference Include="..\Grafikoa2\Grafikoa2.csproj">
       <Project>{1254EBC6-CA3A-4283-993C-805E8D6A9E2E}</Project>
       <Name>Grafikoa2</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Grafikoa3\Grafikoa3.csproj">
+    <ProjectReference Include="..\Grafikoa3\GrafikoaProduktuenPrezioak.csproj">
       <Project>{F5BB85F2-6F5D-4EC4-91D9-E785A4B7B714}</Project>
-      <Name>Grafikoa3</Name>
+      <Name>GrafikoaProduktuenPrezioak</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

@@ -5,11 +5,11 @@ VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HJAA_Grafikoak_HaritzOtero", "HJAA_Grafikoak_HaritzOtero\HJAA_Grafikoak_HaritzOtero.csproj", "{617E3D42-0098-468A-A546-AC5A7D00D176}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grafikoa1", "Grafikoa1\Grafikoa1.csproj", "{88DD57ED-796D-4839-AF42-024227BAF8D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrafikoaProductuenStock", "Grafikoa1\GrafikoaProductuenStock.csproj", "{88DD57ED-796D-4839-AF42-024227BAF8D7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grafikoa2", "Grafikoa2\Grafikoa2.csproj", "{1254EBC6-CA3A-4283-993C-805E8D6A9E2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grafikoa3", "Grafikoa3\Grafikoa3.csproj", "{F5BB85F2-6F5D-4EC4-91D9-E785A4B7B714}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrafikoaProduktuenPrezioak", "Grafikoa3\GrafikoaProduktuenPrezioak.csproj", "{F5BB85F2-6F5D-4EC4-91D9-E785A4B7B714}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
