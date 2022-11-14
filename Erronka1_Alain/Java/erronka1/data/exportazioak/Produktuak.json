@@ -1,38 +1,68 @@
 [
     {
         "id": 1,
-        "izena": "Hamburguesa de quesoooooooo",
-        "stocka": 69,
-        "prezioa": 100.0
+        "izena": "Lehenengoa",
+        "deskripzioa": "<p><p>Produktuaren deskripzioa</p></p>",
+        "prezioa": 123.0,
+        "stocka": 13.0,
+        "bolumena": 0.12999999523162842,
+        "pisua": 123.0,
+        "barraKodea": "19239150013A",
+        "lehentasuna": "0"
     },
     {
         "id": 2,
-        "izena": "Prozesagailuaaaaaa",
-        "stocka": 4,
-        "prezioa": 250.0
+        "izena": "Bigarrena",
+        "deskripzioa": "<p><p>Produktuaren deskripzioa</p></p>",
+        "prezioa": 123.0,
+        "stocka": 13.0,
+        "bolumena": 0.12999999523162842,
+        "pisua": 123.0,
+        "barraKodea": "19239190013B",
+        "lehentasuna": "0"
     },
     {
         "id": 3,
-        "izena": "EEPROM Memoria",
-        "stocka": 50,
-        "prezioa": 26.0
+        "izena": "Hirugarrena",
+        "deskripzioa": "<p><p>Produktuaren deskripzioa</p></p>",
+        "prezioa": 123.0,
+        "stocka": 13.0,
+        "bolumena": 0.12999999523162842,
+        "pisua": 123.0,
+        "barraKodea": "1939900123C",
+        "lehentasuna": "0"
     },
     {
         "id": 4,
-        "izena": "Produktua 1",
-        "stocka": 20,
-        "prezioa": 11.0
+        "izena": "Laugarrena",
+        "deskripzioa": "<p><p>Produktuaren deskripzioa</p></p>",
+        "prezioa": 123.0,
+        "stocka": 13.0,
+        "bolumena": 0.12999999523162842,
+        "pisua": 123.0,
+        "barraKodea": "192399020123D",
+        "lehentasuna": "0"
     },
     {
         "id": 5,
-        "izena": "Produktua 2",
-        "stocka": 25,
-        "prezioa": 1.0
+        "izena": "Bostgarrena",
+        "deskripzioa": "<p><p>Produktuaren deskripzioa</p></p>",
+        "prezioa": 123.0,
+        "stocka": 13.0,
+        "bolumena": 0.12999999523162842,
+        "pisua": 123.0,
+        "barraKodea": "192349900123E",
+        "lehentasuna": "0"
     },
     {
         "id": 6,
-        "izena": "sdfkghskdjgfskjgdfg",
-        "stocka": 15,
-        "prezioa": 123.0
+        "izena": "Seigarrena",
+        "deskripzioa": "<p><p>Produktuaren deskripzioa</p></p>",
+        "prezioa": 123.0,
+        "stocka": 13.0,
+        "bolumena": 0.12999999523162842,
+        "pisua": 123.0,
+        "barraKodea": "192399060123F",
+        "lehentasuna": "0"
     }
 ]

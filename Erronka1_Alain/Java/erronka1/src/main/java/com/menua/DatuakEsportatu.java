@@ -1,9 +1,10 @@
-package com.exekutagarriak;
+package com.menua;
 
 import com.atzipenekoak.Csva;
 import com.atzipenekoak.Jsona;
 import com.atzipenekoak.Xmla;
 import com.pojoak.Produktuak;
+import com.postgress.ProduktuakJavaObjetura;
 
 public class DatuakEsportatu {
 
@@ -25,7 +26,7 @@ public class DatuakEsportatu {
             csva.idatzi();
             System.out.println("Datuak ondo esportatu dira");
         } catch (Exception e) {
-            System.out.println("Arazoren bat egon da datuak esportatzeko orduan");
+            System.out.println("Arazoren bat egon da datuak esportatzeko orduan. Begiratu taulak ez daudela hutsik");
         }
 
     }
@@ -38,7 +39,7 @@ public class DatuakEsportatu {
             xmla.idatzi();
             System.out.println("Datuak ondo esportatu dira");
         } catch (Exception e) {
-            System.out.println("Arazoren bat egon da datuak esportatzeko orduan");
+            System.out.println("Arazoren bat egon da datuak esportatzeko orduan. Begiratu taulak ez daudela hutsik");
         }
 
     }
@@ -51,7 +52,7 @@ public class DatuakEsportatu {
             jsona.idatzi();
             System.out.println("Datuak ondo esportatu dira");
         } catch (Exception e) {
-            System.out.println("Arazoren bat egon da datuak esportatzeko orduan");
+            System.out.println("Arazoren bat egon da datuak esportatzeko orduan. Begiratu taulak ez daudela hutsik");
         }
 
     }
@@ -68,7 +69,7 @@ public class DatuakEsportatu {
             jsona.idatzi();
             System.out.println("Datuak ondo esportatu dira");
         } catch (Exception e) {
-            System.out.println("Arazoren bat egon da datuak esportatzeko orduan");
+            System.out.println("Arazoren bat egon da datuak esportatzeko orduan. Begiratu taulak ez daudela hutsik");
         }
     }
 

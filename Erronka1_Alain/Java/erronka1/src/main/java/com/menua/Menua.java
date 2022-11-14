@@ -1,6 +1,9 @@
-package com.exekutagarriak;
+package com.menua;
 
 import java.util.Scanner;
+
+import com.postgress.GarbituTaulak;
+import com.postgress.ProduktuListaInportatu;
 
 public class Menua {
     public static Scanner in;
@@ -16,7 +19,8 @@ public class Menua {
             System.out.println("1.- Datuak irakurri");
             System.out.println("2.- Datuak esportatu");
             System.out.println("3.- Datuak inportatu (egiteko)");
-            System.out.println("4.- Irten");
+            System.out.println("4.- Produktu guztiak ezabatu");
+            System.out.println("5.- Irten");
             System.out.println();
             System.out.print("Aukeratu zenbaki bat: ");
             aukera = in.nextInt();
@@ -35,6 +39,10 @@ public class Menua {
                     break;
                 case 4:
                     garbitu();
+                    GarbituTaulak.garbitu();
+                    break;
+                case 5:
+                    garbitu();
                     System.out.println("Eskerrik asko programa hau erabiltzeagatik.");
                     System.out.println();
                     break;
@@ -42,7 +50,7 @@ public class Menua {
                     garbitu();
                     System.out.println("Aukera okerra. Saiatu berriz.");
             }
-        } while (aukera != 4);
+        } while (aukera != 5);
     }
 
     private static void datuakIrakurri() {
@@ -134,7 +142,7 @@ public class Menua {
             }
         } while (aukera != 5);
     }
-    
+
     private static void datuakInportatu() {
         int aukera;
         do {
@@ -147,7 +155,7 @@ public class Menua {
             switch (aukera) {
                 case 1:
                     garbitu();
-                    ProduktuenListaImportatu.datuakInportatu();
+                    ProduktuListaInportatu.listaInportatu();
                     break;
                 case 2:
                     garbitu();
@@ -161,7 +169,6 @@ public class Menua {
             }
         } while (aukera != 3);
     }
-    
 
     private static void garbitu() {
         System.out.print("\033[H\033[2J");

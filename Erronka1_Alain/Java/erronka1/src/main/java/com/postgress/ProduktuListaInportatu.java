@@ -1,4 +1,4 @@
-package com.exekutagarriak;
+package com.postgress;
 
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -8,6 +8,8 @@ import com.atzipenekoak.Csva;
 import com.atzipenekoak.Jsona;
 import com.atzipenekoak.Xmla;
 import com.konexioa.Konexioa;
+import com.menua.ProduktuBatenStocka;
+import com.pojoak.Produktua;
 import com.pojoak.Produktuak;
 
 public class ProduktuListaInportatu {
@@ -16,9 +18,10 @@ public class ProduktuListaInportatu {
     public static Konexioa konexioa = new Konexioa();
     public static Statement st;
 
-    public static void main(String[] args) {
+    public static void listaInportatu() {
         Produktuak produktuak = new Produktuak();
         in = new Scanner(System.in);
+        System.out.print("Fitxategiaren izena (.csv, .xml edo .json formatukoa): ");
         String fitxategia = in.nextLine();
         produktuak = produktuenListaObjetura(fitxategia);
         int kontagailua = 0;
@@ -27,31 +30,31 @@ public class ProduktuListaInportatu {
         int idPT = idLortuPT() + 1;
         int idPP = idLortuPP() + 1;
         int idSQ = idLortuSQ() + 1;
-        try { //Ez du usten for (Produktua p : produktuak) egiten, orduan for each-a while true batekin dago eginda errore bat eman arte
-            while (true) {
-                izena = produktuak.getProduktuak().get(kontagailua).getIzena();
-                deskripzioa = produktuak.getProduktuak().get(kontagailua).getDeskripzioa();
-                barraKodea = produktuak.getProduktuak().get(kontagailua).getBarraKodea();
-                prezioa = produktuak.getProduktuak().get(kontagailua).getPrezioa();
-                bolumena = produktuak.getProduktuak().get(kontagailua).getBolumena();
-                pisua = produktuak.getProduktuak().get(kontagailua).getPisua();
-                kantitatea = produktuak.getProduktuak().get(kontagailua).getStocka();
-                lehentasuna = produktuak.getProduktuak().get(kontagailua).getLehentasuna();
-                idAk = ProduktuBatenStocka.produktuaGehitu(idPT, idPP, idSQ, izena, deskripzioa, barraKodea, prezioa, bolumena, pisua,
-                        kantitatea, lehentasuna);
+
+        for (Produktua p : produktuak.getProduktuak()) {
+                izena = p.getIzena();
+                deskripzioa = p.getDeskripzioa();
+                barraKodea = p.getBarraKodea();
+                prezioa = p.getPrezioa();
+                bolumena = p.getBolumena();
+                pisua = p.getPisua();
+                kantitatea = p.getStocka();
+                lehentasuna = p.getLehentasuna();
+                idAk = ProduktuBatenStocka.produktuaGehitu(idPT, idPP, idSQ, izena, deskripzioa, barraKodea, prezioa,
+                        bolumena, pisua, kantitatea, lehentasuna);
+                kontagailua++;
                 String[] idArray = idAk.split(";");
-                idPT = Integer.parseInt(idArray[0]);
-                idPP = Integer.parseInt(idArray[1]);
-                idSQ = Integer.parseInt(idArray[2]);
-            }
-        } catch (Exception e) {
-            System.out.println("Amaitu da?" + kontagailua + "produktu gehitu dira");
+                idPT = Integer.parseInt(idArray[0])  + 1;
+                idPP = Integer.parseInt(idArray[1])  + 1;
+                idSQ = Integer.parseInt(idArray[2])  + 2;
         }
+        System.out.println((kontagailua + 1) + " produktu gehitu dira");
 
     }
 
     public static Produktuak produktuenListaObjetura(String FileIn) {
         Produktuak produktuak = new Produktuak();
+        produktuak = null;
         if (FileIn.contains(".csv")) {
             Csva csva = new Csva("data/importazioak/" + FileIn);
             return produktuak = csva.irakurri();
@@ -66,7 +69,7 @@ public class ProduktuListaInportatu {
         } else {
             System.out.println("Sartutako fitxategiaren formatua ez da zuzena .csv, .xml edo .json izan behar da");
         }
-        return produktuak = null;
+        return produktuak;
     }
 
     public static int idLortuPT() {

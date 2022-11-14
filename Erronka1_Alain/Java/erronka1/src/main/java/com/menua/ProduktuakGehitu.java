@@ -1,4 +1,4 @@
-package com.exekutagarriak;
+package com.menua;
 
 import java.sql.Statement;
 import java.text.SimpleDateFormat;

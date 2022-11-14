@@ -40,12 +40,17 @@ public class Jsona {
             JsonArray jsonarray = jsonst.asJsonArray();
             produktuak = new Produktuak();
             for (int i = 0; i < jsonarray.size(); i++) {
+                //ID;IZENA;DESKRIPZIOA;PREZIOA;KANTITATEA;BOLUMENA;PISUA;BARRAKODEA;LEHENTASUNA
                 JsonObject jsonobj = jsonarray.getJsonObject(i);
                 Produktua produktua = new Produktua();
                 produktua.setId(jsonobj.getInt("id"));
                 produktua.setIzena(jsonobj.getString("izena"));
+                produktua.setDeskripzioa(jsonobj.getString("deskripzioa"));
                 produktua.setStocka(jsonobj.getInt("stocka"));
-                produktua.setPrezioa(jsonobj.getInt("prezioa"));
+                produktua.setStocka(jsonobj.getInt("bolumena"));
+                produktua.setPrezioa(jsonobj.getInt("pisua"));
+                produktua.setIzena(jsonobj.getString("barraKodea"));
+                produktua.setIzena(jsonobj.getString("lehentasuna"));
                 produktuak.add(produktua);
             }
             
@@ -60,13 +65,18 @@ public class Jsona {
         //int produktuKopurua = 0;
         JsonArray model = null;
         JsonArrayBuilder jab = Json.createArrayBuilder();
-        for (Produktua p : this.produktuak.getProduktuak()) {
+        for (Produktua p : this.produktuak.getProduktuak()) { //!!!
             jab.add(Json.createObjectBuilder()
-            // "Produktua["+ id+", "+izena+", "+stocka+", "+prezioa+"]";
+                //ID;IZENA;DESKRIPZIOA;PREZIOA;KANTITATEA;BOLUMENA;PISUA;BARRAKODEA;LEHENTASUNA
                     .add("id", p.getId())
                     .add("izena", p.getIzena())
-                    .add("stocka", p.getStocka())
+                    .add("deskripzioa", p.getDeskripzioa())
                     .add("prezioa", p.getPrezioa())
+                    .add("stocka", p.getStocka())
+                    .add("bolumena", p.getBolumena())
+                    .add("pisua", p.getPisua())
+                    .add("barraKodea", p.getBarraKodea())
+                    .add("lehentasuna", p.getLehentasuna())
                     .build());
             //produktuKopurua++;
         }

@@ -2,38 +2,68 @@
 <Produktuak>
     <Produktua>
         <Id>1</Id>
-        <Izena>Hamburguesa de quesoooooooo</Izena>
-        <Stocka>69</Stocka>
-        <Prezioa>100.0</Prezioa>
+        <Izena>Lehenengoa</Izena>
+        <Deskripzioa>&lt;p&gt;&lt;p&gt;Produktuaren deskripzioa&lt;/p&gt;&lt;/p&gt;</Deskripzioa>
+        <Prezioa>123.0</Prezioa>
+        <Stocka>13.0</Stocka>
+        <Bolumena>0.13</Bolumena>
+        <Pisua>123.0</Pisua>
+        <Barra_Kodea>19239150013A</Barra_Kodea>
+        <Lehentasuna>0</Lehentasuna>
     </Produktua>
     <Produktua>
         <Id>2</Id>
-        <Izena>Prozesagailuaaaaaa</Izena>
-        <Stocka>4</Stocka>
-        <Prezioa>250.0</Prezioa>
+        <Izena>Bigarrena</Izena>
+        <Deskripzioa>&lt;p&gt;&lt;p&gt;Produktuaren deskripzioa&lt;/p&gt;&lt;/p&gt;</Deskripzioa>
+        <Prezioa>123.0</Prezioa>
+        <Stocka>13.0</Stocka>
+        <Bolumena>0.13</Bolumena>
+        <Pisua>123.0</Pisua>
+        <Barra_Kodea>19239190013B</Barra_Kodea>
+        <Lehentasuna>0</Lehentasuna>
     </Produktua>
     <Produktua>
         <Id>3</Id>
-        <Izena>EEPROM Memoria</Izena>
-        <Stocka>50</Stocka>
-        <Prezioa>26.0</Prezioa>
+        <Izena>Hirugarrena</Izena>
+        <Deskripzioa>&lt;p&gt;&lt;p&gt;Produktuaren deskripzioa&lt;/p&gt;&lt;/p&gt;</Deskripzioa>
+        <Prezioa>123.0</Prezioa>
+        <Stocka>13.0</Stocka>
+        <Bolumena>0.13</Bolumena>
+        <Pisua>123.0</Pisua>
+        <Barra_Kodea>1939900123C</Barra_Kodea>
+        <Lehentasuna>0</Lehentasuna>
     </Produktua>
     <Produktua>
         <Id>4</Id>
-        <Izena>Produktua 1</Izena>
-        <Stocka>20</Stocka>
-        <Prezioa>11.0</Prezioa>
+        <Izena>Laugarrena</Izena>
+        <Deskripzioa>&lt;p&gt;&lt;p&gt;Produktuaren deskripzioa&lt;/p&gt;&lt;/p&gt;</Deskripzioa>
+        <Prezioa>123.0</Prezioa>
+        <Stocka>13.0</Stocka>
+        <Bolumena>0.13</Bolumena>
+        <Pisua>123.0</Pisua>
+        <Barra_Kodea>192399020123D</Barra_Kodea>
+        <Lehentasuna>0</Lehentasuna>
     </Produktua>
     <Produktua>
         <Id>5</Id>
-        <Izena>Produktua 2</Izena>
-        <Stocka>25</Stocka>
-        <Prezioa>1.0</Prezioa>
+        <Izena>Bostgarrena</Izena>
+        <Deskripzioa>&lt;p&gt;&lt;p&gt;Produktuaren deskripzioa&lt;/p&gt;&lt;/p&gt;</Deskripzioa>
+        <Prezioa>123.0</Prezioa>
+        <Stocka>13.0</Stocka>
+        <Bolumena>0.13</Bolumena>
+        <Pisua>123.0</Pisua>
+        <Barra_Kodea>192349900123E</Barra_Kodea>
+        <Lehentasuna>0</Lehentasuna>
     </Produktua>
     <Produktua>
         <Id>6</Id>
-        <Izena>sdfkghskdjgfskjgdfg</Izena>
-        <Stocka>15</Stocka>
+        <Izena>Seigarrena</Izena>
+        <Deskripzioa>&lt;p&gt;&lt;p&gt;Produktuaren deskripzioa&lt;/p&gt;&lt;/p&gt;</Deskripzioa>
         <Prezioa>123.0</Prezioa>
+        <Stocka>13.0</Stocka>
+        <Bolumena>0.13</Bolumena>
+        <Pisua>123.0</Pisua>
+        <Barra_Kodea>192399060123F</Barra_Kodea>
+        <Lehentasuna>0</Lehentasuna>
     </Produktua>
 </Produktuak>

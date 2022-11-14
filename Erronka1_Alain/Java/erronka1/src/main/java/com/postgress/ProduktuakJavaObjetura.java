@@ -1,4 +1,4 @@
-package com.exekutagarriak;
+package com.postgress;
 
 import java.sql.Statement;
 import java.sql.ResultSet;
@@ -86,7 +86,6 @@ public class ProduktuakJavaObjetura {
                 }
             }
             aurkitua = false;
-
         }
         // Produktuak Arraylist-a prestatu ondoren, nahi dugun formatura ahal dugu
         // esportatu

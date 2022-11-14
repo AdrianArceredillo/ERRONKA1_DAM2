@@ -1,4 +1,4 @@
-package com.exekutagarriak;
+package com.miszelanea;
 
 import java.sql.ResultSet;
 import java.sql.Statement;

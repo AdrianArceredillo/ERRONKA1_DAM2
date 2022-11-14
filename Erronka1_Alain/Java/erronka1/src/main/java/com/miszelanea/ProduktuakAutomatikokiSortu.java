@@ -1,4 +1,4 @@
-package com.exekutagarriak;
+package com.miszelanea;
 
 import java.io.FileWriter;
 import java.io.IOException;
