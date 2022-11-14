@@ -23,4 +23,14 @@
     <string name="lblProductoSeleccionado">Ikusi:</string>
     <string name="btnVerSeleccionado">Ikusi:</string>
 
+    <!-- Actividad listado de ventas -->
+    <string name="lblElegirCliente">Aukeratu bezero bat:</string>
+
+
+    <!-- Actividad: menú para elegir la información que el usuario desea ver -->
+    <string name="btnVerVentas">Salmentak</string>
+    <string name="btnVerCatalogo">Katalogoa</string>
+
+
+
 </resources>

@@ -2,7 +2,6 @@ package com.example.pruebas_erronka1;
 
 
 import java.time.LocalDateTime;
-import java.util.TimeZone;
 
 public class Salmenta {
 
@@ -18,23 +17,42 @@ public class Salmenta {
      *   - El producto 2 también pertenece a la venta 1
      * */
 
-    int id;
-    int order_id;
-    String izena;               //name
-
-    float aleko_Prezioa;        //price_unit
-    float guztirako_Prezioa;    //price_total
-    int produktua_Id;           //product_id
-    int kantitatea;             //product_uom_qty
-    int company_id;             //company_id
-    int bezeroa_Id;             //order_partner_id
-    LocalDateTime data;         //create_date
-
-
-    // LocalDateTime ldt = myResultSet.getObject( … , LocalDateTime.class ) ;
+    int id;                     //id
+    String name;                //name
+    float price_unit;           //price_unit
+    float price_subtotal;       //price_subtotal
+    float price_total;          //price_total
+    int product_id;             //product_id
+    int product_uom_qty;        //product_uom_qty
+    int order_partner_id;       //order_partner_id
+    String data;                //create_date
+    String descripcion_Cliente; //order_partner_id + name(res_partner)
 
 
-    //id
+
+    public Salmenta() {
+    }
+
+    public Salmenta(int id, String name, String data) {
+        this.id = id;
+        this.name = name;
+        this.data = data;
+    }
+
+    public Salmenta(int id, String name, float price_unit, float price_subtotal, float price_total,
+                    int product_id, int product_uom_qty, int order_partner_id, String data, String descripcion_Cliente) {
+        this.id = id;
+        this.name = name;
+        this.price_unit = price_unit;
+        this.price_subtotal = price_subtotal;
+        this.price_total = price_total;
+        this.product_id = product_id;
+        this.product_uom_qty = product_uom_qty;
+        this.order_partner_id = order_partner_id;
+        this.data = data;
+        this.descripcion_Cliente = descripcion_Cliente;
+    }
+
     public int getId() {
         return id;
     }
@@ -43,91 +61,82 @@ public class Salmenta {
         this.id = id;
     }
 
-    //order_id
-    public int getOrder_id() {
-        return order_id;
+    public String getName() {
+        return name;
     }
 
-    public void setOrder_id(int order_id) {
-        this.order_id = order_id;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    //zena
-    public String getIzena() {
-        return izena;
+    public float getPrice_unit() {
+        return price_unit;
     }
 
-    public void setIzena(String izena) {
-        this.izena = izena;
+    public void setPrice_unit(float price_unit) {
+        this.price_unit = price_unit;
     }
 
-    //aleko_Prezioa
-    public float getAleko_Prezioa() {
-        return aleko_Prezioa;
+    public float getPrice_subtotal() {
+        return price_subtotal;
     }
 
-    public void setAleko_Prezioa(float aleko_Prezioa) {
-        this.aleko_Prezioa = aleko_Prezioa;
+    public void setPrice_subtotal(float price_subtotal) {
+        this.price_subtotal = price_subtotal;
     }
 
-    //guztirako_Prezioa
-    public float getGuztirako_Prezioa() {
-        return guztirako_Prezioa;
+    public float getPrice_total() {
+        return price_total;
     }
 
-    public void setGuztirako_Prezioa(float guztirako_Prezioa) {
-        this.guztirako_Prezioa = guztirako_Prezioa;
+    public void setPrice_total(float price_total) {
+        this.price_total = price_total;
     }
 
-    //produktua_Id
-    public int getProduktua_Id() {
-        return produktua_Id;
+    public int getProduct_id() {
+        return product_id;
     }
 
-    public void setProduktua_Id(int produktua_Id) {
-        this.produktua_Id = produktua_Id;
+    public void setProduct_id(int product_id) {
+        this.product_id = product_id;
     }
 
-    //kantitatea
-    public int getKantitatea() {
-        return kantitatea;
+    public int getProduct_uom_qty() {
+        return product_uom_qty;
     }
 
-    public void setKantitatea(int kantitatea) {
-        this.kantitatea = kantitatea;
+    public void setProduct_uom_qty(int product_uom_qty) {
+        this.product_uom_qty = product_uom_qty;
     }
 
-    //company_id
-    public int getCompany_id() {
-        return company_id;
+    public int getOrder_partner_id() {
+        return order_partner_id;
     }
 
-    public void setCompany_id(int company_id) {
-        this.company_id = company_id;
+    public void setOrder_partner_id(int order_partner_id) {
+        this.order_partner_id = order_partner_id;
     }
 
-    //bezeroa_Id
-    public int getBezeroa_Id() {
-        return bezeroa_Id;
-    }
-
-    public void setBezeroa_Id(int bezeroa_Id) {
-        this.bezeroa_Id = bezeroa_Id;
-    }
-
-    //data
-    public LocalDateTime getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(LocalDateTime data) {
+    public void setData(String data) {
         this.data = data;
+    }
+
+    public String getDescripcion_Cliente() {
+        return descripcion_Cliente;
+    }
+
+    public void setDescripcion_Cliente(String descripcion_Cliente) {
+        this.descripcion_Cliente = descripcion_Cliente;
     }
 
 
     @Override
     public String toString() {
-        return "Salmenta[" + id + ", " + izena + "]";
+        return "Salmenta[" + id + ", " + name + ", " + data + "]\n";
     }
 
 

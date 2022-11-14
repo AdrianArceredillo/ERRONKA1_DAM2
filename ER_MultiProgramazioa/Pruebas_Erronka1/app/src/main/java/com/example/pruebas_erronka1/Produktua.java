@@ -52,6 +52,23 @@ public class Produktua {
         this.price = price;
     }
 
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+
     @Override
     public String toString() {
         return "Id: " + id + ". Nombre: " + name + ". Price: " + price;

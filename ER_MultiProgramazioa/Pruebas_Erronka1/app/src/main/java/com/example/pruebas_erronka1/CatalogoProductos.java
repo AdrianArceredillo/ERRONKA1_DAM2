@@ -1,5 +1,7 @@
 package com.example.pruebas_erronka1;
 
+import static com.example.pruebas_erronka1.R.string.lblProductoSeleccionado;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -18,6 +20,8 @@ public class CatalogoProductos extends AppCompatActivity {
     private Spinner spinnerElegirProductos;
     private TextView txtProductoSeleccionado;
     private Button btnVerSeleccionado;
+
+    private Produktua prod_Sel = new Produktua();
 
     String[] produktuenIzenak_A = {};
     ArrayList<String> produktuenIzenak = new ArrayList<>();
@@ -53,21 +57,18 @@ public class CatalogoProductos extends AppCompatActivity {
         spinnerElegirProductos = findViewById(R.id.spinnerElegirProductos);
         spinnerElegirProductos.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, produktuenIzenak));
 
-        String productoSeleccionado = spinnerElegirProductos.getSelectedItem().toString();
-
         txtProductoSeleccionado = findViewById(R.id.txtProductoSeleccionado);
-        txtProductoSeleccionado.setText(productoSeleccionado);
 
         btnVerSeleccionado = findViewById(R.id.btnVerSeleccionado);
         btnVerSeleccionado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                lytProductoInfoCompleta = findViewById(R.id.lytProductoInfoCompleta);
+                String nombre_Seleccionado_A = spinnerElegirProductos.getSelectedItem().toString();
 
-                produktuakIkusi.productoSeleccionadoInfo(productoSeleccionado);
-                TextView textView = new TextView(getApplicationContext());
-                textView.setText(produktuakIkusi.getProductoSeleccionado().getName());
-                linearLayout.addView(textView);
+                prod_Sel = produktuakIkusi.productoSeleccionadoInfo(nombre_Seleccionado_A);
+
+                String nombre_Seleccionado_BBB = String.valueOf(prod_Sel.getPrice());
+                txtProductoSeleccionado.setText(nombre_Seleccionado_BBB);
             }
         });
 

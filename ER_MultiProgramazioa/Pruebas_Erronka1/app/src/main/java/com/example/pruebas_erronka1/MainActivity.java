@@ -25,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
 
     private Connection connection = null;
     private static final String LOG_TAG = MainActivity.class.getSimpleName();   // Class name for Log tag
+    public static final String NOMBRE_USUARIO = "Usuario";
+
+    private String nombreUsuario;
     private String usuarioCorrecto = "adrian";
     private String contraseña_Correcta = "password";
     public static final int TEXT_REQUEST = 1;   // Unique tag for the intent reply
@@ -100,6 +103,8 @@ public class MainActivity extends AppCompatActivity {
         if (usuarioCorrecto.equals(usuarioUser) & contraseña_Correcta.equals(contraseñaUser)) {
             Toast mezua_Correcto = Toast.makeText(getApplicationContext(), " Ongi etorri! ", Toast.LENGTH_LONG);
             mezua_Correcto.show();
+
+            abrirMenuInformacion(); //abrir la acitividad que permitirá al usuario elegir el tipo de información que desea ver
             btnPruebaActivar.setEnabled(true);
         } else {
             Toast mezua_Incorrecto = Toast.makeText(getApplicationContext(), " Los datos introducidos no son correctos! ", Toast.LENGTH_LONG);
@@ -107,6 +112,13 @@ public class MainActivity extends AppCompatActivity {
             mContraseña.setText("");
 
         }
+    }
+
+    public void abrirMenuInformacion() {
+        Intent intentCatalogo = new Intent(this, MenuOpciones.class);
+        nombreUsuario = mUsuario.getText().toString();
+        intentCatalogo.putExtra(NOMBRE_USUARIO, nombreUsuario);
+        startActivity(intentCatalogo);
     }
 
     public void abrirCatalogo() {

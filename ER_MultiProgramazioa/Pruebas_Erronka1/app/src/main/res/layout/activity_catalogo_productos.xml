@@ -58,22 +58,12 @@
             tools:ignore="SpeakableTextPresentCheck" />
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/lytProductoInfoCompleta"
-        android:layout_width="386dp"
-        android:layout_height="339dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnVerSeleccionado"></LinearLayout>
-
     <TextView
         android:id="@+id/txtProductoSeleccionado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="20dp"
         android:text="@string/lblProductoSeleccionado"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
@@ -82,9 +72,10 @@
         android:id="@+id/btnVerSeleccionado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="216dp"
+        android:layout_marginTop="40dp"
         android:text="@string/btnVerSeleccionado"
-        app:layout_constraintStart_toEndOf="@+id/txtProductoSeleccionado"
-        app:layout_constraintTop_toTopOf="@+id/txtProductoSeleccionado" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

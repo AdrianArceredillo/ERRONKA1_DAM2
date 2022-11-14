@@ -10,7 +10,7 @@ public class ProduktuaIkusiHaria extends Thread {
     Connection conn;
     private int prod_Id;
     public static ArrayList<Produktua> produktuGuztiak = new ArrayList<>();
-    private Produktua productoSeleccionado = new Produktua();
+    public Produktua productoSeleccionado = new Produktua();
 
 
     public ProduktuaIkusiHaria(Connection conn) {
@@ -24,7 +24,6 @@ public class ProduktuaIkusiHaria extends Thread {
     public void setProductoSeleccionado(Produktua productoSeleccionado) {
         this.productoSeleccionado = productoSeleccionado;
     }
-
 
 
     public void run() {
@@ -51,27 +50,40 @@ public class ProduktuaIkusiHaria extends Thread {
     }
 
 
-    public void productoSeleccionadoInfo(String nombreProducto) {
+    public Produktua productoSeleccionadoInfo(String nombreProducto) {
         Statement st = null;
         try {
             st = conn.createStatement();
             String sql;
-            sql = "select id, name, list_price, create_date, type FROM public.product_template";
+            sql = "select id, name, list_price, create_date, type FROM public.product_template WHERE name = '" + nombreProducto + "'";
+
             ResultSet rs = st.executeQuery(sql);
 
-            while (rs.next()) {
-                int prod_Identificador = rs.getInt("id");
-                String prod_Nombre = rs.getString("name");
-                float price_Prod = rs.getFloat("list_price");
-                String createDate_Product = rs.getString("create_date");
-                String type_Product = rs.getString("type");
+            int prod_Identificador = rs.getInt("id");
+            String prod_Nombre = rs.getString("name");
+            float price_Prod = rs.getFloat("list_price");
+            String createDate_Product = String.valueOf(rs.getTimestamp("create_date"));
+            String type_Product = rs.getString("type");
 
-                productoSeleccionado = new Produktua(prod_Identificador, prod_Nombre, price_Prod, createDate_Product, type_Product);
-            }
+            productoSeleccionado = new Produktua(prod_Identificador, prod_Nombre, price_Prod, createDate_Product, type_Product);
+            return productoSeleccionado;
+
+//            while (rs.next()) {
+//                int prod_Identificador = rs.getInt("id");
+//                String prod_Nombre = rs.getString("name");
+//                float price_Prod = rs.getFloat("list_price");
+//                String createDate_Product = String.valueOf(rs.getTimestamp("create_date"));
+//                String type_Product = rs.getString("type");
+
+//                productoSeleccionado = new Produktua(prod_Identificador, prod_Nombre, price_Prod, createDate_Product, type_Product);
+//                return productoSeleccionado;
+//            }
+
         } catch (Exception e) {
             System.out.print(e.getMessage());
             e.printStackTrace();
         }
+        return productoSeleccionado;
     }
 
 
