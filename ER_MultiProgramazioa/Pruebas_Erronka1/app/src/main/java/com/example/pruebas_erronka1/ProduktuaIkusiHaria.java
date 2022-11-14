@@ -7,48 +7,66 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 public class ProduktuaIkusiHaria extends Thread {
-    Database conn;
-    Connection con;
+    Connection conn;
     private int prod_Id;
-    public static ArrayList<Produktua> produktuGuztiak = null;
+    public static ArrayList<Produktua> produktuGuztiak = new ArrayList<>();
+    private Produktua productoSeleccionado = new Produktua();
 
 
-    public ProduktuaIkusiHaria(Database conn) {
+    public ProduktuaIkusiHaria(Connection conn) {
         this.conn = conn;
     }
 
-    public ProduktuaIkusiHaria(Connection con) {
-        this.con = con;
+    public Produktua getProductoSeleccionado() {
+        return productoSeleccionado;
+    }
+
+    public void setProductoSeleccionado(Produktua productoSeleccionado) {
+        this.productoSeleccionado = productoSeleccionado;
     }
 
 
-    public void run(Database db) {
+
+    public void run() {
+
         Statement st = null;
-        Connection conn = db.connection;
         try {
-            Class.forName("org.postgresql.Driver");
-            db.connection = DriverManager.getConnection(db.getUrl(), db.getUser(), db.getPass());
-            //connection = DriverManager.getConnection(url);
             st = conn.createStatement();
             String sql;
-            //sql = "SELECT  id, name FROM product_template";
-            sql = "select public.product_template.id, public.product_template.name\n" +
-                    "FROM \n" +
-                    "public.product_template\n" +
-                    "WHERE \n" +
-                    "public.product_template.id > 5";
+            sql = "select id, name, list_price FROM public.product_template";
             ResultSet rs = st.executeQuery(sql);
 
-            //STEP 5: Extract data from result set
             while (rs.next()) {
-                //Retrieve by column name
                 int prod_Identificador = rs.getInt("id");
                 String prod_Nombre = rs.getString("name");
+                float price_Prod = rs.getFloat("list_price");
 
-                Produktua produktua = new Produktua(prod_Identificador, prod_Nombre);
+                Produktua produktua = new Produktua(prod_Identificador, prod_Nombre, price_Prod);
                 produktuGuztiak.add(produktua);
-                //resultado_Prueba = "Id: " + prod_Identificador + ". Nombre: " + prod_Nombre;
+            }
+        } catch (Exception e) {
+            System.out.print(e.getMessage());
+            e.printStackTrace();
+        }
+    }
 
+
+    public void productoSeleccionadoInfo(String nombreProducto) {
+        Statement st = null;
+        try {
+            st = conn.createStatement();
+            String sql;
+            sql = "select id, name, list_price, create_date, type FROM public.product_template";
+            ResultSet rs = st.executeQuery(sql);
+
+            while (rs.next()) {
+                int prod_Identificador = rs.getInt("id");
+                String prod_Nombre = rs.getString("name");
+                float price_Prod = rs.getFloat("list_price");
+                String createDate_Product = rs.getString("create_date");
+                String type_Product = rs.getString("type");
+
+                productoSeleccionado = new Produktua(prod_Identificador, prod_Nombre, price_Prod, createDate_Product, type_Product);
             }
         } catch (Exception e) {
             System.out.print(e.getMessage());

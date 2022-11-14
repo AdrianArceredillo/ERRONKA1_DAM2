@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     private static final ArrayList<Produktua> catalogo_Productos = null;
     private TextView txtPruebaProd;
 
+    private LinearLayout linearLayout;
+
     public EditText mUsuario, mContraseña;
     public Button btnSartu;
     public Button btnPruebaActivar;
@@ -41,24 +44,30 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         this.setTitle("HJAA Denda");
 
-        Database db = new Database();
-        Konexioa kon = new Konexioa();
-        kon.connectDatabase(db.host, db.port, db.database, db.user, db.pass);
-
-
-        ProduktuaIkusiHaria produktuakIkusi = new ProduktuaIkusiHaria(db);
-        produktuakIkusi.start();
-        try {
-            produktuakIkusi.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-
-
-        txtPruebaProd = findViewById(R.id.txtPruebaProd);
-        //txtPruebaProd.setText(doInBackground());
-        txtPruebaProd.setText(produktuakIkusi.getProduktuGuztiak().get(0).getName());
+//        Database db = new Database();
+//
+//        ProduktuaIkusiHaria produktuakIkusi = new ProduktuaIkusiHaria(db.getExtraConnection());
+//        produktuakIkusi.start();
+//
+//        try {
+//            produktuakIkusi.join();
+//
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//
+//        txtPruebaProd = findViewById(R.id.txtPruebaProd);
+//        txtPruebaProd.setText(produktuakIkusi.getProduktuGuztiak().get(3).toString());
+//
+//        ArrayList<Produktua> listaProductos = produktuakIkusi.getProduktuGuztiak();
+//        linearLayout = findViewById(R.id.lytPruebasProd);
+//
+//        for( int i = 0; i < listaProductos.size(); i++ )
+//        {
+//            TextView textView = new TextView(getApplicationContext());
+//            textView.setText(produktuakIkusi.getProduktuGuztiak().get(i).toStringDefinitivo());
+//            linearLayout.addView(textView);
+//        }
 
 
         //asignar los elementos de la actividad
@@ -67,29 +76,20 @@ public class MainActivity extends AppCompatActivity {
 
         btnPruebaActivar = findViewById(R.id.btnPruebaActivar);
         btnPruebaActivar.setEnabled(false);
+        btnPruebaActivar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                abrirCatalogo();
+            }
+        });
 
         btnSartu = findViewById(R.id.btnIniciarSesion);
         btnSartu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*
-                String usuarioUser = mUsuario.getText().toString();
-                String contraseñaUser = mContraseña.getText().toString();
-
-                if (usuarioCorrecto.equals(usuarioUser) & contraseña_Correcta.equals(contraseñaUser)) {
-                    Toast mezua_Correcto = Toast.makeText(getApplicationContext()," Ongi etorri! ", Toast.LENGTH_LONG);
-                    mezua_Correcto.show();
-                    btnPruebaActivar.setEnabled(true);
-                } else {
-                    Toast mezua_Incorrecto = Toast.makeText(getApplicationContext()," Los datos introducidos no son correctos! ", Toast.LENGTH_LONG);
-                    mezua_Incorrecto.show();
-                }
-                */
                 comprobarInicioSesion();
             }
         });
-
-        //txtPruebaProd = findViewById(R.id.txtPruebaProd);
     }
 
 
@@ -109,91 +109,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
-    protected String doInBackground() {
-        //En esta parte es donde realizamos la llamada. Se realiza de manera asíncrona
-
-//        String url = db.getUrl();
-//        String user = db.getUser();
-//        String pass = db.getPass();
-
-        String url_Prueba = "jdbc:postgresql://10.0.2.2:5432/Ariketa_1";
-
-        String resultado_Prueba = "";
-
-        Connection conn = null;
-        Statement st = null;
-
-        try {
-            //STEP 2: Register JDBC driver
-            Class.forName("org.postgresql.Driver");
-
-            //STEP 3: Open a connection
-            System.out.println("Connecting to database...");
-            conn = DriverManager.getConnection(url_Prueba, "openpg", "openpgpwd");
-
-            //STEP 4: Execute a query
-            System.out.println("Creating statement...");
-            st = conn.createStatement();
-            String sql;
-            //sql = "SELECT  id, name FROM product_template";
-            sql = "select public.product_template.id, public.product_template.name\n" +
-                    "FROM \n" +
-                    "public.product_template\n" +
-                    "WHERE \n" +
-                    "public.product_template.id > 5";
-            ResultSet rs = st.executeQuery(sql);
-
-            //STEP 5: Extract data from result set
-            while (rs.next()) {
-                //Retrieve by column name
-                int prod_Identificador = rs.getInt("id");
-                String prod_Nombre = rs.getString("name");
-
-                Produktua produktua = new Produktua(prod_Identificador, prod_Nombre);
-                catalogo_Productos.add(produktua);
-                //resultado_Prueba = "Id: " + prod_Identificador + ". Nombre: " + prod_Nombre;
-
-
-                //Display values
-                resultado_Prueba = produktua.toString();
-                return resultado_Prueba;
-
-                //System.out.print(", First: " + first);
-                //System.out.println(", Last: " + last);
-            }
-            //STEP 6: Clean-up environment
-            rs.close();
-            st.close();
-            conn.close();
-        } catch (SQLException se) {
-            //Handle errors for JDBC
-            se.printStackTrace();
-        } catch (Exception e) {
-            //Handle errors for Class.forName
-            e.printStackTrace();
-        } finally {
-            //finally block used to close resources
-            try {
-                if (st != null)
-                    st.close();
-            } catch (SQLException se2) {
-            }// nothing we can do
-            try {
-                if (conn != null)
-                    conn.close();
-            } catch (SQLException se) {
-                se.printStackTrace();
-            }//end finally try
-        }
-
-        /*protected void onPostExecute(String result) {
-            //En esta parte es donde tratamos el resultado devuelto por la llamada a la BBDD.
-        }
-        */
-
-        return resultado_Prueba;
-
+    public void abrirCatalogo() {
+        Intent intentCatalogo = new Intent(this, CatalogoProductos.class);
+        startActivity(intentCatalogo);
     }
 
 

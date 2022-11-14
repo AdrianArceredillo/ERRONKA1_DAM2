@@ -67,8 +67,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabControlSalmentak = new System.Windows.Forms.TabControl();
             this.tabEpeak = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.salmentakDenboraTarteanDll1 = new SalmentakDenboraTarteanDLL.SalmentakDenboraTarteanDll();
+            this.lblAukeraturikoEpea = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.btnVerGraficoIntervalosTiempo = new System.Windows.Forms.Button();
@@ -78,8 +80,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.lblAukeraturikoEpea = new System.Windows.Forms.Label();
-            this.salmentakDenboraTarteanDll1 = new SalmentakDenboraTarteanDLL.SalmentakDenboraTarteanDll();
             this.gbDatuMota.SuspendLayout();
             this.tabBezeroak.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -519,15 +519,22 @@
             this.tabEpeak.Text = "Epeak";
             this.tabEpeak.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // salmentakDenboraTarteanDll1
             // 
-            this.button1.Font = new System.Drawing.Font("Noto Kufi Arabic", 8.25F);
-            this.button1.Location = new System.Drawing.Point(457, 44);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 25);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Ezkutatu";
-            this.button1.UseVisualStyleBackColor = true;
+            this.salmentakDenboraTarteanDll1.Location = new System.Drawing.Point(302, 250);
+            this.salmentakDenboraTarteanDll1.Name = "salmentakDenboraTarteanDll1";
+            this.salmentakDenboraTarteanDll1.Size = new System.Drawing.Size(263, 287);
+            this.salmentakDenboraTarteanDll1.TabIndex = 14;
+            // 
+            // lblAukeraturikoEpea
+            // 
+            this.lblAukeraturikoEpea.AutoSize = true;
+            this.lblAukeraturikoEpea.Location = new System.Drawing.Point(5, 286);
+            this.lblAukeraturikoEpea.Name = "lblAukeraturikoEpea";
+            this.lblAukeraturikoEpea.Size = new System.Drawing.Size(35, 13);
+            this.lblAukeraturikoEpea.TabIndex = 14;
+            this.lblAukeraturikoEpea.Text = "Epea:";
+            this.lblAukeraturikoEpea.Visible = false;
             // 
             // panel6
             // 
@@ -544,6 +551,17 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(599, 119);
             this.panel6.TabIndex = 13;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Noto Kufi Arabic", 8.25F);
+            this.button1.Location = new System.Drawing.Point(457, 44);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(106, 25);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Ezkutatu";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label17
             // 
@@ -634,23 +652,6 @@
             this.label14.Size = new System.Drawing.Size(119, 18);
             this.label14.TabIndex = 2;
             this.label14.Text = "Azalpen laburra:";
-            // 
-            // lblAukeraturikoEpea
-            // 
-            this.lblAukeraturikoEpea.AutoSize = true;
-            this.lblAukeraturikoEpea.Location = new System.Drawing.Point(5, 286);
-            this.lblAukeraturikoEpea.Name = "lblAukeraturikoEpea";
-            this.lblAukeraturikoEpea.Size = new System.Drawing.Size(35, 13);
-            this.lblAukeraturikoEpea.TabIndex = 14;
-            this.lblAukeraturikoEpea.Text = "Epea:";
-            this.lblAukeraturikoEpea.Visible = false;
-            // 
-            // salmentakDenboraTarteanDll1
-            // 
-            this.salmentakDenboraTarteanDll1.Location = new System.Drawing.Point(302, 250);
-            this.salmentakDenboraTarteanDll1.Name = "salmentakDenboraTarteanDll1";
-            this.salmentakDenboraTarteanDll1.Size = new System.Drawing.Size(263, 287);
-            this.salmentakDenboraTarteanDll1.TabIndex = 14;
             // 
             // frmAtalNagusia
             // 

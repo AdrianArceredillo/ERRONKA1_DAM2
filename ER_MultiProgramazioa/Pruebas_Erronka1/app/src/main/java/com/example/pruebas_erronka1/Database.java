@@ -66,16 +66,20 @@ public class Database {
     }
 
     public Connection getExtraConnection() {
-        Connection c = null;
-        try {
-            Class.forName("org.postgresql.Driver");
-            c = DriverManager.getConnection(url, user, pass);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return c;
+        return connection;
     }
+
+//    public Connection getExtraConnection() {
+//        Connection c = null;
+//        try {
+//            Class.forName("org.postgresql.Driver");
+//            c = DriverManager.getConnection(url, user, pass);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//
+//        return c;
+//    }
 
 
     public String getUrl() {

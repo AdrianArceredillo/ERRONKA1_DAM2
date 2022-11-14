@@ -418,12 +418,19 @@ namespace PruebaGrafico0.AtalNagusiaForm
         private void dtpAmaieraData_ValueChanged(object sender, EventArgs e)
         {
             fechaFin = dtpAmaieraData.Value.ToString("yyyy-MM-dd");
+            this.pruebaErronkaDll1.Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.salmentakDenboraTarteanDll1.Visible = false;
         }
 
         private void btnEsconderGraficoClientes_Click(object sender, EventArgs e)
         {
             this.totalGastoClienteGrafico.Visible = false;
             this.clienteHistorialCompraGrafico.Visible = false;
+            this.totalGastoClienteGrafico.Visible = false;
         }
 
     }

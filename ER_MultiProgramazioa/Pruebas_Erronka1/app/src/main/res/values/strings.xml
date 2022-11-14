@@ -17,4 +17,10 @@
     <string name="btnRealizarCompra">Realizar Operación</string>
     <string name="btnValidarCompra">Ver Historial</string>
 
+
+    <!-- Actividad del catálogo -->
+    <string name="lblElegirProducto">Aukeratu produktu bat:</string>
+    <string name="lblProductoSeleccionado">Ikusi:</string>
+    <string name="btnVerSeleccionado">Ikusi:</string>
+
 </resources>
