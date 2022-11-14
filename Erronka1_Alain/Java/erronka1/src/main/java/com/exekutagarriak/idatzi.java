@@ -70,7 +70,7 @@ VALUES(
         Konexioa konekzioa = new Konexioa();
         Statement st;
         try{
-            st = konekzioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123").createStatement();
+            st = konekzioa.connectDatabase().createStatement();
             System.out.println(st.executeQuery(sql)); 
         } catch(Exception ex){} //Cath-ean sartzen da, baina arazorik gabe exekutatzen du sql-a
     }

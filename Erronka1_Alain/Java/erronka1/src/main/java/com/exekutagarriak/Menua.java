@@ -58,7 +58,7 @@ public class Menua {
                 case 1:
                     garbitu();
                     System.out.println();
-                    datuakEsportatu.produktuakImprimatu();
+                    DatuakEsportatu.produktuakImprimatu();
                     break;
                 case 2:
                     garbitu();
@@ -114,19 +114,19 @@ public class Menua {
             switch (aukera) {
                 case 1:
                     garbitu();
-                    datuakEsportatu.produktuakCsvra();
+                    DatuakEsportatu.produktuakCsvra();
                     break;
                 case 2:
                     garbitu();
-                    datuakEsportatu.produktuakXmlra();
+                    DatuakEsportatu.produktuakXmlra();
                     break;
                 case 3:
                     garbitu();
-                    datuakEsportatu.produktuakJsonera();
+                    DatuakEsportatu.produktuakJsonera();
                     break;
                 case 4:
                     garbitu();
-                    datuakEsportatu.produktuakDenetara();
+                    DatuakEsportatu.produktuakDenetara();
                     break;
                 default:
                     garbitu();

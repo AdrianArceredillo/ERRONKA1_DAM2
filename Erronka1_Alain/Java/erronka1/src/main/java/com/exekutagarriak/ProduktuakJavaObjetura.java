@@ -23,9 +23,6 @@ public class ProduktuakJavaObjetura {
         ArrayList<String> stock_quant = new ArrayList<String>(); // Stock-aren informazioa gordeko den Arraylist-a
                                                                  // sortu, String bezala gordetzen da informazioa
 
-        String id; // Product eta stock tauletan, produktuak id bat edukitzen du. Aldagai hau bi
-                   // tauletako produktuaren id-a konparatzeko erabiliko da
-
         product_template = irakurriTaulaPT("product_template"); // product_template taula irakurri, eta bere datuak
                                                                 // product_template deitzen den Arraylist-ean gorde
 
@@ -40,9 +37,9 @@ public class ProduktuakJavaObjetura {
         String idpt, idpp, idpppt, idsqpp; // id-> Product_template, product_product, product_product
                                            // (product_template),
                                            // stock_quant (product_product)
-        String izena, deskripzioa, barrakodea;
+        String izena, deskripzioa, barrakodea, lehentasuna;
         float prezioa, kantitatea, bolumena, pisua;
-        int lehentasuna;
+
         for (String ppString : product_product) {
             if (!aurkitua) {
                 String[] ppZatiak = ppString.split(";");
@@ -59,6 +56,7 @@ public class ProduktuakJavaObjetura {
                                 String[] sqZatiak = sqString.split(";");
                                 idsqpp = sqZatiak[0];
                                 if (idpp.equals(idsqpp)) {
+
                                     izena = ptZatiak[1];
                                     deskripzioa = ptZatiak[2];
                                     barrakodea = ppZatiak[2];
@@ -66,7 +64,8 @@ public class ProduktuakJavaObjetura {
                                     kantitatea = Float.parseFloat(sqZatiak[1]);
                                     bolumena = Float.parseFloat(ptZatiak[4]);
                                     pisua = Float.parseFloat(ptZatiak[5]);
-                                    lehentasuna = Integer.parseInt(ppZatiak[2]);
+                                    lehentasuna = ptZatiak[6];
+
                                     aurkitua = true;
                                     Produktua produktua = new Produktua(); // ID;IZENA;DESKRIPZIOA;PREZIOA;KANTITATEA;BOLUMENA;PISUA;BARRAKODEA;LEHENTASUNA
                                     produktua.setId(Integer.parseInt(idpt));
@@ -79,6 +78,7 @@ public class ProduktuakJavaObjetura {
                                     produktua.setBarraKodea(barrakodea);
                                     produktua.setLehentasuna(lehentasuna);
                                     produktuak.add(produktua);
+
                                 }
                             }
                         }
@@ -86,9 +86,11 @@ public class ProduktuakJavaObjetura {
                 }
             }
             aurkitua = false;
+
         }
         // Produktuak Arraylist-a prestatu ondoren, nahi dugun formatura ahal dugu
         // esportatu
+
         return produktuak;
     }
 
@@ -97,12 +99,12 @@ public class ProduktuakJavaObjetura {
                                                                                // informazio guztia agertzeko
         ArrayList<String> datuak = new ArrayList<String>(); // Datuak gordetzeko Arraylist bat sortu
         try {
-            st = konexioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123").createStatement(); // konektatu
+            st = konexioa.connectDatabase().createStatement(); // konektatu
             ResultSet rs = st.executeQuery(sql); // sql exekutatu
             while (rs.next()) { // Taulan informazioa dagoen bitartean egin hurrengoa
-                datuak.add(rs.getString("id") + ";" + rs.getString("name") + ";" + rs.getString("description")
+                datuak.add(rs.getString("id") + ";" + rs.getString("name") + ";" + rs.getString("description") + ";"
                         + Float.toString(rs.getFloat("list_price")) + ";" + Float.toString(rs.getFloat("volume")) + ";"
-                        + Float.toString(rs.getFloat("weight")));
+                        + Float.toString(rs.getFloat("weight")) + ";" + rs.getString("priority"));
             }
         } catch (Exception ex) {
             System.out.println("Exception : " + ex);
@@ -115,7 +117,7 @@ public class ProduktuakJavaObjetura {
                                                                                // informazio guztia agertzeko
         ArrayList<String> datuak = new ArrayList<String>(); // Datuak gordetzeko Arraylist bat sortu
         try {
-            st = konexioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123").createStatement(); // konektatu
+            st = konexioa.connectDatabase().createStatement(); // konektatu
             ResultSet rs = st.executeQuery(sql); // sql exekutatu
             while (rs.next()) { // Taulan informazioa dagoen bitartean egin hurrengoa
                 datuak.add(rs.getString("id") + ";" + rs.getString("product_tmpl_id") + ";" + rs.getString("barcode")); // id,
@@ -160,7 +162,7 @@ public class ProduktuakJavaObjetura {
                                                                                                       */
         ArrayList<String> datuak = new ArrayList<String>();
         try {
-            st = konexioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123").createStatement();
+            st = konexioa.connectDatabase().createStatement();
             ResultSet rs = st.executeQuery(sql);
             while (rs.next()) {
                 datuak.add(rs.getString("product_id") + ";" + Integer.toString(rs.getShort("quantity")));

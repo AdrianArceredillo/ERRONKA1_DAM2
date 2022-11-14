@@ -5,7 +5,12 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class Konexioa {
-    public Connection connectDatabase(String host,String port,String database,String user,String password) {
+    public Connection connectDatabase() {
+        String host = "localhost";
+        String port = "5432";
+        String database = "Erronka_db";
+        String user = "admin";
+        String password = "admin123";
         String url = "";
         Connection connection = null;
         try {

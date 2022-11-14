@@ -28,8 +28,8 @@ public class ProduktuaEzabatu {
         String sql = "DELETE FROM public.\"product_template\" WHERE id = " + id;
         Statement st;
         try{
-            st = konekzioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123").createStatement();
-            ResultSet rs = st.executeQuery(sql);
+            st = konekzioa.connectDatabase().createStatement();
+            st.executeQuery(sql);
         } catch(Exception ex){
             System.out.println("Exception : "+ex);
         }
@@ -41,7 +41,7 @@ public class ProduktuaEzabatu {
         ArrayList <String> modelo = new ArrayList <String> ();
         Statement st;
         try{
-            st = konekzioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123").createStatement();
+            st = konekzioa.connectDatabase().createStatement();
             ResultSet rs = st.executeQuery(sql);
             while(rs.next()){
                 modelo.add(rs.getString("id") + ";" + rs.getString("name") + ";" + Integer.toString(rs.getShort("list_price")));

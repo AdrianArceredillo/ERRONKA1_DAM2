@@ -6,16 +6,15 @@ import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 
-
-@XmlType(propOrder = { "id", "izena", "stocka", "prezioa" })
+//ID;IZENA;DESKRIPZIOA;PREZIOA;KANTITATEA;BOLUMENA;PISUA;BARRAKODEA;LEHENTASUNA
+@XmlType(propOrder = { "id", "izena", "deskripzioa", "prezioa", "stocka", "bolumena", "pisua", "barraKodea", "lehentasuna"})
 @XmlRootElement(name = "Produktua")
 
 public class Produktua {
 
     int id = 0;
-    String izena, deskripzioa, barraKodea;
+    String izena, deskripzioa, barraKodea, lehentasuna;
     float stocka, prezioa, bolumena, pisua;
-    int lehentasuna;
 
     @XmlElement(name = "Id")
     public int getId(){
@@ -82,18 +81,18 @@ public class Produktua {
     }
 
     @XmlElement(name = "Lehentasuna")
-    public float getLehentasuna() {
+    public String getLehentasuna() {
         return lehentasuna;
     }    
-    public void setLehentasuna(int lehentasuna) {
+    public void setLehentasuna(String lehentasuna) {
         this.lehentasuna = lehentasuna;
     }
 
 
 
     @Override
-    public String toString() {
-        return "Produktua["+ id+", "+izena+", "+stocka+", "+prezioa+"]";
+    public String toString() { // ID;IZENA;DESKRIPZIOA;PREZIOA;KANTITATEA;BOLUMENA;PISUA;BARRAKODEA;LEHENTASUNA
+        return "Produktua["+ id+", "+izena+", "+deskripzioa+", "+prezioa+", "+stocka+", "+bolumena+", "+pisua+", "+barraKodea+", "+lehentasuna+"]";
     }
 
 }

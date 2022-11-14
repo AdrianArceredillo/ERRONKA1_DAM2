@@ -10,7 +10,7 @@ public class ProduktuBatInportatu {
     public static Konexioa konexioa = new Konexioa();
     public static Statement st;
 
-    public static void produktuBatGehitu() {
+    public static void main(String[] args) {
         
         
         String izena, deskripzioa, barraKodea, erantzuna;
@@ -64,7 +64,7 @@ public class ProduktuBatInportatu {
         } while (!ondo);
         in.close();
         ProduktuBatenStocka.produktuaGehitu(izena, deskripzioa, barraKodea, prezioa, bolumena, pisua, kantitatea, lehentasuna);
-
+        
     }
 
     private static void garbitu() {

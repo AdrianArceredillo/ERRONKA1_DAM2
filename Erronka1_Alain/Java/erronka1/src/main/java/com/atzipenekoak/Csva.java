@@ -38,11 +38,17 @@ public class Csva {
             while ((l = inputStream.readLine()) != null) {
                 String[] eremuak = l.split(banatzailea);
                 if (!eremuak[0].equals("ID")) {
+                    //ID;IZENA;DESKRIPZIOA;PREZIOA;KANTITATEA;BOLUMENA;PISUA;BARRAKODEA;LEHENTASUNA
                     Produktua produktua = new Produktua();
                     produktua.setId(Integer.parseInt(eremuak[0]));
                     produktua.setIzena(eremuak[1]);
-                    produktua.setStocka(Integer.parseInt(eremuak[2]));
+                    produktua.setDeskripzioa(eremuak[2]);
                     produktua.setPrezioa(Float.parseFloat(eremuak[3]));
+                    produktua.setStocka(Float.parseFloat(eremuak[4]));
+                    produktua.setBolumena(Float.parseFloat(eremuak[5]));
+                    produktua.setPisua(Float.parseFloat(eremuak[6]));
+                    produktua.setBarraKodea(eremuak[7]);
+                    produktua.setLehentasuna(eremuak[8]);
                     produktuak.add(produktua);
                 }
             }

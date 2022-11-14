@@ -36,7 +36,7 @@ public class irakurri
         ArrayList <String> modelo = new ArrayList <String> ();
         Statement st;
         try{
-            st = konekzioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123").createStatement();
+            st = konekzioa.connectDatabase().createStatement();
             ResultSet rs = st.executeQuery(sql);
             while(rs.next()){
                 modelo.add(rs.getString("name") + ";" + rs.getString("id") +  ";" +  "Proba2" + ";" + "Proba3" + ";" + Integer.toString(rs.getShort("list_price"))); //rs.getShort(11) ere balio du

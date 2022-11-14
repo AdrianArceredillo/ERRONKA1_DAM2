@@ -100,7 +100,7 @@ public class ProduktuenListaImportatu {
 
     public static void exekuzioa(String sql, int n, int kontagailua) {
         try {
-            st = konexioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123").createStatement();
+            st = konexioa.connectDatabase().createStatement();
             st.executeQuery(sql);
         } catch (Exception ex) {
             if (n % 200 == 0 && n != 0) {
@@ -126,14 +126,15 @@ public class ProduktuenListaImportatu {
             System.out.println("Sartutako fitxategiaren formatua ez da zuzena .csv, .xml edo .json izan behar da");
         }
         return produktuak = null;
-
     }
+
+
 
     public static int idLortu() {
         String sql = "SELECT id FROM public.\"product_template\" ORDER BY id DESC LIMIT 1";
         int id = 0;
         try {
-            st = konexioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123").createStatement();
+            st = konexioa.connectDatabase().createStatement();
             ResultSet rs = st.executeQuery(sql);
             while (rs.next()) {
                 id = rs.getInt(1);
@@ -144,6 +145,7 @@ public class ProduktuenListaImportatu {
         return id;
     }
 
+    
     private static void garbitu() {
         System.out.print("\033[H\033[2J");
         System.out.flush();

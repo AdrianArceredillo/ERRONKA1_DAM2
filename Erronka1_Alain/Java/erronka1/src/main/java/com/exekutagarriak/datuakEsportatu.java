@@ -5,11 +5,11 @@ import com.atzipenekoak.Jsona;
 import com.atzipenekoak.Xmla;
 import com.pojoak.Produktuak;
 
-public class datuakEsportatu {
+public class DatuakEsportatu {
 
     public static void produktuakImprimatu() { // Kontsolan imprimatzen ditu datuak
         try {
-            System.out.println("Datuen egitura -> Produktua[ID, Izena, Stocka, Prezioa]");
+            System.out.println("Datuen egitura -> Produktua[id, izena, deskripzioa, prezioa, stocka, bolumena, pisua, barraKodea, lehentasuna]");
             System.out.print(ProduktuakJavaObjetura.ProduktuenJavaObjetua()); // Produktuak lortu eta imprimatu
         } catch (Exception e) {
             System.out.println("Arazoren bat egon da datuak irakurtzeko orduan, edo hutsik dago");

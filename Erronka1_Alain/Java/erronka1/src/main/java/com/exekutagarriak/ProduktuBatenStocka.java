@@ -10,12 +10,12 @@ public class ProduktuBatenStocka {
     public static Konexioa konexioa = new Konexioa();
     public static Statement st;
 
-    public static void produktuaGehitu(String izena, String deskripzioa, String barraKodea, Float prezioa,
-            Float bolumena, Float pisua, Float kantitatea, int lehentasuna) {
+    public static String produktuaGehitu(int idPT, int idPP, int idSQ, String izena, String deskripzioa, String barraKodea, Float prezioa,
+            Float bolumena, Float pisua, Float kantitatea, String lehentasuna) {
         garbitu();
-        int idPT = idLortuPT() + 1;
-        int idPP = idLortuPP() + 1;
-        int idSQ = idLortuSQ() + 1;
+        // int idPT = idLortuPT() + 1;
+        // int idPP = idLortuPP() + 1;
+        // int idSQ = idLortuSQ() + 1;
         String timeStamp;
         timeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new java.util.Date());
 
@@ -23,7 +23,7 @@ public class ProduktuBatenStocka {
                                                                      // taularentzako
         sqlPT += " ( " + idPT + ", NULL,'" + izena + "',1,'<p>" + deskripzioa
                 + "</p>',NULL,NULL,'product','product',1,"
-                + prezioa + "," + bolumena + "," + pisua + ",true,true,1,1,NULL,true,NULL,NULL,false,false,"+lehentasuna+",2,'"
+                + prezioa + "," + bolumena + "," + pisua + ",true,true,1,1,NULL,true,NULL,NULL,false,false, '"+lehentasuna+"',2,'"
                 + timeStamp
                 + "',2,'"
                 + timeStamp
@@ -52,13 +52,14 @@ public class ProduktuBatenStocka {
                 + "', null)";
         exekuzioa(sqlSQ, "SQ");
 
+        return idPT + ";" + idPP + ";" + idSQ;
     }
 
     public static void exekuzioa(String sql, String taula) {
         Konexioa konekzioa = new Konexioa();
         Statement st;
         try {
-            st = konekzioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123").createStatement();
+            st = konekzioa.connectDatabase().createStatement();
             System.out.println(st.executeQuery(sql));
         } catch (Exception ex) {
             System.out.println("Exception: (" + taula + ")" + ex);
@@ -69,7 +70,7 @@ public class ProduktuBatenStocka {
         String sql = "SELECT id FROM public.product_template ORDER BY id DESC LIMIT 1";
         int id = 0;
         try {
-            st = konexioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123").createStatement();
+            st = konexioa.connectDatabase().createStatement();
             ResultSet rs = st.executeQuery(sql);
             while (rs.next()) {
                 id = rs.getInt(1);
@@ -85,7 +86,7 @@ public class ProduktuBatenStocka {
         String sql = "SELECT id FROM public.product_product ORDER BY id DESC LIMIT 1";
         int id = 0;
         try {
-            st = konexioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123").createStatement();
+            st = konexioa.connectDatabase().createStatement();
             ResultSet rs = st.executeQuery(sql);
             while (rs.next()) {
                 id = rs.getInt(1);
@@ -101,7 +102,7 @@ public class ProduktuBatenStocka {
         String sql = "SELECT id FROM public.stock_quant ORDER BY id DESC LIMIT 1";
         int id = 0;
         try {
-            st = konexioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123").createStatement();
+            st = konexioa.connectDatabase().createStatement();
             ResultSet rs = st.executeQuery(sql);
             while (rs.next()) {
                 id = rs.getInt(1);

@@ -33,7 +33,7 @@ public class Proba {
         Konexioa konekzioa = new Konexioa();
         Statement st;
         try {
-            st = konekzioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123").createStatement();
+            st = konekzioa.connectDatabase().createStatement();
             System.out.println(st.executeQuery(sql));
         } catch (Exception ex) {
             System.out.println("Exception: (" + taula + ")" + ex);
@@ -44,7 +44,7 @@ public class Proba {
         String sql = "SELECT id FROM public.product_template ORDER BY id DESC LIMIT 1";
         int id = 0;
         try {
-            st = konexioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123").createStatement();
+            st = konexioa.connectDatabase().createStatement();
             ResultSet rs = st.executeQuery(sql);
             while (rs.next()) {
                 id = rs.getInt(1);

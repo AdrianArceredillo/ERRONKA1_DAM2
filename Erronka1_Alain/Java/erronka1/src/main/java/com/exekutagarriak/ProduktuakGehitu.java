@@ -39,7 +39,7 @@ public class ProduktuakGehitu {
         String sql = "INSERT INTO public.product_template VALUES( "+id+", NULL,'"+izena+"',1,'<p>"+deskripzioa+"</p>',NULL,NULL,'product','product',1,"+prezioa+",10,10,true,true,1,1,NULL,true,NULL,NULL,false,false,0,2,'"+timeStamp+"',2,'"+timeStamp+"',0,'none',NULL,NULL,NULL,'receive','no-message',NULL,'manual','no-message',NULL,'no','order',false);"; 
         Statement st;
         try {
-            st = konexioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123").createStatement(); // konektatu
+            st = konexioa.connectDatabase().createStatement(); // konektatu
             st.executeQuery(sql); 
         } catch (Exception ex) {
             System.out.println("Exception : " + ex);
@@ -52,7 +52,7 @@ public class ProduktuakGehitu {
         ArrayList <String> modelo = new ArrayList <String> ();
         Statement st;
         try{
-            st = konekzioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123").createStatement();
+            st = konekzioa.connectDatabase().createStatement();
             ResultSet rs = st.executeQuery(sql);
             while(rs.next()){
                 modelo.add(rs.getString("id") + ";" + rs.getString("name") +  ";" + rs.getString("description") + ";" + Integer.toString(rs.getShort("list_price")));
@@ -72,7 +72,7 @@ public class ProduktuakGehitu {
         int id = 0;
         Statement st;
         try{
-            st = konekzioa.connectDatabase("localhost", "5432", "proba_erronka", "admin", "admin123").createStatement();
+            st = konekzioa.connectDatabase().createStatement();
             ResultSet rs = st.executeQuery(sql);
             while(rs.next()){
                 id = rs.getInt(1);
