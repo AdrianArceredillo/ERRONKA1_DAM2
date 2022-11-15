@@ -8,7 +8,6 @@ import com.atzipenekoak.Csva;
 import com.atzipenekoak.Jsona;
 import com.atzipenekoak.Xmla;
 import com.konexioa.Konexioa;
-import com.menua.ProduktuBatenStocka;
 import com.pojoak.Produktua;
 import com.pojoak.Produktuak;
 
@@ -40,7 +39,7 @@ public class ProduktuListaInportatu {
                 pisua = p.getPisua();
                 kantitatea = p.getStocka();
                 lehentasuna = p.getLehentasuna();
-                idAk = ProduktuBatenStocka.produktuaGehitu(idPT, idPP, idSQ, izena, deskripzioa, barraKodea, prezioa,
+                idAk = InsertProduktua.produktuaGehitu(idPT, idPP, idSQ, izena, deskripzioa, barraKodea, prezioa,
                         bolumena, pisua, kantitatea, lehentasuna);
                 kontagailua++;
                 String[] idArray = idAk.split(";");

@@ -1,4 +1,4 @@
-package com.menua;
+package com.postgress;
 
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat;
 
 import com.konexioa.Konexioa;
 
-public class ProduktuBatenStocka {
+public class InsertProduktua {
     public static Konexioa konexioa = new Konexioa();
     public static Statement st;
 
@@ -21,8 +21,8 @@ public class ProduktuBatenStocka {
 
         String sqlPT = "INSERT INTO public.product_template VALUES"; // sqlPT -> SQL agiandua Product_Template
                                                                      // taularentzako
-        sqlPT += " ( " + idPT + ", NULL,'" + izena + "',1,'<p>" + deskripzioa
-                + "</p>',NULL,NULL,'product','product',1,"
+        sqlPT += " ( " + idPT + ", NULL,'" + izena + "',1,'" + deskripzioa
+                + "',NULL,NULL,'product','product',1,"
                 + prezioa + "," + bolumena + "," + pisua + ",true,true,1,1,NULL,true,NULL,NULL,false,false, '"+lehentasuna+"',2,'"
                 + timeStamp
                 + "',2,'"

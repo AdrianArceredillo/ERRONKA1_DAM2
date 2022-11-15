@@ -5,7 +5,6 @@ import java.sql.Statement;
 import java.util.Scanner;
 
 import com.konexioa.Konexioa;
-import com.menua.ProduktuBatenStocka;
 
 public class ProduktuBatInportatu {
     public static Scanner in;
@@ -67,7 +66,7 @@ public class ProduktuBatInportatu {
         int idPP = idLortuPP() + 1;
         int idSQ = idLortuSQ() + 1;
 
-        ProduktuBatenStocka.produktuaGehitu(idPT, idPP, idSQ, izena, deskripzioa, barraKodea, prezioa, bolumena, pisua,
+        InsertProduktua.produktuaGehitu(idPT, idPP, idSQ, izena, deskripzioa, barraKodea, prezioa, bolumena, pisua,
                 kantitatea, lehentasuna);
 
     }
