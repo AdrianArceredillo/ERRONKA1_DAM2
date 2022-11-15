@@ -11,7 +11,7 @@ public class InsertProduktua {
     public static Statement st;
 
     public static String produktuaGehitu(int idPT, int idPP, int idSQ, String izena, String deskripzioa, String barraKodea, Float prezioa,
-            Float bolumena, Float pisua, Float kantitatea, String lehentasuna) {
+            Float bolumena, Float pisua, Float stocka, String lehentasuna) {
         garbitu();
         // int idPT = idLortuPT() + 1;
         // int idPP = idLortuPP() + 1;
@@ -38,7 +38,7 @@ public class InsertProduktua {
         exekuzioa(sqlPP, "PP");
 
         String sqlSQ = "INSERT INTO public.stock_quant VALUES"; // sqlSQ -> SQL agindua Stock_Quant taularentzako
-        sqlSQ += "(" + idSQ + "      , " + idPP + ", 1,  8, null, null, null, " + kantitatea + "       , 0, '"
+        sqlSQ += "(" + idSQ + "      , " + idPP + ", 1,  8, null, null, null, " + stocka + "       , 0, '"
                 + timeStamp
                 + "',    0,                  0, '2022-12-31',  true, null, 2, '" + timeStamp + "', 2, '" + timeStamp
                 + "', null)";
@@ -46,9 +46,9 @@ public class InsertProduktua {
 
         sqlSQ = "INSERT INTO public.stock_quant VALUES"; // Bigarren agindua taula berdinarentzako, zeren taula honetan,
                                                          // produktu bakoitzeko 2 ilara idazten dira
-        sqlSQ += "(" + (idSQ + 1) + ", " + idPP + ", 1, 14, null, null, null, " + (kantitatea * -1) + ", 0, '"
+        sqlSQ += "(" + (idSQ + 1) + ", " + idPP + ", 1, 14, null, null, null, " + (stocka * -1) + ", 0, '"
                 + timeStamp
-                + "', null, " + kantitatea + ", null        , false, null, 2, '" + timeStamp + "', 2, '" + timeStamp
+                + "', null, " + stocka + ", null        , false, null, 2, '" + timeStamp + "', 2, '" + timeStamp
                 + "', null)";
         exekuzioa(sqlSQ, "SQ");
 

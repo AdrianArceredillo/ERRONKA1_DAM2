@@ -38,7 +38,7 @@ public class ProduktuakJavaObjetura {
                                            // (product_template),
                                            // stock_quant (product_product)
         String izena, deskripzioa, barrakodea, lehentasuna;
-        float prezioa, kantitatea, bolumena, pisua;
+        float prezioa, stocka, bolumena, pisua;
 
         for (String ppString : product_product) {
             if (!aurkitua) {
@@ -61,18 +61,18 @@ public class ProduktuakJavaObjetura {
                                     deskripzioa = ptZatiak[2];
                                     barrakodea = ppZatiak[2];
                                     prezioa = Float.parseFloat(ptZatiak[3]);
-                                    kantitatea = Float.parseFloat(sqZatiak[1]);
+                                    stocka = Float.parseFloat(sqZatiak[1]);
                                     bolumena = Float.parseFloat(ptZatiak[4]);
                                     pisua = Float.parseFloat(ptZatiak[5]);
                                     lehentasuna = ptZatiak[6];
 
                                     aurkitua = true;
-                                    Produktua produktua = new Produktua(); // ID;IZENA;DESKRIPZIOA;PREZIOA;KANTITATEA;BOLUMENA;PISUA;BARRAKODEA;LEHENTASUNA
+                                    Produktua produktua = new Produktua(); // ID;IZENA;DESKRIPZIOA;PREZIOA;stocka;BOLUMENA;PISUA;BARRAKODEA;LEHENTASUNA
                                     produktua.setId(Integer.parseInt(idpt));
                                     produktua.setIzena(izena);
                                     produktua.setDeskripzioa(deskripzioa);
                                     produktua.setPrezioa(prezioa);
-                                    produktua.setStocka(kantitatea);
+                                    produktua.setStocka(stocka);
                                     produktua.setBolumena(bolumena);
                                     produktua.setPisua(pisua);
                                     produktua.setBarraKodea(barrakodea);

@@ -14,7 +14,7 @@ public class ProduktuBatInportatu {
     public static void produktuaInportatu() {
 
         String izena, deskripzioa, barraKodea, erantzuna, lehentasuna;
-        float prezioa, bolumena, pisua, kantitatea;
+        float prezioa, bolumena, pisua, stocka;
         boolean ondo = false;
         in = new Scanner(System.in);
         do {
@@ -26,8 +26,8 @@ public class ProduktuBatInportatu {
             deskripzioa = in.nextLine();
             System.out.print("Prezioa: ");
             prezioa = in.nextFloat();
-            System.out.print("Kantitatea: ");
-            kantitatea = in.nextFloat();
+            System.out.print("Stocka: ");
+            stocka = in.nextFloat();
             System.out.print("Bolumena (m\u00B3): ");
             bolumena = in.nextFloat();
             System.out.print("Pisua (Kg): ");
@@ -45,7 +45,7 @@ public class ProduktuBatInportatu {
             garbitu();
             System.out.print("Sartutako datuak:\nIzena: " + izena + "\nDeskripzioa: " + deskripzioa + "\nPrezioa: "
                     + prezioa
-                    + "\nKantitatea: " + kantitatea + "\nBolumena: " + bolumena + "\nPisua: " + pisua
+                    + "\nstocka: " + stocka + "\nBolumena: " + bolumena + "\nPisua: " + pisua
                     + "\nBarra-kodea: "
                     + barraKodea + "\nLehentasuna: ");
             if (lehentasuna.equals("1")) {
@@ -67,7 +67,7 @@ public class ProduktuBatInportatu {
         int idSQ = idLortuSQ() + 1;
 
         InsertProduktua.produktuaGehitu(idPT, idPP, idSQ, izena, deskripzioa, barraKodea, prezioa, bolumena, pisua,
-                kantitatea, lehentasuna);
+                stocka, lehentasuna);
 
     }
 

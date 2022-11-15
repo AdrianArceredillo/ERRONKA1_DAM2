@@ -6,7 +6,7 @@ import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 
-//ID;IZENA;DESKRIPZIOA;PREZIOA;KANTITATEA;BOLUMENA;PISUA;BARRAKODEA;LEHENTASUNA
+//ID;IZENA;DESKRIPZIOA;PREZIOA;STOCKA;BOLUMENA;PISUA;BARRAKODEA;LEHENTASUNA
 @XmlType(propOrder = { "id", "izena", "deskripzioa", "prezioa", "stocka", "bolumena", "pisua", "barraKodea", "lehentasuna"})
 @XmlRootElement(name = "Produktua")
 
@@ -91,7 +91,7 @@ public class Produktua {
 
 
     @Override
-    public String toString() { // ID;IZENA;DESKRIPZIOA;PREZIOA;KANTITATEA;BOLUMENA;PISUA;BARRAKODEA;LEHENTASUNA
+    public String toString() { // ID;IZENA;DESKRIPZIOA;PREZIOA;STOCKA;BOLUMENA;PISUA;BARRAKODEA;LEHENTASUNA
         return "Produktua["+ id+", "+izena+", "+deskripzioa+", "+prezioa+", "+stocka+", "+bolumena+", "+pisua+", "+barraKodea+", "+lehentasuna+"]";
     }
 

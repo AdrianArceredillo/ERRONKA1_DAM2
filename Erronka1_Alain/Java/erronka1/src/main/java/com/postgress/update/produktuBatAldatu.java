@@ -30,7 +30,7 @@ public class ProduktuBatAldatu {
             if (erantzuna.equals("bai") || erantzuna.equals("b")) {
                 produktuaEditatu(idPT);
 
-                ///////////////////////////////////////////////////////////
+                
                 System.out.println("Hemen produktu guztien lista berria:");
                 System.out.println(
                         "Produktua[id, izena, deskripzioa, prezioa, stocka, bolumena, pisua, barraKodea, lehentasuna]");
@@ -45,12 +45,13 @@ public class ProduktuBatAldatu {
                 bestebat = false;
             }
         } while (bestebat);
+        
     }
 
     public static void produktuaEditatu(int idPT) {
         // UPDATE public.product_template SET name = 'update-a', description =
         // '<p>deskripzio berria</p>' WHERE id = 1;
-        // ID;IZENA;DESKRIPZIOA;PREZIOA;KANTITATEA;BOLUMENA;PISUA;BARRAKODEA;LEHENTASUNA
+        // ID;IZENA;DESKRIPZIOA;PREZIOA;STOCKA;BOLUMENA;PISUA;BARRAKODEA;LEHENTASUNA
         String name, description, barcode, priority;
         float list_price, quantity, volume, weight;
 
@@ -84,14 +85,14 @@ public class ProduktuBatAldatu {
             System.out.println("Izena: " + name);
             System.out.println("Deskripzioa: " + description);
             System.out.println("Prezioa: " + list_price);
-            System.out.println("Kantitatea: " + quantity);
+            System.out.println("Stocka: " + quantity);
             System.out.println("Bolumena (m\u00B3): " + volume);
             System.out.println("Pisua (Kg): " + weight);
             System.out.println("Barra kodea: " + barcode);
             System.out.println("Lehentasuna: " + priority);
 
             System.out.println(
-                    "Ze datu nahi duzu aldatu? (izena/deskripzioa/prezioa/kantitatea/bolumena/pisua/barrakodea/lehentasuna)(irten)");
+                    "Ze datu nahi duzu aldatu? (izena/deskripzioa/prezioa/stocka/bolumena/pisua/barrakodea/lehentasuna)(irten)");
             in = new Scanner(System.in);
             String erantzuna = in.nextLine().toLowerCase();
             switch (erantzuna) {
@@ -104,8 +105,8 @@ public class ProduktuBatAldatu {
                 case "prezioa":
                     prezioaAldatu(list_price, idPT);
                     break;
-                case "kantitatea":
-                    kantitateaAldatu(quantity, idPP);
+                case "stocka":
+                    stockaAldatu(quantity, idPP);
                     break;
                 case "bolumena":
                     bolumenaAldatu(volume, idPT);
@@ -130,6 +131,7 @@ public class ProduktuBatAldatu {
     }
 
     public static void izenaAldatu(String name, int id) {
+
         String nameBerria;
         System.out.println("Aurreko izena: " + name);
         System.out.print("Izen berria: ");
@@ -160,10 +162,10 @@ public class ProduktuBatAldatu {
         exekutatu(sql);
     }
 
-    public static void kantitateaAldatu(float quant, int id) {
+    public static void stockaAldatu(float quant, int id) {
         float quantBerria;
-        System.out.println("Aurreko kantitatea: " + quant);
-        System.out.print("Kantitate berria: ");
+        System.out.println("Aurreko stocka: " + quant);
+        System.out.print("Stock berria: ");
         in = new Scanner(System.in);
         quantBerria = in.nextFloat();
         String sql = "UPDATE public.stock_quant SET quantity = " + quantBerria + " WHERE product_id = " + id + " and location_id = 8";

@@ -40,7 +40,7 @@ public class Jsona {
             JsonArray jsonarray = jsonst.asJsonArray();
             produktuak = new Produktuak();
             for (int i = 0; i < jsonarray.size(); i++) {
-                //ID;IZENA;DESKRIPZIOA;PREZIOA;KANTITATEA;BOLUMENA;PISUA;BARRAKODEA;LEHENTASUNA
+                //ID;IZENA;DESKRIPZIOA;PREZIOA;STOCKA;BOLUMENA;PISUA;BARRAKODEA;LEHENTASUNA
                 JsonObject jsonobj = jsonarray.getJsonObject(i);
                 Produktua produktua = new Produktua();
                 produktua.setId(jsonobj.getInt("id"));
@@ -67,7 +67,7 @@ public class Jsona {
         JsonArrayBuilder jab = Json.createArrayBuilder();
         for (Produktua p : this.produktuak.getProduktuak()) { //!!!
             jab.add(Json.createObjectBuilder()
-                //ID;IZENA;DESKRIPZIOA;PREZIOA;KANTITATEA;BOLUMENA;PISUA;BARRAKODEA;LEHENTASUNA
+                //ID;IZENA;DESKRIPZIOA;PREZIOA;STOCKA;BOLUMENA;PISUA;BARRAKODEA;LEHENTASUNA
                     .add("id", p.getId())
                     .add("izena", p.getIzena())
                     .add("deskripzioa", p.getDeskripzioa())

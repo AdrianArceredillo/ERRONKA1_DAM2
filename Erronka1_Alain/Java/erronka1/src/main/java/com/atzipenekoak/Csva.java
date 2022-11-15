@@ -38,7 +38,7 @@ public class Csva {
             while ((l = inputStream.readLine()) != null) {
                 String[] eremuak = l.split(banatzailea);
                 if (!eremuak[0].equals("ID")) {
-                    //ID;IZENA;DESKRIPZIOA;PREZIOA;KANTITATEA;BOLUMENA;PISUA;BARRAKODEA;LEHENTASUNA
+                    //ID;IZENA;DESKRIPZIOA;PREZIOA;STOCKA;BOLUMENA;PISUA;BARRAKODEA;LEHENTASUNA
                     Produktua produktua = new Produktua();
                     produktua.setId(Integer.parseInt(eremuak[0]));
                     produktua.setIzena(eremuak[1]);
@@ -67,7 +67,7 @@ public class Csva {
             for (Produktua p : this.produktuak.getProduktuak()) {
                 if (produktuKopurua == 0) {
                     outputStream
-                            .println("ID;IZENA;DESKRIPZIOA;PREZIOA;KANTITATEA;BOLUMENA;PISUA;BARRAKODEA;LEHENTASUNA");
+                            .println("ID;IZENA;DESKRIPZIOA;PREZIOA;STOCKA;BOLUMENA;PISUA;BARRAKODEA;LEHENTASUNA");
                 }
                 produktuKopurua++;
                 outputStream.println(p.getId() + ";" + p.getIzena() + ";" + p.getDeskripzioa() + ";"

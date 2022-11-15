@@ -25,7 +25,7 @@ public class ProduktuListaInportatu {
         produktuak = produktuenListaObjetura(fitxategia);
         int kontagailua = 0;
         String izena, deskripzioa, barraKodea, lehentasuna, idAk;
-        Float prezioa, bolumena, pisua, kantitatea;
+        Float prezioa, bolumena, pisua, stocka;
         int idPT = idLortuPT() + 1;
         int idPP = idLortuPP() + 1;
         int idSQ = idLortuSQ() + 1;
@@ -37,10 +37,10 @@ public class ProduktuListaInportatu {
                 prezioa = p.getPrezioa();
                 bolumena = p.getBolumena();
                 pisua = p.getPisua();
-                kantitatea = p.getStocka();
+                stocka = p.getStocka();
                 lehentasuna = p.getLehentasuna();
                 idAk = InsertProduktua.produktuaGehitu(idPT, idPP, idSQ, izena, deskripzioa, barraKodea, prezioa,
-                        bolumena, pisua, kantitatea, lehentasuna);
+                        bolumena, pisua, stocka, lehentasuna);
                 kontagailua++;
                 String[] idArray = idAk.split(";");
                 idPT = Integer.parseInt(idArray[0])  + 1;
