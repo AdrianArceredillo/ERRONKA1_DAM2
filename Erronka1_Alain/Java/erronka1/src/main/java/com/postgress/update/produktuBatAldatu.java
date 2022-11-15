@@ -57,6 +57,7 @@ public class ProduktuBatAldatu {
         int idPP = 0;
         boolean egin = true;
         do {
+            garbitu();
             String sql = "SELECT id FROM public.product_product where product_tmpl_id = " + idPT;
             try {
                 st = konexioa.connectDatabase().createStatement();
@@ -84,8 +85,8 @@ public class ProduktuBatAldatu {
             System.out.println("Deskripzioa: " + description);
             System.out.println("Prezioa: " + list_price);
             System.out.println("Kantitatea: " + quantity);
-            System.out.println("Bolumena: " + volume);
-            System.out.println("Pisua: " + weight);
+            System.out.println("Bolumena (m\u00B3): " + volume);
+            System.out.println("Pisua (Kg): " + weight);
             System.out.println("Barra kodea: " + barcode);
             System.out.println("Lehentasuna: " + priority);
 
@@ -98,25 +99,25 @@ public class ProduktuBatAldatu {
                     izenaAldatu(name, idPT);
                     break;
                 case "deskripzioa":
-                    deskripzioaAldatu();
+                    deskripzioaAldatu(description, idPT);
                     break;
                 case "prezioa":
-                    prezioaAldatu();
+                    prezioaAldatu(list_price, idPT);
                     break;
                 case "kantitatea":
-                    kantitateaAldatu();
+                    kantitateaAldatu(quantity, idPP);
                     break;
                 case "bolumena":
-                    bolumenaAldatu();
+                    bolumenaAldatu(volume, idPT);
                     break;
                 case "pisua":
-                    pisuaAldatu();
+                    pisuaAldatu(weight, idPT);
                     break;
                 case "barrakodea":
-                    barraKodeaAldatu();
+                    barraKodeaAldatu(barcode, idPP);
                     break;
                 case "lehentasuna":
-                    lehentasunaAldatu();
+                    lehentasunaAldatu(priority, idPT);
                     break;
                 case "irten":
                     egin = false;
@@ -134,30 +135,86 @@ public class ProduktuBatAldatu {
         System.out.print("Izen berria: ");
         in = new Scanner(System.in);
         nameBerria = in.nextLine();
-        String sql = "UPDATE public.product_template SET name = '" +nameBerria+"' WHERE id = " + id;
+        String sql = "UPDATE public.product_template SET name = '" + nameBerria + "' WHERE id = " + id;
         exekutatu(sql);
-       
+
     }
 
-    public static void deskripzioaAldatu() {
+    public static void deskripzioaAldatu(String description, int id) {
+        String descriptionBerria;
+        System.out.println("Aurreko deskripzioa: " + description);
+        System.out.print("Deskripzio berria: ");
+        in = new Scanner(System.in);
+        descriptionBerria = in.nextLine();
+        String sql = "UPDATE public.product_template SET description = '<p>" + descriptionBerria + "</p>' WHERE id = " + id;
+        exekutatu(sql);
     }
 
-    public static void prezioaAldatu() {
+    public static void prezioaAldatu(float list_price, int id) {
+        float list_priceBerria;
+        System.out.println("Aurreko prezioa: " + list_price);
+        System.out.print("Prezio berria: ");
+        in = new Scanner(System.in);
+        list_priceBerria = in.nextFloat();
+        String sql = "UPDATE public.product_template SET list_price = " + list_priceBerria + " WHERE id = " + id;
+        exekutatu(sql);
     }
 
-    public static void kantitateaAldatu() {
+    public static void kantitateaAldatu(float quant, int id) {
+        float quantBerria;
+        System.out.println("Aurreko kantitatea: " + quant);
+        System.out.print("Kantitate berria: ");
+        in = new Scanner(System.in);
+        quantBerria = in.nextFloat();
+        String sql = "UPDATE public.stock_quant SET quantity = " + quantBerria + " WHERE product_id = " + id + " and location_id = 8";
+        exekutatu(sql);
+        sql = "UPDATE public.stock_quant SET quantity = " + (quantBerria*-1) + " WHERE product_id = " + id + " and location_id = 14";
+        exekutatu(sql);
     }
 
-    public static void bolumenaAldatu() {
+    public static void bolumenaAldatu(float volume, int id) {
+        float volumeBerria;
+        System.out.println("Aurreko bolumena (m\u00B3): " + volume);
+        System.out.print("Bolumen berria (m\u00B3): ");
+        in = new Scanner(System.in);
+        volumeBerria = in.nextFloat();
+        String sql = "UPDATE public.product_template SET volume = " + volumeBerria + " WHERE id = " + id;
+        exekutatu(sql);
     }
 
-    public static void pisuaAldatu() {
+    public static void pisuaAldatu(float weight, int id) {
+        float weightBerria;
+        System.out.println("Aurreko pisua (Kg): " + weight);
+        System.out.print("Pisu berria (Kg): ");
+        in = new Scanner(System.in);
+        weightBerria = in.nextFloat();
+        String sql = "UPDATE public.product_template SET weight = " + weightBerria + " WHERE id = " + id;
+        exekutatu(sql);
     }
 
-    public static void barraKodeaAldatu() {
+    public static void barraKodeaAldatu(String barcode, int id) {
+        String barcodeBerria;
+        System.out.println("Aurreko barra kodea: " + barcode);
+        System.out.print("Barra kode berria (ezin da izan beste barra kode baten berdina): ");
+        in = new Scanner(System.in);
+        barcodeBerria = in.nextLine();
+        String sql = "UPDATE public.product_product SET barcode = '" + barcodeBerria + "' WHERE id = " + id;
+        exekutatu(sql);
     }
 
-    public static void lehentasunaAldatu() {
+    public static void lehentasunaAldatu(String priority, int id) {
+        String priorityBerria;
+        System.out.println("Aurreko lehentasuna: " + priority);
+        System.out.print("Lehentasun berria (Bai/Ez): ");
+        in = new Scanner(System.in);
+        priorityBerria = in.nextLine().toLowerCase();
+        if(priorityBerria.equals("bai") || priorityBerria.equals("b") || priorityBerria.equals("1")){
+            priorityBerria = "1";
+        } else{
+            priorityBerria = "0";
+        }
+        String sql = "UPDATE public.product_template SET priority = '" + priorityBerria + "' WHERE id = " + id;
+        exekutatu(sql);
     }
 
     public static void exekutatu(String sql) {
@@ -233,4 +290,8 @@ public class ProduktuBatAldatu {
         return quant;
     }
 
+    private static void garbitu() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
 }
