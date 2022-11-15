@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using HJAA_Grafikoak_HaritzOtero;
 
 namespace Grafikoak_Joseba
 {
@@ -261,6 +262,12 @@ namespace Grafikoak_Joseba
         private void graf21_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HJAA_Grafikoak_HaritzOtero.Form1 frmHaritz = new HJAA_Grafikoak_HaritzOtero.Form1();
+            frmHaritz.Show();
         }
     }
 }
