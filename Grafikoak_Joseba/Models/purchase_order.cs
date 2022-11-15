@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Grafikoak_Joseba.Models
-{//aa
+{
     internal class purchase_order
     {
         [Key]
