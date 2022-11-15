@@ -1,0 +1,8 @@
+D:\2022-2023\DAM2Ethazi\1_Erronka\Grafikoak_Joseba\Graf3\bin\Debug\Graf3.dll
+D:\2022-2023\DAM2Ethazi\1_Erronka\Grafikoak_Joseba\Graf3\bin\Debug\Graf3.pdb
+D:\2022-2023\DAM2Ethazi\1_Erronka\Grafikoak_Joseba\Graf3\obj\Debug\GrafikoaLangileak.csproj.AssemblyReference.cache
+D:\2022-2023\DAM2Ethazi\1_Erronka\Grafikoak_Joseba\Graf3\obj\Debug\Graf3.Graf3.resources
+D:\2022-2023\DAM2Ethazi\1_Erronka\Grafikoak_Joseba\Graf3\obj\Debug\GrafikoaLangileak.csproj.GenerateResource.cache
+D:\2022-2023\DAM2Ethazi\1_Erronka\Grafikoak_Joseba\Graf3\obj\Debug\GrafikoaLangileak.csproj.CoreCompileInputs.cache
+D:\2022-2023\DAM2Ethazi\1_Erronka\Grafikoak_Joseba\Graf3\obj\Debug\Graf3.dll
+D:\2022-2023\DAM2Ethazi\1_Erronka\Grafikoak_Joseba\Graf3\obj\Debug\Graf3.pdb

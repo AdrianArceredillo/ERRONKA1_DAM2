@@ -1,0 +1,140 @@
+﻿namespace Grafikoak_Joseba
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.labelUrteak = new System.Windows.Forms.Label();
+            this.graf12 = new Graf1.Graf1();
+            this.graf31 = new Graf3.Graf3();
+            this.graf21 = new Graf2.Graf2();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(134, 128);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnExit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnExit.Location = new System.Drawing.Point(1804, 53);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(90, 52);
+            this.btnExit.TabIndex = 3;
+            this.btnExit.Text = "ITXI SAIOA";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Items.AddRange(new object[] {
+            "",
+            "2022",
+            "2021",
+            "2020"});
+            this.comboBox1.Location = new System.Drawing.Point(898, 88);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(138, 21);
+            this.comboBox1.TabIndex = 7;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // labelUrteak
+            // 
+            this.labelUrteak.Font = new System.Drawing.Font("Yu Gothic", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUrteak.Location = new System.Drawing.Point(885, 37);
+            this.labelUrteak.Name = "labelUrteak";
+            this.labelUrteak.Size = new System.Drawing.Size(166, 42);
+            this.labelUrteak.TabIndex = 6;
+            this.labelUrteak.Text = "URTEAK";
+            // 
+            // graf12
+            // 
+            this.graf12.Location = new System.Drawing.Point(124, 185);
+            this.graf12.Name = "graf12";
+            this.graf12.Size = new System.Drawing.Size(700, 400);
+            this.graf12.TabIndex = 4;
+            // 
+            // graf31
+            // 
+            this.graf31.Location = new System.Drawing.Point(124, 637);
+            this.graf31.Name = "graf31";
+            this.graf31.Size = new System.Drawing.Size(700, 400);
+            this.graf31.TabIndex = 8;
+            // 
+            // graf21
+            // 
+            this.graf21.BackColor = System.Drawing.SystemColors.Control;
+            this.graf21.Location = new System.Drawing.Point(1111, 185);
+            this.graf21.Name = "graf21";
+            this.graf21.Size = new System.Drawing.Size(700, 400);
+            this.graf21.TabIndex = 1;
+            this.graf21.Load += new System.EventHandler(this.graf21_Load);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1924, 1061);
+            this.Controls.Add(this.graf31);
+            this.Controls.Add(this.labelUrteak);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.graf12);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.graf21);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load_1);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+        private Graf2.Graf2 graf21;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnExit;
+        private Graf1.Graf1 graf12;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label labelUrteak;
+        private Graf3.Graf3 graf31;
+    }
+}
+
