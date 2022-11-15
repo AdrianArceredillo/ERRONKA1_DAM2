@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Grafikoak_Joseba.Models
 {
     internal class sale_order_line
-    {
+    {//PROBA
         [Key]
         public int id { get; set; }
         public string name { get; set; }
