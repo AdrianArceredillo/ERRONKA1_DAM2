@@ -24,7 +24,10 @@
     <string name="btnVerSeleccionado">Ikusi:</string>
 
     <!-- Actividad listado de ventas -->
-    <string name="lblElegirCliente">Aukeratu bezero bat:</string>
+    <string name="lblVerListaClientes">Bezeroen zerrenda:</string>
+    <string name="btn_Ver_MejorCompraClientes">Erosketa handiena:</string>
+    <string name="btn_Ocultar_MejorCompraClientes">Edukia ezkutatu:</string>
+    <string name="lblFiltroarenAzalpena">Ikusi bezero bakoitzaren erosketarik handienaren prezioa.</string>
 
 
     <!-- Actividad: menú para elegir la información que el usuario desea ver -->

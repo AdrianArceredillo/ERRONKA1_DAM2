@@ -28,15 +28,14 @@ public class Salmenta {
     String data;                //create_date
     String descripcion_Cliente; //order_partner_id + name(res_partner)
 
-
-
     public Salmenta() {
+
     }
 
-    public Salmenta(int id, String name, String data) {
-        this.id = id;
-        this.name = name;
-        this.data = data;
+    public Salmenta(int bezeroaId, String bezeroaIzena, float prezioTotala) {
+        this.order_partner_id = bezeroaId;
+        this.descripcion_Cliente = bezeroaIzena;
+        this.price_total = prezioTotala;
     }
 
     public Salmenta(int id, String name, float price_unit, float price_subtotal, float price_total,
@@ -136,9 +135,27 @@ public class Salmenta {
 
     @Override
     public String toString() {
-        return "Salmenta[" + id + ", " + name + ", " + data + "]\n";
+        return "Salmenta " + id + ":\n" +
+                "Produktua: " + name + " - Uds.: " + product_uom_qty + "\n" +
+                "Data: " + data + "\n";
     }
 
+
+    public String toStringSalmentak() {
+        return /*"- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n\n" +*/
+                "Salmenta: \t\t\t\t\t" + id + "\n" +
+                "Produktua: \t\t\t\t" + name + " \n" +
+                "\t\t\t\t\t\t\t\t\t\t\t\t\tUds.: " + product_uom_qty + " unitate\n" +
+                "Bezeroa: \t\t\t\t\t\t" + "Id: " + order_partner_id + "\n" +
+                "\t\t\t\t\t\t\t\t\t\t\t\t\tIzena: " + descripcion_Cliente + "\n" +
+                "Totala: \t\t\t\t\t\t\t" + price_total + " €\n" +
+                "Data: \t\t\t\t\t\t\t\t\t" + data + "\n\n" +
+                "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n";
+    }
+
+    public String toStringTxikia() {
+        return "Bezeroa: " + descripcion_Cliente + ". Prezioa: " + price_total + "\n";
+    }
 
     //INFO INTERNET:
     //TimeStamp without time zone: - https://stackoverflow.com/questions/8655442/create-a-timestamp-without-timezone
