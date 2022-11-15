@@ -45,6 +45,21 @@
     <Reference Include="EntityFramework6.Npgsql, Version=6.4.3.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework6.Npgsql.6.4.3\lib\net461\EntityFramework6.Npgsql.dll</HintPath>
     </Reference>
+    <Reference Include="Grafikoa1, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Grafikoa1\bin\Debug\Grafikoa1.dll</HintPath>
+    </Reference>
+    <Reference Include="Grafikoa3, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Grafikoa3\bin\Debug\Grafikoa3.dll</HintPath>
+    </Reference>
+    <Reference Include="GrafikoaDll, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DAM-2HaritzOtero\DesarrolloInterface\C#\GrafikoaDll\GrafikoaDll\bin\Debug\GrafikoaDll.dll</HintPath>
+    </Reference>
+    <Reference Include="KaixoDll">
+      <HintPath>..\..\..\DAM-2HaritzOtero\DesarrolloInterface\C#\KaixoDll\KaixoDll\bin\Debug\KaixoDll.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -132,9 +147,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Grafikoa1\GrafikoaProductuenStock.csproj">
-      <Project>{88DD57ED-796D-4839-AF42-024227BAF8D7}</Project>
-      <Name>GrafikoaProductuenStock</Name>
+    <ProjectReference Include="..\..\Graf1\GrafikoProduktuenSalmenta.csproj">
+      <Project>{11c97148-c850-40c7-b85c-1143009a3cfc}</Project>
+      <Name>GrafikoProduktuenSalmenta</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Graf2\GrafikoaErosketak.csproj">
+      <Project>{cde52758-0aa3-4fe4-a0e5-d90a804f3492}</Project>
+      <Name>GrafikoaErosketak</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Graf3\GrafikoaLangileak.csproj">
+      <Project>{1ad84883-2e1f-4bb5-ac62-2bd08591e3b7}</Project>
+      <Name>GrafikoaLangileak</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Grafikoak_Joseba\Grafikoak_Joseba.csproj">
+      <Project>{d1f64445-5d10-4adb-8c33-1e592662bb2e}</Project>
+      <Name>Grafikoak_Joseba</Name>
     </ProjectReference>
     <ProjectReference Include="..\Grafikoa2\Grafikoa2.csproj">
       <Project>{1254EBC6-CA3A-4283-993C-805E8D6A9E2E}</Project>
