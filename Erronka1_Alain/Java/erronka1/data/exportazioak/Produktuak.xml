@@ -2,8 +2,8 @@
 <Produktuak>
     <Produktua>
         <Id>1</Id>
-        <Izena>Lehenengoa</Izena>
-        <Deskripzioa>&lt;p&gt;&lt;p&gt;Produktuaren deskripzioa&lt;/p&gt;&lt;/p&gt;</Deskripzioa>
+        <Izena>update-a</Izena>
+        <Deskripzioa>&lt;p&gt;deskripzio berria&lt;/p&gt;</Deskripzioa>
         <Prezioa>123.0</Prezioa>
         <Stocka>13.0</Stocka>
         <Bolumena>0.13</Bolumena>
@@ -14,7 +14,7 @@
     <Produktua>
         <Id>2</Id>
         <Izena>Bigarrena</Izena>
-        <Deskripzioa>&lt;p&gt;&lt;p&gt;Produktuaren deskripzioa&lt;/p&gt;&lt;/p&gt;</Deskripzioa>
+        <Deskripzioa>&lt;p&gt;Produktuaren deskripzioa&lt;/p&gt;</Deskripzioa>
         <Prezioa>123.0</Prezioa>
         <Stocka>13.0</Stocka>
         <Bolumena>0.13</Bolumena>
@@ -23,20 +23,9 @@
         <Lehentasuna>0</Lehentasuna>
     </Produktua>
     <Produktua>
-        <Id>3</Id>
-        <Izena>Hirugarrena</Izena>
-        <Deskripzioa>&lt;p&gt;&lt;p&gt;Produktuaren deskripzioa&lt;/p&gt;&lt;/p&gt;</Deskripzioa>
-        <Prezioa>123.0</Prezioa>
-        <Stocka>13.0</Stocka>
-        <Bolumena>0.13</Bolumena>
-        <Pisua>123.0</Pisua>
-        <Barra_Kodea>1939900123C</Barra_Kodea>
-        <Lehentasuna>0</Lehentasuna>
-    </Produktua>
-    <Produktua>
         <Id>4</Id>
         <Izena>Laugarrena</Izena>
-        <Deskripzioa>&lt;p&gt;&lt;p&gt;Produktuaren deskripzioa&lt;/p&gt;&lt;/p&gt;</Deskripzioa>
+        <Deskripzioa>&lt;p&gt;Produktuaren deskripzioa&lt;/p&gt;</Deskripzioa>
         <Prezioa>123.0</Prezioa>
         <Stocka>13.0</Stocka>
         <Bolumena>0.13</Bolumena>
@@ -47,7 +36,7 @@
     <Produktua>
         <Id>5</Id>
         <Izena>Bostgarrena</Izena>
-        <Deskripzioa>&lt;p&gt;&lt;p&gt;Produktuaren deskripzioa&lt;/p&gt;&lt;/p&gt;</Deskripzioa>
+        <Deskripzioa>&lt;p&gt;Produktuaren deskripzioa&lt;/p&gt;</Deskripzioa>
         <Prezioa>123.0</Prezioa>
         <Stocka>13.0</Stocka>
         <Bolumena>0.13</Bolumena>
@@ -58,7 +47,7 @@
     <Produktua>
         <Id>6</Id>
         <Izena>Seigarrena</Izena>
-        <Deskripzioa>&lt;p&gt;&lt;p&gt;Produktuaren deskripzioa&lt;/p&gt;&lt;/p&gt;</Deskripzioa>
+        <Deskripzioa>&lt;p&gt;Produktuaren deskripzioa&lt;/p&gt;</Deskripzioa>
         <Prezioa>123.0</Prezioa>
         <Stocka>13.0</Stocka>
         <Bolumena>0.13</Bolumena>

@@ -8,12 +8,12 @@ import java.util.Scanner;
 import com.konexioa.Konexioa;
 import com.postgress.ProduktuakJavaObjetura;
 
-public class produktuBatAldatu {
+public class ProduktuBatAldatu {
     public static Konexioa konexioa = new Konexioa();
     public static Statement st;
     public static Scanner in;
 
-    public static void produktuaEzabatu() {
+    public static void produktuaAldatu() {
         int idPT;
         String erantzuna;
         boolean bestebat;
@@ -55,96 +55,118 @@ public class produktuBatAldatu {
         float list_price, quantity, volume, weight;
 
         int idPP = 0;
+        boolean egin = true;
+        do {
+            String sql = "SELECT id FROM public.product_product where product_tmpl_id = " + idPT;
+            try {
+                st = konexioa.connectDatabase().createStatement();
+                ResultSet rs = st.executeQuery(sql);
+                while (rs.next()) {
+                    idPP = rs.getInt(1);
+                }
+            } catch (Exception ex) {
+                System.out.println("Exception (PP): " + ex);
+            }
+            String[] datuakPT = irakurriTaulaPT(idPT).get(0).split(";");
+            // id
+            name = datuakPT[1];
+            description = datuakPT[2];
+            list_price = Float.parseFloat(datuakPT[3]);
+            quantity = irakurriTaulaSQ(idPP);
+            volume = Float.parseFloat(datuakPT[4]);
+            weight = Float.parseFloat(datuakPT[5]);
+            barcode = irakurriTaulaPP(idPP);
+            priority = datuakPT[6];
 
-        String sql = "SELECT id FROM public.product_product where product_tmpl_id = " + idPT;
+            System.out.println("Datuak:");
+            System.out.println("ID-a: " + idPT);
+            System.out.println("Izena: " + name);
+            System.out.println("Deskripzioa: " + description);
+            System.out.println("Prezioa: " + list_price);
+            System.out.println("Kantitatea: " + quantity);
+            System.out.println("Bolumena: " + volume);
+            System.out.println("Pisua: " + weight);
+            System.out.println("Barra kodea: " + barcode);
+            System.out.println("Lehentasuna: " + priority);
+
+            System.out.println(
+                    "Ze datu nahi duzu aldatu? (izena/deskripzioa/prezioa/kantitatea/bolumena/pisua/barrakodea/lehentasuna)(irten)");
+            in = new Scanner(System.in);
+            String erantzuna = in.nextLine().toLowerCase();
+            switch (erantzuna) {
+                case "izena":
+                    izenaAldatu(name, idPT);
+                    break;
+                case "deskripzioa":
+                    deskripzioaAldatu();
+                    break;
+                case "prezioa":
+                    prezioaAldatu();
+                    break;
+                case "kantitatea":
+                    kantitateaAldatu();
+                    break;
+                case "bolumena":
+                    bolumenaAldatu();
+                    break;
+                case "pisua":
+                    pisuaAldatu();
+                    break;
+                case "barrakodea":
+                    barraKodeaAldatu();
+                    break;
+                case "lehentasuna":
+                    lehentasunaAldatu();
+                    break;
+                case "irten":
+                    egin = false;
+                    break;
+                default:
+                    System.out.println("Aukera okerra. Saiatu berriz.");
+            }
+        } while (egin);
+
+    }
+
+    public static void izenaAldatu(String name, int id) {
+        String nameBerria;
+        System.out.println("Aurreko izena: " + name);
+        System.out.print("Izen berria: ");
+        in = new Scanner(System.in);
+        nameBerria = in.nextLine();
+        String sql = "UPDATE public.product_template SET name = '" +nameBerria+"' WHERE id = " + id;
+        exekutatu(sql);
+       
+    }
+
+    public static void deskripzioaAldatu() {
+    }
+
+    public static void prezioaAldatu() {
+    }
+
+    public static void kantitateaAldatu() {
+    }
+
+    public static void bolumenaAldatu() {
+    }
+
+    public static void pisuaAldatu() {
+    }
+
+    public static void barraKodeaAldatu() {
+    }
+
+    public static void lehentasunaAldatu() {
+    }
+
+    public static void exekutatu(String sql) {
         try {
             st = konexioa.connectDatabase().createStatement();
-            ResultSet rs = st.executeQuery(sql);
-            while (rs.next()) {
-                idPP = rs.getInt(1);
-            }
+            st.executeQuery(sql);
         } catch (Exception ex) {
-            System.out.println("Exception (PP): " + ex);
+            System.out.println(ex);
         }
-        String[] datuakPT = irakurriTaulaPT(idPT).get(0).split(";");
-        // id
-        name = datuakPT[1];
-        description = datuakPT[2];
-        list_price = Float.parseFloat(datuakPT[3]);
-        quantity = irakurriTaulaSQ(idPP);
-        volume = Float.parseFloat(datuakPT[4]);
-        weight = Float.parseFloat(datuakPT[5]);
-        barcode = irakurriTaulaPP(idPP);
-        priority = datuakPT[6];
-        System.out.println("Datuak:");
-        System.out.println("ID-a: " + idPT);
-        System.out.println("Izena: " + name);
-        System.out.println("Deskripzioa: " + description);
-        System.out.println("Prezioa: " + list_price);
-        System.out.println("Kantitatea: " + quantity);
-        System.out.println("Bolumena: " + volume);
-        System.out.println("Pisua: " + weight);
-        System.out.println("Barra kodea: " + barcode);
-        System.out.println("Lehentasuna: " + priority);
-
-        System.out.println(
-                "Ze datu nahi duzu aldatu? (izena/deskripzioa/prezioa/kantitatea/bolumena/pisua/barrakodea/lehentasuna)");
-        in = new Scanner(System.in);
-        String erantzuna = in.nextLine().toLowerCase();
-        switch (erantzuna) {
-            case "izena":
-            izenaAldatu();
-                break;
-            case "deskripzioa":
-            deskripzioaAldatu();
-                break;
-            case "prezioa":
-            prezioaAldatu();
-                break;
-            case "kantitatea":
-            kantitateaAldatu();
-                break;
-            case "bolumena":
-            bolumenaAldatu();
-                break;
-            case "pisua":
-            pisuaAldatu();
-                break;
-            case "barrakodea":
-            barraKodeaAldatu();
-                break;
-            case "lehentasuna":
-            lehentasunaAldatu();
-                break;
-            default:
-                System.out.println("Aukera okerra. Saiatu berriz.");
-        }
-
-    }
-
-
-    private static void izenaAldatu() {
-    }
-
-    private static void deskripzioaAldatu() {
-    }
-
-    private static void prezioaAldatu() {
-    }
-
-    private static void kantitateaAldatu() {
-    }
-
-    private static void bolumenaAldatu() {
-    }
-
-    private static void pisuaAldatu() {
-    }
-
-    private static void barraKodeaAldatu() {
-    }
-
-    private static void lehentasunaAldatu() {
     }
 
     public static String izenaLortu(int id) {
