@@ -6,11 +6,11 @@ import java.sql.DriverManager;
 
 public class Konexioa {
     public Connection connectDatabase() {
-        String host = "localhost";
+        String host = "192.168.65.10";
         String port = "5432";
-        String database = "Erronka_db";
-        String user = "admin";
-        String password = "admin123";
+        String database = "HJAA";
+        String user = "openpg";
+        String password = "openpgpwd";
         String url = "";
         Connection connection = null;
         try {

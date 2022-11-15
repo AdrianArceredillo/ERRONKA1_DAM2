@@ -1,4 +1,4 @@
-package com.postgress;
+package com.postgress.insert;
 
 import java.sql.ResultSet;
 import java.sql.Statement;

@@ -1,18 +1,19 @@
-package com.postgress;
+package com.postgress.delete;
 
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Scanner;
 
 import com.konexioa.Konexioa;
+import com.postgress.ProduktuakJavaObjetura;
 
 public class ProduktuBatEzabatu {
     public static Konexioa konexioa = new Konexioa();
     public static Statement st;
     public static Scanner in;
 
-    public static void main(String[] args) {
-        int idTP;
+    public static void produktuaEzabatu() {
+        int idPT;
         String erantzuna;
         boolean bestebat;
         in = new Scanner(System.in);
@@ -21,32 +22,31 @@ public class ProduktuBatEzabatu {
                 "Produktua[ id, izena, deskripzioa, prezioa, stocka, bolumena, pisua, barraKodea, lehentasuna]");
         System.out.print(ProduktuakJavaObjetura.ProduktuenJavaObjetua());
         do {
-        System.out.print("Aukeratu produktu bat bere ID-a idazten: ");
-        idTP = in.nextInt();
-        System.out.println("Ziur zaude " + izenaLortu(idTP) + " produktua nahi duzula ezabatu? (Bai/Ez)");
-        erantzuna = in.next().toLowerCase();
-        if (erantzuna.equals("bai") || erantzuna.equals("b")) {
-            produktuaEzabatu(idTP);
-            System.out.println("Hemen produktu guztien lista berria:");
-            System.out.println(
-                    "Produktua[id, izena, deskripzioa, prezioa, stocka, bolumena, pisua, barraKodea, lehentasuna]");
-            System.out.print(ProduktuakJavaObjetura.ProduktuenJavaObjetua());
-        }
-        System.out.println("Nahi duzu beste produktu bat ezabatu? (Bai/Ez)");
-        erantzuna = in.next().toLowerCase();
-        in.nextLine();
-        if (erantzuna.equals("bai") || erantzuna.equals("b")) {
-            bestebat = true;
-        } else {
-            bestebat = false;
-        }
+            System.out.print("Aukeratu produktu bat bere ID-a idazten: ");
+            idPT = in.nextInt();
+            System.out.println("Ziur zaude " + izenaLortu(idPT) + " produktua nahi duzula ezabatu? (Bai/Ez)");
+            erantzuna = in.next().toLowerCase();
+            if (erantzuna.equals("bai") || erantzuna.equals("b")) {
+                produktuaEzabatu(idPT);
+                System.out.println("Hemen produktu guztien lista berria:");
+                System.out.println(
+                        "Produktua[id, izena, deskripzioa, prezioa, stocka, bolumena, pisua, barraKodea, lehentasuna]");
+                System.out.print(ProduktuakJavaObjetura.ProduktuenJavaObjetua());
+            }
+            System.out.println("Nahi duzu beste produktu bat ezabatu? (Bai/Ez)");
+            erantzuna = in.next().toLowerCase();
+            in.nextLine();
+            if (erantzuna.equals("bai") || erantzuna.equals("b")) {
+                bestebat = true;
+            } else {
+                bestebat = false;
+            }
         } while (bestebat);
-
     }
 
-    public static void produktuaEzabatu(int idTP) {
+    public static void produktuaEzabatu(int idPT) {
         int idPP = 0;
-        String sql = "SELECT id FROM public.product_product where product_tmpl_id = " + idTP;
+        String sql = "SELECT id FROM public.product_product where product_tmpl_id = " + idPT;
         try {
             st = konexioa.connectDatabase().createStatement();
             ResultSet rs = st.executeQuery(sql);
@@ -63,7 +63,7 @@ public class ProduktuBatEzabatu {
         sql = "delete from public.product_product where id = " + idPP;
         exekutatu(sql);
 
-        sql = "delete from public.product_template where id = " + idTP;
+        sql = "delete from public.product_template where id = " + idPT;
         exekutatu(sql);
 
     }

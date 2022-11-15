@@ -1,4 +1,4 @@
-package com.postgress;
+package com.postgress.delete;
 
 import java.sql.Statement;
 import java.util.Scanner;
@@ -11,7 +11,6 @@ public class GarbituTaulak {
     public static Scanner in;
 
     public static void garbitu() {
-        boolean ezabatu;
         String erantzuna;
         System.out.println("Ziur zaude produktu guztiak ezabatu nahi dituzula? (Bai/Ez)");
         in = new Scanner(System.in);
