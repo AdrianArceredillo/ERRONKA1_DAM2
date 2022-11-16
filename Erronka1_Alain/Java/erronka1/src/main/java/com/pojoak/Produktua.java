@@ -92,7 +92,7 @@ public class Produktua {
 
     @Override
     public String toString() { // ID;IZENA;DESKRIPZIOA;PREZIOA;STOCKA;BOLUMENA;PISUA;BARRAKODEA;LEHENTASUNA
-        return "Produktua["+ id+", "+izena+", "+deskripzioa+", "+prezioa+", "+stocka+", "+bolumena+", "+pisua+", "+barraKodea+", "+lehentasuna+"]";
+        return String.format("Produktua["+ id+", "+izena+", "+deskripzioa+", %.2f, %.2f, %.2f, %.2f, "+barraKodea+", "+lehentasuna+"]", prezioa, stocka, bolumena, pisua);
     }
 
 }

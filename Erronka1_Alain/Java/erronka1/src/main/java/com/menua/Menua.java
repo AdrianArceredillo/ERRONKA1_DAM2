@@ -7,6 +7,7 @@ import com.postgress.delete.ProduktuBatEzabatu;
 import com.postgress.insert.ProduktuBatInportatu;
 import com.postgress.insert.ProduktuListaInportatu;
 import com.postgress.update.ProduktuBatAldatu;
+import com.postgress.update.ProduktuListaAldatu;
 
 public class Menua {
     public static Scanner in;
@@ -140,7 +141,7 @@ public class Menua {
                     break;
                 case 2:
                     garbitu();
-                    GarbituTaulak.garbitu();
+                    ProduktuListaAldatu.produktuListaAldatu();
                     break;
                 case 3:
                     garbitu();
