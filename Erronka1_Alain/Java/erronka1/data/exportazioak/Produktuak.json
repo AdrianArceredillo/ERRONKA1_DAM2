@@ -1,1 +1,57 @@
-[{"id":1,"izena":"Update test","deskripzioa":"<p>Update test deskripzioa</p>","prezioa":420.69000244140625,"stocka":1337.0,"bolumena":0.41999998688697815,"pisua":420.69000244140625,"barraKodea":"1234567890W","lehentasuna":"1"},{"id":2,"izena":"Bigarrena","deskripzioa":"<p>Produktuaren deskripzioa</p>","prezioa":123.0,"stocka":13.0,"bolumena":0.12999999523162842,"pisua":123.0,"barraKodea":"19239190013B","lehentasuna":"0"},{"id":3,"izena":"Hirugarrena","deskripzioa":"<p>Produktuaren deskripzioa</p>","prezioa":123.0,"stocka":13.0,"bolumena":0.12999999523162842,"pisua":123.0,"barraKodea":"1939900123C","lehentasuna":"0"},{"id":4,"izena":"Laugarrena","deskripzioa":"<p>Produktuaren deskripzioa</p>","prezioa":123.0,"stocka":13.0,"bolumena":0.12999999523162842,"pisua":123.0,"barraKodea":"192399020123D","lehentasuna":"0"},{"id":5,"izena":"Bostgarrena","deskripzioa":"<p>Produktuaren deskripzioa</p>","prezioa":123.0,"stocka":13.0,"bolumena":0.12999999523162842,"pisua":123.0,"barraKodea":"192349900123E","lehentasuna":"0"},{"id":6,"izena":"Seigarrena","deskripzioa":"<p>Produktuaren deskripzioa</p>","prezioa":123.0,"stocka":13.0,"bolumena":0.12999999523162842,"pisua":123.0,"barraKodea":"192399060123F","lehentasuna":"0"}]
+[
+    {
+        "id": 1,
+        "izena": "yokse",
+        "deskripzioa": "<p>deskripzio berria</p>",
+        "prezioa": 269.83001708984375,
+        "stocka": 5130.0,
+        "bolumena": 0.12999999523162842,
+        "pisua": 269.83001708984375,
+        "barraKodea": "19239150013A",
+        "lehentasuna": "Ez"
+    },
+    {
+        "id": 2,
+        "izena": "Bigarrena",
+        "deskripzioa": "<p>Produktuaren deskripzioa</p>",
+        "prezioa": 269.83001708984375,
+        "stocka": 5130.0,
+        "bolumena": 0.12999999523162842,
+        "pisua": 269.83001708984375,
+        "barraKodea": "19239190013B",
+        "lehentasuna": "Bai"
+    },
+    {
+        "id": 4,
+        "izena": "Laugarrena",
+        "deskripzioa": "<p>Produktuaren deskripzioa</p>",
+        "prezioa": 269.83001708984375,
+        "stocka": 5130.0,
+        "bolumena": 0.12999999523162842,
+        "pisua": 269.83001708984375,
+        "barraKodea": "192399020123D",
+        "lehentasuna": "Bai"
+    },
+    {
+        "id": 5,
+        "izena": "Bostgarrena",
+        "deskripzioa": "<p>Produktuaren deskripzioa</p>",
+        "prezioa": 269.83001708984375,
+        "stocka": 5130.0,
+        "bolumena": 0.12999999523162842,
+        "pisua": 269.83001708984375,
+        "barraKodea": "192349900123E",
+        "lehentasuna": "Bai"
+    },
+    {
+        "id": 6,
+        "izena": "Seigarrena",
+        "deskripzioa": "<p>Produktuaren deskripzioa</p>",
+        "prezioa": 390.83001708984375,
+        "stocka": 5130.0,
+        "bolumena": 0.12999999523162842,
+        "pisua": 390.83001708984375,
+        "barraKodea": "192399060123F",
+        "lehentasuna": "Bai"
+    }
+]

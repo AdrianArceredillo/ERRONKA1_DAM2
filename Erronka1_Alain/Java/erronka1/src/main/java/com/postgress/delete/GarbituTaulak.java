@@ -15,7 +15,6 @@ public class GarbituTaulak {
         System.out.println("Ziur zaude produktu guztiak ezabatu nahi dituzula? (Bai/Ez)");
         in = new Scanner(System.in);
         erantzuna = in.nextLine();
-        in.next();
         erantzuna = erantzuna.toLowerCase();
         if (erantzuna.equals("bai") || erantzuna.equals("b")) {
             garbiketa();

@@ -47,10 +47,10 @@ public class Jsona {
                 produktua.setIzena(jsonobj.getString("izena"));
                 produktua.setDeskripzioa(jsonobj.getString("deskripzioa"));
                 produktua.setStocka(jsonobj.getInt("stocka"));
-                produktua.setStocka(jsonobj.getInt("bolumena"));
+                produktua.setBolumena(jsonobj.getInt("bolumena"));
                 produktua.setPrezioa(jsonobj.getInt("pisua"));
-                produktua.setIzena(jsonobj.getString("barraKodea"));
-                produktua.setIzena(jsonobj.getString("lehentasuna"));
+                produktua.setBarraKodea(jsonobj.getString("barraKodea"));
+                produktua.setLehentasuna(jsonobj.getString("lehentasuna"));
                 produktuak.add(produktua);
             }
             

@@ -2,68 +2,57 @@
 <Produktuak>
     <Produktua>
         <Id>1</Id>
-        <Izena>Update test</Izena>
-        <Deskripzioa>&lt;p&gt;Update test deskripzioa&lt;/p&gt;</Deskripzioa>
-        <Prezioa>420.69</Prezioa>
-        <Stocka>1337.0</Stocka>
-        <Bolumena>0.42</Bolumena>
-        <Pisua>420.69</Pisua>
-        <Barra_Kodea>1234567890W</Barra_Kodea>
-        <Lehentasuna>1</Lehentasuna>
+        <Izena>yokse</Izena>
+        <Deskripzioa>&lt;p&gt;deskripzio berria&lt;/p&gt;</Deskripzioa>
+        <Prezioa>269.83002</Prezioa>
+        <Stocka>5130.0</Stocka>
+        <Bolumena>0.13</Bolumena>
+        <Pisua>269.83002</Pisua>
+        <Barra_Kodea>19239150013A</Barra_Kodea>
+        <Lehentasuna>Ez</Lehentasuna>
     </Produktua>
     <Produktua>
         <Id>2</Id>
         <Izena>Bigarrena</Izena>
         <Deskripzioa>&lt;p&gt;Produktuaren deskripzioa&lt;/p&gt;</Deskripzioa>
-        <Prezioa>123.0</Prezioa>
-        <Stocka>13.0</Stocka>
+        <Prezioa>269.83002</Prezioa>
+        <Stocka>5130.0</Stocka>
         <Bolumena>0.13</Bolumena>
-        <Pisua>123.0</Pisua>
+        <Pisua>269.83002</Pisua>
         <Barra_Kodea>19239190013B</Barra_Kodea>
-        <Lehentasuna>0</Lehentasuna>
-    </Produktua>
-    <Produktua>
-        <Id>3</Id>
-        <Izena>Hirugarrena</Izena>
-        <Deskripzioa>&lt;p&gt;Produktuaren deskripzioa&lt;/p&gt;</Deskripzioa>
-        <Prezioa>123.0</Prezioa>
-        <Stocka>13.0</Stocka>
-        <Bolumena>0.13</Bolumena>
-        <Pisua>123.0</Pisua>
-        <Barra_Kodea>1939900123C</Barra_Kodea>
-        <Lehentasuna>0</Lehentasuna>
+        <Lehentasuna>Bai</Lehentasuna>
     </Produktua>
     <Produktua>
         <Id>4</Id>
         <Izena>Laugarrena</Izena>
         <Deskripzioa>&lt;p&gt;Produktuaren deskripzioa&lt;/p&gt;</Deskripzioa>
-        <Prezioa>123.0</Prezioa>
-        <Stocka>13.0</Stocka>
+        <Prezioa>269.83002</Prezioa>
+        <Stocka>5130.0</Stocka>
         <Bolumena>0.13</Bolumena>
-        <Pisua>123.0</Pisua>
+        <Pisua>269.83002</Pisua>
         <Barra_Kodea>192399020123D</Barra_Kodea>
-        <Lehentasuna>0</Lehentasuna>
+        <Lehentasuna>Bai</Lehentasuna>
     </Produktua>
     <Produktua>
         <Id>5</Id>
         <Izena>Bostgarrena</Izena>
         <Deskripzioa>&lt;p&gt;Produktuaren deskripzioa&lt;/p&gt;</Deskripzioa>
-        <Prezioa>123.0</Prezioa>
-        <Stocka>13.0</Stocka>
+        <Prezioa>269.83002</Prezioa>
+        <Stocka>5130.0</Stocka>
         <Bolumena>0.13</Bolumena>
-        <Pisua>123.0</Pisua>
+        <Pisua>269.83002</Pisua>
         <Barra_Kodea>192349900123E</Barra_Kodea>
-        <Lehentasuna>0</Lehentasuna>
+        <Lehentasuna>Bai</Lehentasuna>
     </Produktua>
     <Produktua>
         <Id>6</Id>
         <Izena>Seigarrena</Izena>
         <Deskripzioa>&lt;p&gt;Produktuaren deskripzioa&lt;/p&gt;</Deskripzioa>
-        <Prezioa>123.0</Prezioa>
-        <Stocka>13.0</Stocka>
+        <Prezioa>390.83002</Prezioa>
+        <Stocka>5130.0</Stocka>
         <Bolumena>0.13</Bolumena>
-        <Pisua>123.0</Pisua>
+        <Pisua>390.83002</Pisua>
         <Barra_Kodea>192399060123F</Barra_Kodea>
-        <Lehentasuna>0</Lehentasuna>
+        <Lehentasuna>Bai</Lehentasuna>
     </Produktua>
 </Produktuak>

@@ -13,8 +13,9 @@ import jakarta.xml.bind.annotation.XmlType;
 public class Produktua {
 
     int id = 0;
-    String izena, deskripzioa, barraKodea, lehentasuna;
+    String izena, deskripzioa, barraKodea;
     float stocka, prezioa, bolumena, pisua;
+    boolean lehentasuna;
 
     @XmlElement(name = "Id")
     public int getId(){
@@ -82,17 +83,27 @@ public class Produktua {
 
     @XmlElement(name = "Lehentasuna")
     public String getLehentasuna() {
-        return lehentasuna;
+        if (lehentasuna){
+            return "Bai";
+        } else {
+            return "Ez";
+        }
+        
     }    
     public void setLehentasuna(String lehentasuna) {
-        this.lehentasuna = lehentasuna;
+        if(lehentasuna.toLowerCase().equals("bai") || lehentasuna.equals("1")){
+            this.lehentasuna = true;
+        } else {
+            this.lehentasuna = false;
+        }
+        
     }
 
 
 
     @Override
     public String toString() { // ID;IZENA;DESKRIPZIOA;PREZIOA;STOCKA;BOLUMENA;PISUA;BARRAKODEA;LEHENTASUNA
-        return String.format("Produktua["+ id+", "+izena+", "+deskripzioa+", %.2f, %.2f, %.2f, %.2f, "+barraKodea+", "+lehentasuna+"]", prezioa, stocka, bolumena, pisua);
+        return String.format("Produktua["+ id+", "+izena+", "+deskripzioa+", %.2f, %.2f, %.2f, %.2f, "+barraKodea+", "+getLehentasuna()+"]", prezioa, stocka, bolumena, pisua);
     }
 
 }

@@ -13,9 +13,11 @@ public class InsertProduktua {
     public static String produktuaGehitu(int idPT, int idPP, int idSQ, String izena, String deskripzioa, String barraKodea, Float prezioa,
             Float bolumena, Float pisua, Float stocka, String lehentasuna) {
         garbitu();
-        // int idPT = idLortuPT() + 1;
-        // int idPP = idLortuPP() + 1;
-        // int idSQ = idLortuSQ() + 1;
+        if(lehentasuna.toLowerCase().equals("bai") || lehentasuna.toLowerCase().equals("b") || lehentasuna.equals("1")){
+            lehentasuna = "1";
+        } else {
+            lehentasuna = "0";
+        }
         String timeStamp;
         timeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new java.util.Date());
 

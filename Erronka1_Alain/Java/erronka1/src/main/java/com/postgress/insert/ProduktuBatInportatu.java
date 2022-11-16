@@ -15,7 +15,7 @@ public class ProduktuBatInportatu {
 
         String izena, deskripzioa, barraKodea, erantzuna, lehentasuna;
         float prezioa, bolumena, pisua, stocka;
-        boolean ondo = false;
+        boolean besteBat = true;
         in = new Scanner(System.in);
         do {
             garbitu();
@@ -34,12 +34,12 @@ public class ProduktuBatInportatu {
             pisua = in.nextFloat();
             System.out.print("Barra-kodea: ");
             barraKodea = in.next();
-            System.out.print("Lehentasuna (B/E): ");
+            System.out.print("Lehentasuna (Bai/Ez): ");
             erantzuna = in.next();
-            if (erantzuna.equals("B") || erantzuna.equals("b") || erantzuna.equals("1")) {
-                lehentasuna = "1";
+            if (erantzuna.toLowerCase().equals("bai") || erantzuna.equals("b") || erantzuna.equals("1")) {
+                lehentasuna = "Bai";
             } else {
-                lehentasuna = "0";
+                lehentasuna = "Ez";
             }
 
             garbitu();
@@ -47,28 +47,31 @@ public class ProduktuBatInportatu {
                     + prezioa
                     + "\nstocka: " + stocka + "\nBolumena: " + bolumena + "\nPisua: " + pisua
                     + "\nBarra-kodea: "
-                    + barraKodea + "\nLehentasuna: ");
-            if (lehentasuna.equals("1")) {
-                System.out.print("Bai");
-            } else {
-                System.out.print("Ez");
-            }
-            System.out.println("\nProduktu hau nahi duzu gehitu? B/E");
+                    + barraKodea + "\nLehentasuna: " + lehentasuna);
+            System.out.println("\nProduktu hau nahi duzu gehitu? (Bai/Ez)");
             erantzuna = in.next();
-            in.nextLine();
-            if (erantzuna.equals("B") || erantzuna.equals("b") || erantzuna.equals("1")) {
-                ondo = true;
+
+            if (erantzuna.toLowerCase().equals("bai") || erantzuna.equals("b") || erantzuna.equals("1")) {
+
+                int idPT = idLortuPT() + 1;
+                int idPP = idLortuPP() + 1;
+                int idSQ = idLortuSQ() + 1;
+
+                InsertProduktua.produktuaGehitu(idPT, idPP, idSQ, izena, deskripzioa, barraKodea, prezioa, bolumena,
+                        pisua,
+                        stocka, lehentasuna);
             }
-        } while (!ondo);
+            System.out.println("Nahi duzu beste produktu bat inportatu? (Bai/Ez)");
+            erantzuna = in.next();
+            if(erantzuna.toLowerCase().equals("bai") ||erantzuna.toLowerCase().equals("b")){
+                besteBat = true;
+            } else {
+                besteBat = false;
+            }
+            in.nextLine();
+
+        } while (besteBat);
         in.close();
-
-        int idPT = idLortuPT() + 1;
-        int idPP = idLortuPP() + 1;
-        int idSQ = idLortuSQ() + 1;
-
-        InsertProduktua.produktuaGehitu(idPT, idPP, idSQ, izena, deskripzioa, barraKodea, prezioa, bolumena, pisua,
-                stocka, lehentasuna);
-
     }
 
     public static int idLortuPT() {

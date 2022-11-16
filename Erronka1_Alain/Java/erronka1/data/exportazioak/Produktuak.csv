@@ -1,7 +1,6 @@
 ID;IZENA;DESKRIPZIOA;PREZIOA;STOCKA;BOLUMENA;PISUA;BARRAKODEA;LEHENTASUNA
-1;Update test;<p>Update test deskripzioa</p>;420.69;1337.0;0.42;420.69;1234567890W;1
-2;Bigarrena;<p>Produktuaren deskripzioa</p>;123.0;13.0;0.13;123.0;19239190013B;0
-3;Hirugarrena;<p>Produktuaren deskripzioa</p>;123.0;13.0;0.13;123.0;1939900123C;0
-4;Laugarrena;<p>Produktuaren deskripzioa</p>;123.0;13.0;0.13;123.0;192399020123D;0
-5;Bostgarrena;<p>Produktuaren deskripzioa</p>;123.0;13.0;0.13;123.0;192349900123E;0
-6;Seigarrena;<p>Produktuaren deskripzioa</p>;123.0;13.0;0.13;123.0;192399060123F;0
+1;yokse;<p>deskripzio berria</p>;269.83002;5130.0;0.13;269.83002;19239150013A;Ez
+2;Bigarrena;<p>Produktuaren deskripzioa</p>;269.83002;5130.0;0.13;269.83002;19239190013B;Bai
+4;Laugarrena;<p>Produktuaren deskripzioa</p>;269.83002;5130.0;0.13;269.83002;192399020123D;Bai
+5;Bostgarrena;<p>Produktuaren deskripzioa</p>;269.83002;5130.0;0.13;269.83002;192349900123E;Bai
+6;Seigarrena;<p>Produktuaren deskripzioa</p>;390.83002;5130.0;0.13;390.83002;192399060123F;Bai

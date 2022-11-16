@@ -89,7 +89,12 @@ public class ProduktuBatAldatu {
             System.out.println("Bolumena (m\u00B3): " + volume);
             System.out.println("Pisua (Kg): " + weight);
             System.out.println("Barra kodea: " + barcode);
-            System.out.println("Lehentasuna: " + priority);
+            if (priority.equals("1")){
+                System.out.println("Lehentasuna: Bai");
+            } else {
+                System.out.println("Lehentasuna: Ez");
+            }
+            
 
             System.out.println(
                     "Ze datu nahi duzu aldatu? (izena/deskripzioa/prezioa/stocka/bolumena/pisua/barrakodea/lehentasuna)(irten)");
@@ -206,13 +211,18 @@ public class ProduktuBatAldatu {
 
     public static void lehentasunaAldatu(String priority, int id) {
         String priorityBerria;
+        if(priority.equals("1")){
+            priority = "Bai";
+        }else{
+            priority = "Ez";
+        }
         System.out.println("Aurreko lehentasuna: " + priority);
         System.out.print("Lehentasun berria (Bai/Ez): ");
         in = new Scanner(System.in);
         priorityBerria = in.nextLine().toLowerCase();
         if(priorityBerria.equals("bai") || priorityBerria.equals("b") || priorityBerria.equals("1")){
             priorityBerria = "1";
-        } else{
+        }else{
             priorityBerria = "0";
         }
         String sql = "UPDATE public.product_template SET priority = '" + priorityBerria + "' WHERE id = " + id;
