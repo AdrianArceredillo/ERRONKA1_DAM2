@@ -56,7 +56,7 @@
 
         <Button
             android:id="@+id/btnHasiera"
-            android:layout_width="169dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#FF1919"
             android:text="@string/btnVolverInicio" />

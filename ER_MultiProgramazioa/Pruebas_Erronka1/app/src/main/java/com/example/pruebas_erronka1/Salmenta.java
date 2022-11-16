@@ -154,7 +154,7 @@ public class Salmenta {
     }
 
     public String toStringTxikia() {
-        return "Bezeroa: " + descripcion_Cliente + ". Prezioa: " + price_total + "\n";
+        return "Bezeroa: " + descripcion_Cliente + ". Prezioa: " + price_total + " €\n";
     }
 
     //INFO INTERNET:

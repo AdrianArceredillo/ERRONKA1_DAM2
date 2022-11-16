@@ -32,6 +32,8 @@ public class VentasListado extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ventas_listado);
 
+        this.setTitle("HJAA - Salmentak");
+
         Database db = new Database();
         SalmentaIkusiHaria salmentaIkusi = new SalmentaIkusiHaria(db.getExtraConnection());
         salmentaIkusi.start();

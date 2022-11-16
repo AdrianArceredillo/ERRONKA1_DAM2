@@ -39,32 +39,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         this.setTitle("HJAA Denda");
 
-//        Database db = new Database();
-//
-//        ProduktuaIkusiHaria produktuakIkusi = new ProduktuaIkusiHaria(db.getExtraConnection());
-//        produktuakIkusi.start();
-//
-//        try {
-//            produktuakIkusi.join();
-//
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-//
-//        txtPruebaProd = findViewById(R.id.txtPruebaProd);
-//        txtPruebaProd.setText(produktuakIkusi.getProduktuGuztiak().get(3).toString());
-//
-//        ArrayList<Produktua> listaProductos = produktuakIkusi.getProduktuGuztiak();
-//        linearLayout = findViewById(R.id.lytPruebasProd);
-//
-//        for( int i = 0; i < listaProductos.size(); i++ )
-//        {
-//            TextView textView = new TextView(getApplicationContext());
-//            textView.setText(produktuakIkusi.getProduktuGuztiak().get(i).toStringDefinitivo());
-//            linearLayout.addView(textView);
-//        }
-
-
         //asignar los elementos de la actividad
         mUsuario = findViewById(R.id.editTextErabiltzailea);
         mContraseña = findViewById(R.id.editTextPasahitza);
@@ -74,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         btnAplikazioaItxi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MainActivity.this.finish(); //FINALIZAR la actividad
+                MainActivity.this.finishAffinity(); //FINALIZAR POR COMPLETO la activadad
                 System.exit(0); //SALIR de la actividad - dejar de ejecutar la aplicación
             }
         });
@@ -103,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
             Toast mezua_Incorrecto = Toast.makeText(getApplicationContext(), " Los datos introducidos no son correctos! ", Toast.LENGTH_LONG);
             mezua_Incorrecto.show();
             mContraseña.setText("");
-
         }
     }
 
@@ -113,15 +86,6 @@ public class MainActivity extends AppCompatActivity {
         intentCatalogo.putExtra(NOMBRE_USUARIO, nombreUsuario);
         startActivity(intentCatalogo);
     }
-
-    public void abrirCatalogo() {
-        Intent intentCatalogo = new Intent(this, CatalogoProductos.class);
-        startActivity(intentCatalogo);
-    }
-
-
-    //Consultas a la base de datos
-    //1 - https://es.stackoverflow.com/questions/103039/conectividad-de-estudio-de-android-con-postgresql
 
 
 }

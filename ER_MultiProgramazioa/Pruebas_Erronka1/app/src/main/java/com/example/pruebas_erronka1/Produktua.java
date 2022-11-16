@@ -76,7 +76,7 @@ public class Produktua {
 
     public String toStringDefinitivo() {
         //String s = String.format("%.2f", 1.2975118);
-        return id + ". Nombre: " + name + ". Price: " + String.format("%.2f", price) + " €\n";
+        return id + ". Nombre: " + name + ".\nPrice: " + String.format("%.2f", price) + " €\n";
 
     }
 

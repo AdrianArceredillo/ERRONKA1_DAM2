@@ -29,6 +29,8 @@ public class CatalogoProductos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_catalogo_productos);
 
+        this.setTitle("HJAA - Produktuen Katalogoa");
+
         Database db = new Database();
         ProduktuaIkusiHaria produktuakIkusi = new ProduktuaIkusiHaria(db.getExtraConnection());
         produktuakIkusi.start();

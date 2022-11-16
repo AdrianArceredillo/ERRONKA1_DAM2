@@ -16,19 +16,19 @@ public class Database {
     // For Local PostgreSQL
 
 
-    //private final String host = "192.168.65.5";
-    //private final String database = "Pekin_Bilbo_Store";
-    //private final int port = 5432;
-    //private final String user = "joseba";
-    //private final String pass = "joseba";
-    //private String url = "jdbc:postgresql://%s:%d/%s";
-    //private boolean status;
+//    public final String host = "10.0.2.2";
+//    public final String database = "Ariketa_1";
+//    public final int port = 5432;
+//    public final String user = "openpg";
+//    public final String pass = "openpgpwd";
+//    public String url = "jdbc:postgresql://%s:%d/%s";
+//    private boolean status;
 
-    public final String host = "10.0.2.2";
-    public final String database = "Ariketa_1";
+    public final String host = "192.168.65.95";
+    public final String database = "HJAA";
     public final int port = 5432;
-    public final String user = "openpg";
-    public final String pass = "openpgpwd";
+    public final String user = "gorka";
+    public final String pass = "gorka";
     public String url = "jdbc:postgresql://%s:%d/%s";
     private boolean status;
 
