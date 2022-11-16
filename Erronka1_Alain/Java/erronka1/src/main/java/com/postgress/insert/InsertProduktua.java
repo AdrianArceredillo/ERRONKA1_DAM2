@@ -29,7 +29,7 @@ public class InsertProduktua {
                 + timeStamp
                 + "',2,'"
                 + timeStamp
-                + "',0,'none',NULL,NULL,NULL,'receive','no-message',NULL,'manual','no-message',NULL,'no','order',false)";
+                + "','manual', 'no-message', null, 'no', 'order', 0, 'none', null, null, null, 'receive', 'no-message', null, false)";
         exekuzioa(sqlPT, "PT");
 
         String sqlPP = "INSERT INTO public.product_product VALUES"; // sqlPP -> SQL agindua Product_Product
