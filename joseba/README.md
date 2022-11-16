@@ -1,1 +1,0 @@
-# Grafikoak_Joseba
