@@ -1,0 +1,12 @@
+C:\Users\otero.haritz\Desktop\JosebaHaritz\Graf2\bin\Debug\Graf2.dll
+C:\Users\otero.haritz\Desktop\JosebaHaritz\Graf2\bin\Debug\Graf2.pdb
+C:\Users\otero.haritz\Desktop\JosebaHaritz\Graf2\bin\Debug\Graf1.dll
+C:\Users\otero.haritz\Desktop\JosebaHaritz\Graf2\bin\Debug\Graf1.pdb
+C:\Users\otero.haritz\Desktop\JosebaHaritz\Graf2\bin\Debug\Graf1.dll.config
+C:\Users\otero.haritz\Desktop\JosebaHaritz\Graf2\obj\Debug\GrafikoaErosketak.csproj.AssemblyReference.cache
+C:\Users\otero.haritz\Desktop\JosebaHaritz\Graf2\obj\Debug\Graf2.Graf2.resources
+C:\Users\otero.haritz\Desktop\JosebaHaritz\Graf2\obj\Debug\GrafikoaErosketak.csproj.GenerateResource.cache
+C:\Users\otero.haritz\Desktop\JosebaHaritz\Graf2\obj\Debug\GrafikoaErosketak.csproj.CoreCompileInputs.cache
+C:\Users\otero.haritz\Desktop\JosebaHaritz\Graf2\obj\Debug\GrafikoaErosketak.csproj.CopyComplete
+C:\Users\otero.haritz\Desktop\JosebaHaritz\Graf2\obj\Debug\Graf2.dll
+C:\Users\otero.haritz\Desktop\JosebaHaritz\Graf2\obj\Debug\Graf2.pdb

@@ -1,0 +1,8 @@
+C:\Users\otero.haritz\Desktop\JosebaHaritz\Grafikoa3\bin\Debug\Grafikoa3.dll
+C:\Users\otero.haritz\Desktop\JosebaHaritz\Grafikoa3\bin\Debug\Grafikoa3.pdb
+C:\Users\otero.haritz\Desktop\JosebaHaritz\Grafikoa3\obj\Debug\GrafikoaProduktuenPrezioak.csproj.AssemblyReference.cache
+C:\Users\otero.haritz\Desktop\JosebaHaritz\Grafikoa3\obj\Debug\Grafikoa3.UserControl1.resources
+C:\Users\otero.haritz\Desktop\JosebaHaritz\Grafikoa3\obj\Debug\GrafikoaProduktuenPrezioak.csproj.GenerateResource.cache
+C:\Users\otero.haritz\Desktop\JosebaHaritz\Grafikoa3\obj\Debug\GrafikoaProduktuenPrezioak.csproj.CoreCompileInputs.cache
+C:\Users\otero.haritz\Desktop\JosebaHaritz\Grafikoa3\obj\Debug\Grafikoa3.dll
+C:\Users\otero.haritz\Desktop\JosebaHaritz\Grafikoa3\obj\Debug\Grafikoa3.pdb
