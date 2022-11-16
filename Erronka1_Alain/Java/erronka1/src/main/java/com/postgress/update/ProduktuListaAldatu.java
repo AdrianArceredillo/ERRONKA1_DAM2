@@ -6,10 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import com.konexioa.Konexioa;
-import com.pojoak.Produktua;
-import com.pojoak.Produktuak;
 import com.postgress.ProduktuakJavaObjetura;
-import com.postgress.delete.GarbituTaulak;
 
 public class ProduktuListaAldatu {
     public static Konexioa konexioa = new Konexioa();
