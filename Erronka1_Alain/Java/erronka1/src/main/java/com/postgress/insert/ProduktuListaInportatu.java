@@ -13,7 +13,6 @@ import com.pojoak.Produktuak;
 
 public class ProduktuListaInportatu {
     public static Scanner in;
-
     public static Konexioa konexioa = new Konexioa();
     public static Statement st;
 

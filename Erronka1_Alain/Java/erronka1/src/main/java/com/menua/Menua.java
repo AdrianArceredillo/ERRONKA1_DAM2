@@ -44,7 +44,7 @@ public class Menua {
                     break;
                 case 4:
                     garbitu();
-                    prodtuktuakEditatu();
+                    produktuakEditatu();
                     break;
                 case 5:
                     garbitu();
@@ -125,7 +125,7 @@ public class Menua {
         } while (aukera != 3);
     }
 
-    private static void prodtuktuakEditatu() {
+    private static void produktuakEditatu() {
         int aukera;
         do {
             System.out.println("\nZer nahi duzu editatu?");
