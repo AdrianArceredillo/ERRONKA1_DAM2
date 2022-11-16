@@ -20,6 +20,11 @@ public class InsertProduktua {
         }
         String timeStamp;
         timeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new java.util.Date());
+/*
+        INSERT INTO
+        public."product_template"(id, name, description, list_price, volume, weight, priority, create_date, write_date, message_main_attachment_id, sequence, description_purchase, description_sale, detailed_type, type, categ_id, sale_ok, purchase_ok, uom_id, uom_po_id, company_id, active, color, default_code, can_image_1024_be_zoomed, has_configurable_attributes, create_uid, write_uid, sale_delay, tracking, description_picking, description_pickingout, description_pickingin, purchase_method, purchase_line_warn, purchase_line_warn_msg, service_type, sale_line_warn, sale_line_warn_msg, expense_policy, invoice_policy, service_to_purchase)
+        values (7, 'izena', 'deskripzioa', 123, 123, 123, '1', '2022-11-15 19:19:18.631', '2022-11-15 19:19:18.631', null, 1, null, null, 'product', 'product', 1, true, true, 1, 1, null, true, null, null, false, false, 2, 2, 0, 'none', null, null, null, 'receive', 'no-message', null, 'manual', 'no-message', null, 'no', 'order', false)
+ */
 
         String sqlPT = "INSERT INTO public.product_template VALUES"; // sqlPT -> SQL agiandua Product_Template
                                                                      // taularentzako
