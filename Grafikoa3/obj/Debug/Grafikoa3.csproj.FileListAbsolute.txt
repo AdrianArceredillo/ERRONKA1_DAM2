@@ -1,0 +1,14 @@
+C:\Users\otero.haritz\Desktop\DAM-2HaritzOtero\DesarrolloInterface\C#\HJAA_Grafikoak_HaritzOtero\Grafikoa3\bin\Debug\Grafikoa3.dll
+C:\Users\otero.haritz\Desktop\DAM-2HaritzOtero\DesarrolloInterface\C#\HJAA_Grafikoak_HaritzOtero\Grafikoa3\bin\Debug\Grafikoa3.pdb
+C:\Users\otero.haritz\Desktop\DAM-2HaritzOtero\DesarrolloInterface\C#\HJAA_Grafikoak_HaritzOtero\Grafikoa3\obj\Debug\Grafikoa3.csproj.AssemblyReference.cache
+C:\Users\otero.haritz\Desktop\DAM-2HaritzOtero\DesarrolloInterface\C#\HJAA_Grafikoak_HaritzOtero\Grafikoa3\obj\Debug\Grafikoa3.csproj.CoreCompileInputs.cache
+C:\Users\otero.haritz\Desktop\DAM-2HaritzOtero\DesarrolloInterface\C#\HJAA_Grafikoak_HaritzOtero\Grafikoa3\obj\Debug\Grafikoa3.dll
+C:\Users\otero.haritz\Desktop\DAM-2HaritzOtero\DesarrolloInterface\C#\HJAA_Grafikoak_HaritzOtero\Grafikoa3\obj\Debug\Grafikoa3.pdb
+C:\Users\otero.haritz\Desktop\Erronka\Interfaces\HJAA_Grafikoak_HaritzOtero\Grafikoa3\bin\Debug\Grafikoa3.dll
+C:\Users\otero.haritz\Desktop\Erronka\Interfaces\HJAA_Grafikoak_HaritzOtero\Grafikoa3\bin\Debug\Grafikoa3.pdb
+C:\Users\otero.haritz\Desktop\Erronka\Interfaces\HJAA_Grafikoak_HaritzOtero\Grafikoa3\obj\Debug\Grafikoa3.csproj.AssemblyReference.cache
+C:\Users\otero.haritz\Desktop\Erronka\Interfaces\HJAA_Grafikoak_HaritzOtero\Grafikoa3\obj\Debug\Grafikoa3.UserControl1.resources
+C:\Users\otero.haritz\Desktop\Erronka\Interfaces\HJAA_Grafikoak_HaritzOtero\Grafikoa3\obj\Debug\Grafikoa3.csproj.GenerateResource.cache
+C:\Users\otero.haritz\Desktop\Erronka\Interfaces\HJAA_Grafikoak_HaritzOtero\Grafikoa3\obj\Debug\Grafikoa3.csproj.CoreCompileInputs.cache
+C:\Users\otero.haritz\Desktop\Erronka\Interfaces\HJAA_Grafikoak_HaritzOtero\Grafikoa3\obj\Debug\Grafikoa3.dll
+C:\Users\otero.haritz\Desktop\Erronka\Interfaces\HJAA_Grafikoak_HaritzOtero\Grafikoa3\obj\Debug\Grafikoa3.pdb
