@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using HJAA_Grafikoak_HaritzOtero;
 
+
 namespace Grafikoak_Joseba
 {
     public partial class Form1 : Form
@@ -46,7 +47,7 @@ namespace Grafikoak_Joseba
                         }
                     }
                 }
-
+                //prueba
                 //Graf2
                 var erosketakData = db.Purchases
                     .Include("Suppliers")

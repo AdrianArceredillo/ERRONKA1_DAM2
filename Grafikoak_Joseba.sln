@@ -17,8 +17,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrafikoaProductuenStock", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrafikoaProduktuenPrezioak", "HJAA_Grafikoak_HaritzOtero\Grafikoa3\GrafikoaProduktuenPrezioak.csproj", "{F5BB85F2-6F5D-4EC4-91D9-E785A4B7B714}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grafikoa2", "HJAA_Grafikoak_HaritzOtero\Grafikoa2\Grafikoa2.csproj", "{1254EBC6-CA3A-4283-993C-805E8D6A9E2E}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,10 +51,6 @@ Global
 		{F5BB85F2-6F5D-4EC4-91D9-E785A4B7B714}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5BB85F2-6F5D-4EC4-91D9-E785A4B7B714}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5BB85F2-6F5D-4EC4-91D9-E785A4B7B714}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1254EBC6-CA3A-4283-993C-805E8D6A9E2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1254EBC6-CA3A-4283-993C-805E8D6A9E2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1254EBC6-CA3A-4283-993C-805E8D6A9E2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1254EBC6-CA3A-4283-993C-805E8D6A9E2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

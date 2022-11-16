@@ -146,6 +146,10 @@
       <Project>{1AD84883-2E1F-4BB5-AC62-2BD08591E3B7}</Project>
       <Name>GrafikoaLangileak</Name>
     </ProjectReference>
+    <ProjectReference Include="..\HJAA_Grafikoak_HaritzOtero\HJAA_Grafikoak_HaritzOtero\HJAA_Grafikoak_HaritzOtero.csproj">
+      <Project>{617e3d42-0098-468a-a546-ac5a7d00d176}</Project>
+      <Name>HJAA_Grafikoak_HaritzOtero</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

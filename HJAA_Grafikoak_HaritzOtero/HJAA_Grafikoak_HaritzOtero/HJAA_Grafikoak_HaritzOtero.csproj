@@ -147,25 +147,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Graf1\GrafikoProduktuenSalmenta.csproj">
-      <Project>{11c97148-c850-40c7-b85c-1143009a3cfc}</Project>
-      <Name>GrafikoProduktuenSalmenta</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Graf2\GrafikoaErosketak.csproj">
-      <Project>{cde52758-0aa3-4fe4-a0e5-d90a804f3492}</Project>
-      <Name>GrafikoaErosketak</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Graf3\GrafikoaLangileak.csproj">
-      <Project>{1ad84883-2e1f-4bb5-ac62-2bd08591e3b7}</Project>
-      <Name>GrafikoaLangileak</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Grafikoak_Joseba\Grafikoak_Joseba.csproj">
-      <Project>{d1f64445-5d10-4adb-8c33-1e592662bb2e}</Project>
-      <Name>Grafikoak_Joseba</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Grafikoa2\Grafikoa2.csproj">
-      <Project>{1254EBC6-CA3A-4283-993C-805E8D6A9E2E}</Project>
-      <Name>Grafikoa2</Name>
+    <ProjectReference Include="..\Grafikoa1\GrafikoaProductuenStock.csproj">
+      <Project>{88dd57ed-796d-4839-af42-024227baf8d7}</Project>
+      <Name>GrafikoaProductuenStock</Name>
     </ProjectReference>
     <ProjectReference Include="..\Grafikoa3\GrafikoaProduktuenPrezioak.csproj">
       <Project>{F5BB85F2-6F5D-4EC4-91D9-E785A4B7B714}</Project>
