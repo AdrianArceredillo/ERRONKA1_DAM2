@@ -3,7 +3,12 @@
 
     <string name="lblUsuario">Erabiltzailea:</string>
     <string name="lblContraseña">Pasahitza:</string>
+
+    <string name="hintErabiltzailea">sartu izena</string>
+    <string name="hintPasahitza">sartu pasahitza</string>
+
     <string name="btnSartu">SARTU!</string>
+    <string name="btnIrten">IRTEN!</string>
 
     <!-- Catálogo -->
     <string name="lblSaldoActualCuenta">Saldo actual:</string>
@@ -19,20 +24,29 @@
 
 
     <!-- Actividad del catálogo -->
-    <string name="lblElegirProducto">Aukeratu produktu bat:</string>
+    <string name="lblElegirProducto">Produktuak era laburrean:</string>
     <string name="lblProductoSeleccionado">Ikusi:</string>
-    <string name="btnVerSeleccionado">Ikusi:</string>
+    <string name="btnVolverMenu">Atzera</string>
 
     <!-- Actividad listado de ventas -->
-    <string name="lblVerListaClientes">Bezeroen zerrenda:</string>
+    <string name="lblVerListaClientes">Bezeroen zerrenda laburra:</string>
     <string name="btn_Ver_MejorCompraClientes">Erosketa handiena:</string>
     <string name="btn_Ocultar_MejorCompraClientes">Edukia ezkutatu:</string>
-    <string name="lblFiltroarenAzalpena">Ikusi bezero bakoitzaren erosketarik handienaren prezioa.</string>
+    <string name="lblFiltroarenAzalpena">ikusi bezero bakoitzak egin duen erosketa handiena.</string>
 
 
     <!-- Actividad: menú para elegir la información que el usuario desea ver -->
     <string name="btnVerVentas">Salmentak</string>
     <string name="btnVerCatalogo">Katalogoa</string>
+    <string name="btnVolverInicio">Hasiera</string>
+
+
+
+    <!-- Otros -->
+    <string name="miRojo">Inicial: #FF1919</string>
+    <string name="miRojoFigma">Figma: #F94236</string>
+
+
 
 
 

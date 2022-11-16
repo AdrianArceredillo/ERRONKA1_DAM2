@@ -4,19 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -33,13 +27,11 @@ public class MainActivity extends AppCompatActivity {
     public static final int TEXT_REQUEST = 1;   // Unique tag for the intent reply
 
     private static final ArrayList<Produktua> catalogo_Productos = null;
-    private TextView txtPruebaProd;
 
-    private LinearLayout linearLayout;
-
+    private Toolbar toolbarLogin;
     public EditText mUsuario, mContraseña;
     public Button btnSartu;
-    public Button btnPruebaActivar;
+    public Button btnAplikazioaItxi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,12 +69,13 @@ public class MainActivity extends AppCompatActivity {
         mUsuario = findViewById(R.id.editTextErabiltzailea);
         mContraseña = findViewById(R.id.editTextPasahitza);
 
-        btnPruebaActivar = findViewById(R.id.btnPruebaActivar);
-        btnPruebaActivar.setEnabled(false);
-        btnPruebaActivar.setOnClickListener(new View.OnClickListener() {
+        btnAplikazioaItxi = findViewById(R.id.btnAplikazioaItxi);
+        btnAplikazioaItxi.setEnabled(true);
+        btnAplikazioaItxi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                abrirCatalogo();
+                MainActivity.this.finish(); //FINALIZAR la actividad
+                System.exit(0); //SALIR de la actividad - dejar de ejecutar la aplicación
             }
         });
 
@@ -105,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
             mezua_Correcto.show();
 
             abrirMenuInformacion(); //abrir la acitividad que permitirá al usuario elegir el tipo de información que desea ver
-            btnPruebaActivar.setEnabled(true);
+            btnAplikazioaItxi.setEnabled(true);
         } else {
             Toast mezua_Incorrecto = Toast.makeText(getApplicationContext(), " Los datos introducidos no son correctos! ", Toast.LENGTH_LONG);
             mezua_Incorrecto.show();

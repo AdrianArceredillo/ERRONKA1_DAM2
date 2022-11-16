@@ -1,9 +1,8 @@
 package com.example.pruebas_erronka1;
 
-import static com.example.pruebas_erronka1.R.string.lblProductoSeleccionado;
-
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -18,8 +17,7 @@ public class CatalogoProductos extends AppCompatActivity {
 
     private LinearLayout linearLayout, lytProductoInfoCompleta;
     private Spinner spinnerElegirProductos;
-    private TextView txtProductoSeleccionado;
-    private Button btnVerSeleccionado;
+    private Button btnMenuraBueltatu;
 
     private Produktua prod_Sel = new Produktua();
 
@@ -57,18 +55,13 @@ public class CatalogoProductos extends AppCompatActivity {
         spinnerElegirProductos = findViewById(R.id.spinnerElegirProductos);
         spinnerElegirProductos.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, produktuenIzenak));
 
-        txtProductoSeleccionado = findViewById(R.id.txtProductoSeleccionado);
-
-        btnVerSeleccionado = findViewById(R.id.btnVerSeleccionado);
-        btnVerSeleccionado.setOnClickListener(new View.OnClickListener() {
+        btnMenuraBueltatu = findViewById(R.id.btnMenuDesdeProductos);
+        btnMenuraBueltatu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String nombre_Seleccionado_A = spinnerElegirProductos.getSelectedItem().toString();
-
-                prod_Sel = produktuakIkusi.productoSeleccionadoInfo(nombre_Seleccionado_A);
-
-                String nombre_Seleccionado_BBB = String.valueOf(prod_Sel.getPrice());
-                txtProductoSeleccionado.setText(nombre_Seleccionado_BBB);
+                Intent intentCerrar_Catalogo = new Intent(CatalogoProductos.this, MenuOpciones.class);
+                startActivity(intentCerrar_Catalogo);
+                finish();
             }
         });
 

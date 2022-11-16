@@ -4,39 +4,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundfigma"
     tools:context=".MenuOpciones">
-
-    <Button
-        android:id="@+id/btnSalmentak"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="268dp"
-        android:backgroundTint="#FF1919"
-        android:text="@string/btnVerVentas"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnProduktuak"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#FF1919"
-        android:text="@string/btnVerCatalogo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSalmentak"
-        app:layout_constraintVertical_bias="0.177" />
 
     <TextView
         android:id="@+id/txtUsuarioRecibido"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="22dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="TextView"
+        android:text="@string/miRojo"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:text="@string/miRojoFigma"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/txtUsuarioRecibido"
+        app:layout_constraintTop_toTopOf="@+id/txtUsuarioRecibido" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="152dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.811"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.257">
+
+        <Button
+            android:id="@+id/btnSalmentak"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF1919"
+            android:text="@string/btnVerVentas" />
+
+        <Button
+            android:id="@+id/btnKatalogoa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF1919"
+            android:text="@string/btnVerCatalogo" />
+
+        <Button
+            android:id="@+id/btnHasiera"
+            android:layout_width="169dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF1919"
+            android:text="@string/btnVolverInicio" />
+
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

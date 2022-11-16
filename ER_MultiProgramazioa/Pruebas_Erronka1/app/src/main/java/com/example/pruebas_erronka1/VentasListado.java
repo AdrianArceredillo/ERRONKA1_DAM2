@@ -2,6 +2,8 @@ package com.example.pruebas_erronka1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.Gravity;
@@ -20,7 +22,7 @@ public class VentasListado extends AppCompatActivity {
     private LinearLayout lytListadoVentas, lytSalmentakOrdenatuta;
     private Spinner spinnerElegirVentas;
     private TextView txtVentasSeleccionado, txtFiltroarenAzalpena;
-    private Button btnVerSeleccionado, btnSalmentakOrdenatuta;
+    private Button btnMenuDesdeVentas, btnSalmentakOrdenatuta;
     private ScrollView scrollViewSalmentaGuztiak, scrollViewSalmentakOrdenatuta;
 
     ArrayList<String> bezeroenIzenak = new ArrayList<>();
@@ -96,28 +98,56 @@ public class VentasListado extends AppCompatActivity {
         txtFiltroarenAzalpena.setVisibility(View.INVISIBLE);
 
         btnSalmentakOrdenatuta = findViewById(R.id.btnSalmentakOrdenatuta);
-
         btnSalmentakOrdenatuta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if (btnSalmentakOrdenatuta.getText().equals(R.string.btn_Ver_MejorCompraClientes)) {
+                if (scrollViewSalmentakOrdenatuta.getVisibility() != View.VISIBLE) {
                     txtFiltroarenAzalpena.setVisibility(View.VISIBLE);                              //hacer visible la explicación del contenido del ScrollView inferior
-                    txtFiltroarenAzalpena.setTextColor(getResources().getColor(R.color.myGreen));   //poner en verde el contenido del TextView
+                    //txtFiltroarenAzalpena.setTextColor(getResources().getColor(R.color.myGreen));   //poner en verde el contenido del TextView
                     scrollViewSalmentakOrdenatuta.setVisibility(View.VISIBLE);                      //hacer visible el ScrollView INFERIOR
                     lytSalmentakOrdenatuta.setVisibility(View.VISIBLE);                             //hacer visible el Layout del ScrollView INFERIOR
 
-                    btnSalmentakOrdenatuta.setText(R.string.btn_Ocultar_MejorCompraClientes);     //cambiar el texto del botón para que el usuario sepa que al pulsarlo de nuevo, este realizará una acción diferente
+                    /*
+                    Cambiar la APARIENCIA y FUNCIONALIDAD del botón para que el usuario sepa que al pulsarlo de nuevo
+                        - Al pulsarlo una vez, mostrará un determinado contenido en la parte inferior
+                        - Si lo volvemos a pulsar, esconderá dicho contenido
 
+                    Apariencia inicial:
+                        - BackgroundTint    -   "#FF1919"   -   (rojo)
+                        - TextColor         -   "#FFFFFF"   -   (blanco)
+                        - Text (contenido)  -   R.string.btn_Ver_MejorCompraClientes
+
+                    Después de pulsar:
+                        - BackgroundTint    -   "#FFFFFF"   -   (blanco)
+                        - TextColor         -   "#FF1919"   -   (rojo)
+                        - Text (contenido)  -   R.string.btn_Ocultar_MejorCompraClientes
+                     */
+                    btnSalmentakOrdenatuta.setText(R.string.btn_Ocultar_MejorCompraClientes);
+                    btnSalmentakOrdenatuta.setTextColor(Color.parseColor("#FF1919"));
+                    btnSalmentakOrdenatuta.setBackgroundColor(Color.parseColor("#FFFFFF"));
                 } else {
                     txtFiltroarenAzalpena.setVisibility(View.INVISIBLE);
                     scrollViewSalmentakOrdenatuta.setVisibility(View.INVISIBLE);
                     lytSalmentakOrdenatuta.setVisibility(View.INVISIBLE);
 
-                    btnSalmentakOrdenatuta.setText(R.string.btn_Ver_MejorCompraClientes);         //ponerle al botón el texto que tenía al principio -> el usuario podrá clicar cuantas veces quiera
+                    btnSalmentakOrdenatuta.setText(R.string.btn_Ver_MejorCompraClientes);
+                    btnSalmentakOrdenatuta.setTextColor(Color.parseColor("#FFFFFF"));
+                    btnSalmentakOrdenatuta.setBackgroundColor(Color.parseColor("#FF1919"));
                 }
 
 
+            }
+        });
+
+
+        btnMenuDesdeVentas = findViewById(R.id.btnMenuDesdeVentas);
+        btnMenuDesdeVentas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent cerrar_VentasListado = new Intent(VentasListado.this, MenuOpciones.class);
+                startActivity(cerrar_VentasListado);
+                finish();
             }
         });
 

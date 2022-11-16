@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@drawable/backgroundfigma"
     tools:context=".MainActivity">
 
     <TextView
@@ -15,54 +15,59 @@
         android:textColor="#020202"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintHorizontal_bias="0.441"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.04" />
+        app:layout_constraintVertical_bias="0.191" />
 
     <TextView
         android:id="@+id/lblContraseña"
         android:layout_width="66dp"
         android:layout_height="23dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="32dp"
         android:text="@string/lblContraseña"
         android:textColor="#020202"
-        app:layout_constraintStart_toStartOf="@+id/lblUsuario"
-        app:layout_constraintTop_toBottomOf="@+id/lblUsuario" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextErabiltzailea"
+        app:layout_constraintTop_toBottomOf="@+id/editTextErabiltzailea" />
 
     <EditText
         android:id="@+id/editTextErabiltzailea"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:autofillHints=""
         android:ems="10"
-        android:hint="Email-a"
+        android:hint="@string/hintErabiltzailea"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:textColor="#BC0E0E"
         android:textColorHint="#BC0E0E"
-        app:layout_constraintStart_toEndOf="@+id/lblUsuario"
-        app:layout_constraintTop_toTopOf="@+id/lblUsuario" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lblUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/lblUsuario" />
 
     <View
         android:id="@+id/divider"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
-        android:layout_marginTop="180dp"
         android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75" />
 
     <Button
         android:id="@+id/btnIniciarSesion"
         android:layout_width="212dp"
         android:layout_height="0dp"
-        android:layout_marginStart="96dp"
         android:layout_marginTop="24dp"
         android:backgroundTint="#FF1919"
         android:text="@string/btnSartu"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider" />
 
@@ -70,48 +75,31 @@
         android:id="@+id/editTextPasahitza"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
         android:ems="10"
-        android:hint="Sartu pasahitza"
+        android:hint="@string/hintPasahitza"
         android:inputType="textPassword"
         android:minHeight="48dp"
+        android:textColor="#BC0E0E"
         android:textColorHint="#BC0E0E"
-        app:layout_constraintStart_toEndOf="@+id/lblContraseña"
-        app:layout_constraintTop_toTopOf="@+id/lblContraseña" />
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lblContraseña"
+        app:layout_constraintTop_toBottomOf="@+id/lblContraseña"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/btnPruebaActivar"
-        android:layout_width="209dp"
+        android:id="@+id/btnAplikazioaItxi"
+        android:layout_width="212dp"
         android:layout_height="48dp"
-        android:layout_marginTop="16dp"
         android:backgroundTint="#504C4C"
-        android:text="Button"
-        app:layout_constraintStart_toStartOf="@+id/btnIniciarSesion"
-        app:layout_constraintTop_toBottomOf="@+id/btnIniciarSesion" />
-
-    <ScrollView
-        android:id="@+id/scrollView3"
-        android:layout_width="358dp"
-        android:layout_height="78dp"
+        android:text="@string/btnIrten"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnPruebaActivar"
-        app:layout_constraintVertical_bias="0.144"
-        tools:ignore="SpeakableTextPresentCheck">
-
-        <LinearLayout
-            android:id="@+id/lytPruebasProd"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical" >
-
-            <LinearLayout
-                android:id="@+id/lytProductosHorizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"></LinearLayout>
-        </LinearLayout>
-    </ScrollView>
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnIniciarSesion"
+        app:layout_constraintTop_toBottomOf="@+id/btnIniciarSesion"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
