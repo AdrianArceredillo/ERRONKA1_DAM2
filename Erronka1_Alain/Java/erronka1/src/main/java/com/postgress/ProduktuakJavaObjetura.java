@@ -12,7 +12,7 @@ public class ProduktuakJavaObjetura {
     public static Konexioa konexioa = new Konexioa();
     public static Statement st;
 
-    public static Produktuak ProduktuenJavaObjetua() {
+    public static Produktuak produktuenJavaObjetua() {
 
         ArrayList<String> product_template = new ArrayList<String>(); // Produktuen informazioa gordeko den Arraylist-a
                                                                       // sortu, String bezala gordetzen da informazioa

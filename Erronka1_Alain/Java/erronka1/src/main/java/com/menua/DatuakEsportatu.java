@@ -11,7 +11,7 @@ public class DatuakEsportatu {
     public static void produktuakImprimatu() { // Kontsolan imprimatzen ditu datuak
         try {
             System.out.println("Datuen egitura -> Produktua[id, izena, deskripzioa, prezioa, stocka, bolumena, pisua, barraKodea, lehentasuna]");
-            System.out.print(ProduktuakJavaObjetura.ProduktuenJavaObjetua()); // Produktuak lortu eta imprimatu
+            System.out.print(ProduktuakJavaObjetura.produktuenJavaObjetua()); // Produktuak lortu eta imprimatu
         } catch (Exception e) {
             System.out.println("Arazoren bat egon da datuak irakurtzeko orduan, edo hutsik dago");
         }
@@ -21,7 +21,7 @@ public class DatuakEsportatu {
     public static void produktuakCsvra() { // CSV/TXT bezala esportatzen du
         try {
             Produktuak produktuak = new Produktuak();
-            produktuak = ProduktuakJavaObjetura.ProduktuenJavaObjetua();
+            produktuak = ProduktuakJavaObjetura.produktuenJavaObjetua();
             Csva csva = new Csva(produktuak, "data/exportazioak/Produktuak.csv");
             csva.idatzi();
             System.out.println("Datuak ondo esportatu dira");
@@ -34,7 +34,7 @@ public class DatuakEsportatu {
     public static void produktuakXmlra() { // XML bezala esportatzen du
         try {
             Produktuak produktuak = new Produktuak();
-            produktuak = ProduktuakJavaObjetura.ProduktuenJavaObjetua();
+            produktuak = ProduktuakJavaObjetura.produktuenJavaObjetua();
             Xmla xmla = new Xmla(produktuak, "data/exportazioak/Produktuak.xml");
             xmla.idatzi();
             System.out.println("Datuak ondo esportatu dira");
@@ -47,7 +47,7 @@ public class DatuakEsportatu {
     public static void produktuakJsonera() { // JSON bezala esportatzen du
         try {
             Produktuak produktuak = new Produktuak();
-            produktuak = ProduktuakJavaObjetura.ProduktuenJavaObjetua();
+            produktuak = ProduktuakJavaObjetura.produktuenJavaObjetua();
             Jsona jsona = new Jsona(produktuak, "data/exportazioak/Produktuak.json");
             jsona.idatzi();
             System.out.println("Datuak ondo esportatu dira");
@@ -60,7 +60,7 @@ public class DatuakEsportatu {
     public static void produktuakDenetara(){
         try {
             Produktuak produktuak = new Produktuak();
-            produktuak = ProduktuakJavaObjetura.ProduktuenJavaObjetua();
+            produktuak = ProduktuakJavaObjetura.produktuenJavaObjetua();
             Csva csva = new Csva(produktuak, "data/exportazioak/Produktuak.csv");
             csva.idatzi();
             Xmla xmla = new Xmla(produktuak, "data/exportazioak/Produktuak.xml");

@@ -20,7 +20,7 @@ public class ProduktuListaAldatu {
         System.out.println("Hemen produktu guztien lista:");
         System.out.println(
                 "Produktua[ id, izena, deskripzioa, prezioa, stocka, bolumena, pisua, barraKodea, lehentasuna]");
-        System.out.print(ProduktuakJavaObjetura.ProduktuenJavaObjetua());
+        System.out.print(ProduktuakJavaObjetura.produktuenJavaObjetua());
         do {
             System.out.print("Aukeratu ze datu nahi duzun aldatu (prezioa/stocka/lehentasuna): ");
             erantzuna = in.nextLine().toLowerCase();
@@ -47,7 +47,7 @@ public class ProduktuListaAldatu {
                     System.out.println("Hemen produktu guztien lista berria:");
                     System.out.println(
                             "Produktua[id, izena, deskripzioa, prezioa, stocka, bolumena, pisua, barraKodea, lehentasuna]");
-                    System.out.print(ProduktuakJavaObjetura.ProduktuenJavaObjetua());
+                    System.out.print(ProduktuakJavaObjetura.produktuenJavaObjetua());
                 }
             }
             System.out.println("Nahi duzu beste zerbait editatu? (Bai/Ez)");
