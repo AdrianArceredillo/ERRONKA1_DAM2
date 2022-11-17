@@ -15,27 +15,25 @@
         android:textColor="#020202"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintHorizontal_bias="0.379"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.142" />
 
     <TextView
         android:id="@+id/lblContraseña"
-        android:layout_width="66dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
         android:text="@string/lblContraseña"
         android:textColor="#020202"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextErabiltzailea"
-        app:layout_constraintTop_toBottomOf="@+id/editTextErabiltzailea" />
+        app:layout_constraintStart_toEndOf="@+id/editTextErabiltzailea"
+        app:layout_constraintTop_toTopOf="@+id/lblUsuario" />
 
     <EditText
         android:id="@+id/editTextErabiltzailea"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="187dp"
+        android:layout_height="49dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/hintErabiltzailea"
@@ -43,23 +41,8 @@
         android:minHeight="48dp"
         android:textColor="#BC0E0E"
         android:textColorHint="#BC0E0E"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/lblUsuario"
         app:layout_constraintTop_toBottomOf="@+id/lblUsuario" />
-
-    <View
-        android:id="@+id/divider"
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:background="?android:attr/listDivider"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.75" />
 
     <EditText
         android:id="@+id/editTextPasahitza"
@@ -71,7 +54,7 @@
         android:minHeight="48dp"
         android:textColor="#BC0E0E"
         android:textColorHint="#BC0E0E"
-        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/lblContraseña"
@@ -83,21 +66,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
-        android:layout_marginStart="28dp"
+        android:layout_marginTop="12dp"
         android:backgroundTint="#504C4C"
         android:text="@string/btnIrten"
-        app:layout_constraintStart_toEndOf="@+id/btnIniciarSesion"
-        app:layout_constraintTop_toTopOf="@+id/btnIniciarSesion" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnIniciarSesion"
+        app:layout_constraintTop_toBottomOf="@+id/btnIniciarSesion"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnIniciarSesion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="36dp"
         android:backgroundTint="#FF1919"
         android:text="@string/btnSartu"
-        app:layout_constraintStart_toEndOf="@+id/editTextErabiltzailea"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPasahitza" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
