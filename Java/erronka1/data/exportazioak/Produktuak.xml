@@ -4,54 +4,54 @@
         <Id>1</Id>
         <Izena>Intel Core i5-11400F 2.6 GHz</Izena>
         <Deskripzioa>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Deskripzioa>
-        <Prezioa>205.58191</Prezioa>
+        <Prezioa>248.75427</Prezioa>
         <Stocka>196.0</Stocka>
         <Bolumena>0.0</Bolumena>
-        <Pisua>205.58191</Pisua>
+        <Pisua>248.75427</Pisua>
         <Barra_Kodea>null</Barra_Kodea>
-        <Lehentasuna>Ez</Lehentasuna>
+        <Lehentasuna>Bai</Lehentasuna>
     </Produktua>
     <Produktua>
         <Id>2</Id>
         <Izena>AMD Ryzen 5 5600X 3.7GHz</Izena>
         <Deskripzioa>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Deskripzioa>
-        <Prezioa>302.394</Prezioa>
+        <Prezioa>365.8962</Prezioa>
         <Stocka>179.0</Stocka>
         <Bolumena>0.0</Bolumena>
-        <Pisua>302.394</Pisua>
+        <Pisua>365.8962</Pisua>
         <Barra_Kodea>null</Barra_Kodea>
-        <Lehentasuna>Ez</Lehentasuna>
+        <Lehentasuna>Bai</Lehentasuna>
     </Produktua>
     <Produktua>
         <Id>3</Id>
         <Izena>Kingston FURY Beast RGB DDR4 3200 MHz 16GB 2x8GB CL16</Izena>
         <Deskripzioa>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Deskripzioa>
-        <Prezioa>95.47189</Prezioa>
+        <Prezioa>115.52074</Prezioa>
         <Stocka>100.0</Stocka>
         <Bolumena>0.0</Bolumena>
-        <Pisua>95.47189</Pisua>
+        <Pisua>115.52074</Pisua>
         <Barra_Kodea>null</Barra_Kodea>
-        <Lehentasuna>Ez</Lehentasuna>
+        <Lehentasuna>Bai</Lehentasuna>
     </Produktua>
     <Produktua>
         <Id>4</Id>
         <Izena>Acer Nitro 5 AN515-58-7571 Intel Core i7-12700H/16GB/512GB SSD/RTX 3060/15.6"</Izena>
         <Deskripzioa>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Deskripzioa>
-        <Prezioa>1390.1841</Prezioa>
+        <Prezioa>1682.1222</Prezioa>
         <Stocka>170.0</Stocka>
         <Bolumena>0.0</Bolumena>
-        <Pisua>1390.1841</Pisua>
+        <Pisua>1682.1222</Pisua>
         <Barra_Kodea>null</Barra_Kodea>
-        <Lehentasuna>Ez</Lehentasuna>
+        <Lehentasuna>Bai</Lehentasuna>
     </Produktua>
     <Produktua>
         <Id>5</Id>
         <Izena>Apple Magic Mouse Plata</Izena>
         <Deskripzioa>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Deskripzioa>
-        <Prezioa>88.21188</Prezioa>
+        <Prezioa>106.73642</Prezioa>
         <Stocka>156.0</Stocka>
         <Bolumena>1.0</Bolumena>
-        <Pisua>88.21188</Pisua>
+        <Pisua>106.73642</Pisua>
         <Barra_Kodea>28137469123784</Barra_Kodea>
         <Lehentasuna>Bai</Lehentasuna>
     </Produktua>
@@ -59,33 +59,22 @@
         <Id>6</Id>
         <Izena>Logitech G413 TKL SE Teclado Gaming Mecánico Retroiluminado</Izena>
         <Deskripzioa>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Deskripzioa>
-        <Prezioa>84.55771</Prezioa>
+        <Prezioa>102.31472</Prezioa>
         <Stocka>128.0</Stocka>
         <Bolumena>0.0</Bolumena>
-        <Pisua>84.55771</Pisua>
+        <Pisua>102.31472</Pisua>
         <Barra_Kodea>null</Barra_Kodea>
-        <Lehentasuna>Ez</Lehentasuna>
+        <Lehentasuna>Bai</Lehentasuna>
     </Produktua>
     <Produktua>
         <Id>8</Id>
         <Izena>PcCom Basic Intel Core i5 10400/16GB/500GB SSD</Izena>
         <Deskripzioa>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</Deskripzioa>
-        <Prezioa>747.6741</Prezioa>
+        <Prezioa>904.68536</Prezioa>
         <Stocka>115.0</Stocka>
         <Bolumena>0.0</Bolumena>
-        <Pisua>747.6741</Pisua>
+        <Pisua>904.68536</Pisua>
         <Barra_Kodea>null</Barra_Kodea>
-        <Lehentasuna>Ez</Lehentasuna>
-    </Produktua>
-    <Produktua>
-        <Id>9</Id>
-        <Izena>Proba izena aldatuta</Izena>
-        <Deskripzioa>&lt;p&gt;AMOGUS&lt;/p&gt;</Deskripzioa>
-        <Prezioa>15.494003</Prezioa>
-        <Stocka>42.0</Stocka>
-        <Bolumena>34.34</Bolumena>
-        <Pisua>15.494003</Pisua>
-        <Barra_Kodea>23489234n234n</Barra_Kodea>
         <Lehentasuna>Bai</Lehentasuna>
     </Produktua>
 </Produktuak>
