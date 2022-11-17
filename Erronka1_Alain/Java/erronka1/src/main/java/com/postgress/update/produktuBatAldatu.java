@@ -30,7 +30,6 @@ public class ProduktuBatAldatu {
             if (erantzuna.equals("bai") || erantzuna.equals("b")) {
                 produktuaEditatu(idPT);
 
-                
                 System.out.println("Hemen produktu guztien lista berria:");
                 System.out.println(
                         "Produktua[id, izena, deskripzioa, prezioa, stocka, bolumena, pisua, barraKodea, lehentasuna]");
@@ -46,7 +45,7 @@ public class ProduktuBatAldatu {
             }
         } while (bestebat);
         garbitu();
-        
+
     }
 
     public static void produktuaEditatu(int idPT) {
@@ -90,12 +89,11 @@ public class ProduktuBatAldatu {
             System.out.println("Bolumena (m\u00B3): " + volume);
             System.out.println("Pisua (Kg): " + weight);
             System.out.println("Barra kodea: " + barcode);
-            if (priority.equals("1")){
+            if (priority.equals("1")) {
                 System.out.println("Lehentasuna: Bai");
             } else {
                 System.out.println("Lehentasuna: Ez");
             }
-            
 
             System.out.println(
                     "Ze datu nahi duzu aldatu? (izena/deskripzioa/prezioa/stocka/bolumena/pisua/barrakodea/lehentasuna)(irten)");
@@ -155,48 +153,97 @@ public class ProduktuBatAldatu {
         System.out.print("Deskripzio berria: ");
         in = new Scanner(System.in);
         descriptionBerria = in.nextLine();
-        String sql = "UPDATE public.product_template SET description = '<p>" + descriptionBerria + "</p>' WHERE id = " + id;
+        String sql = "UPDATE public.product_template SET description = '<p>" + descriptionBerria + "</p>' WHERE id = "
+                + id;
         exekutatu(sql);
     }
 
     public static void prezioaAldatu(float list_price, int id) {
-        float list_priceBerria;
+        String inputa;
+        float list_priceBerria = 0;
         System.out.println("Aurreko prezioa: " + list_price);
         System.out.print("Prezio berria: ");
         in = new Scanner(System.in);
-        list_priceBerria = in.nextFloat();
+        boolean ondo = false;
+        while (!ondo) {
+            try {
+                inputa = in.nextLine();
+                list_priceBerria = Float.parseFloat(inputa);
+                ondo = true;
+            } catch (Exception e) {
+                System.out.println("Sartutako datua ez da zuzena. Erabili zenbakiak eta '.'");
+                System.out.print("Prezio berria: ");
+            }
+        }
         String sql = "UPDATE public.product_template SET list_price = " + list_priceBerria + " WHERE id = " + id;
         exekutatu(sql);
     }
 
     public static void stockaAldatu(float quant, int id) {
-        float quantBerria;
+        String inputa;
+        float quantBerria = 0;
         System.out.println("Aurreko stocka: " + quant);
         System.out.print("Stock berria: ");
         in = new Scanner(System.in);
-        quantBerria = in.nextFloat();
-        String sql = "UPDATE public.stock_quant SET quantity = " + quantBerria + " WHERE product_id = " + id + " and location_id = 8";
+        boolean ondo = false;
+        while (!ondo) {
+            try {
+                inputa = in.nextLine();
+                quantBerria = Float.parseFloat(inputa);
+                ondo = true;
+            } catch (Exception e) {
+                System.out.println("Sartutako datua ez da zuzena. Erabili zenbakiak eta '.'");
+                System.out.print("Stock berria: ");
+            }
+        }
+        String sql = "UPDATE public.stock_quant SET quantity = " + quantBerria + " WHERE product_id = " + id
+                + " and location_id = 8";
         exekutatu(sql);
-        sql = "UPDATE public.stock_quant SET quantity = " + (quantBerria*-1) + " WHERE product_id = " + id + " and location_id = 14";
+        sql = "UPDATE public.stock_quant SET quantity = " + (quantBerria * -1) + " WHERE product_id = " + id
+                + " and location_id = 14";
         exekutatu(sql);
     }
 
     public static void bolumenaAldatu(float volume, int id) {
-        float volumeBerria;
+        String inputa;
+        float volumeBerria = 0;
         System.out.println("Aurreko bolumena (m\u00B3): " + volume);
         System.out.print("Bolumen berria (m\u00B3): ");
         in = new Scanner(System.in);
-        volumeBerria = in.nextFloat();
+        boolean ondo = false;
+        while (!ondo) {
+            try {
+                inputa = in.nextLine();
+                volumeBerria = Float.parseFloat(inputa);
+                ondo = true;
+            } catch (Exception e) {
+                System.out.println("Sartutako datua ez da zuzena. Erabili zenbakiak eta '.'");
+                System.out.print("Bolumen berria: ");
+            }
+        }
+        
         String sql = "UPDATE public.product_template SET volume = " + volumeBerria + " WHERE id = " + id;
         exekutatu(sql);
     }
 
     public static void pisuaAldatu(float weight, int id) {
-        float weightBerria;
+        String inputa;
+        float weightBerria = 0;
         System.out.println("Aurreko pisua (Kg): " + weight);
         System.out.print("Pisu berria (Kg): ");
         in = new Scanner(System.in);
-        weightBerria = in.nextFloat();
+        boolean ondo = false;
+        while (!ondo) {
+            try {
+                inputa = in.nextLine();
+                weightBerria = Float.parseFloat(inputa);
+                ondo = true;
+            } catch (Exception e) {
+                System.out.println("Sartutako datua ez da zuzena. Erabili zenbakiak eta '.'");
+                System.out.print("Pisu berria: ");
+            }
+        }
+        
         String sql = "UPDATE public.product_template SET weight = " + weightBerria + " WHERE id = " + id;
         exekutatu(sql);
     }
@@ -213,18 +260,18 @@ public class ProduktuBatAldatu {
 
     public static void lehentasunaAldatu(String priority, int id) {
         String priorityBerria;
-        if(priority.equals("1")){
+        if (priority.equals("1")) {
             priority = "Bai";
-        }else{
+        } else {
             priority = "Ez";
         }
         System.out.println("Aurreko lehentasuna: " + priority);
         System.out.print("Lehentasun berria (Bai/Ez): ");
         in = new Scanner(System.in);
         priorityBerria = in.nextLine().toLowerCase();
-        if(priorityBerria.equals("bai") || priorityBerria.equals("b") || priorityBerria.equals("1")){
+        if (priorityBerria.equals("bai") || priorityBerria.equals("b") || priorityBerria.equals("1")) {
             priorityBerria = "1";
-        }else{
+        } else {
             priorityBerria = "0";
         }
         String sql = "UPDATE public.product_template SET priority = '" + priorityBerria + "' WHERE id = " + id;
@@ -236,7 +283,7 @@ public class ProduktuBatAldatu {
             st = konexioa.connectDatabase().createStatement();
             st.executeQuery(sql);
         } catch (Exception ex) {
-            System.out.println(ex);
+            //System.out.println(ex);
         }
     }
 

@@ -68,7 +68,7 @@ public class ProduktuListaInportatu {
             Jsona jsona = new Jsona("data/importazioak/" + FileIn);
             return produktuak = jsona.irakurri();
         } else {
-            System.out.println("Sartutako fitxategiaren formatua ez da zuzena .csv, .xml edo .json izan behar da");
+            System.out.println("Sartutako fitxategiaren formatua ez da zuzena, .csv, .xml edo .json izan behar da");
         }
         return produktuak;
     }

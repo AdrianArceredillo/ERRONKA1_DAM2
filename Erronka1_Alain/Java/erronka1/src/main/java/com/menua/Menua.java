@@ -15,7 +15,7 @@ public class Menua {
     public static void main(String[] args) {
         garbitu();
         in = new Scanner(System.in);
-        int aukera = 0;
+        String aukera = "";
         do {
             System.out.println();
             System.out.println("HASIERAKO MENUA");
@@ -28,29 +28,30 @@ public class Menua {
             System.out.println("6.- Irten");
             System.out.println();
             System.out.print("Aukeratu zenbaki bat: ");
-            aukera = in.nextInt();
+            aukera = in.nextLine();
+
             switch (aukera) {
-                case 1:
+                case "1":
                     garbitu();
                     DatuakEsportatu.produktuakImprimatu();
                     break;
-                case 2:
+                case "2":
                     garbitu();
                     datuakEsportatu();
                     break;
-                case 3:
+                case "3":
                     garbitu();
                     datuakInportatu();
                     break;
-                case 4:
+                case "4":
                     garbitu();
                     produktuakEditatu();
                     break;
-                case 5:
+                case "5":
                     garbitu();
                     produktuakEzabatu();
                     break;
-                case 6:
+                case "6":
                     garbitu();
                     System.out.println("Eskerrik asko programa hau erabiltzeagatik.");
                     System.out.println();
@@ -59,12 +60,12 @@ public class Menua {
                     garbitu();
                     System.out.println("Aukera okerra. Saiatu berriz.");
             }
-        } while (aukera != 6);
+        } while (!aukera.equals("6"));
         in.close();
     }
 
     private static void datuakEsportatu() {
-        int aukera;
+        String aukera;
         do {
             System.out.println("\nZe formatutara nahi duzu produktuen datuak esportatu?");
             System.out.println("1.- CSV");
@@ -73,113 +74,116 @@ public class Menua {
             System.out.println("4.- Denetara");
             System.out.println("5.- Atzera");
             System.out.print("Aukeratu zenbaki bat: ");
-            aukera = in.nextInt();
+            aukera = in.nextLine();
             switch (aukera) {
-                case 1:
+                case "1":
                     garbitu();
                     DatuakEsportatu.produktuakCsvra();
                     break;
-                case 2:
+                case "2":
                     garbitu();
                     DatuakEsportatu.produktuakXmlra();
                     break;
-                case 3:
+                case "3":
                     garbitu();
                     DatuakEsportatu.produktuakJsonera();
                     break;
-                case 4:
+                case "4":
                     garbitu();
                     DatuakEsportatu.produktuakDenetara();
+                    break;
+                case "5":
+                    garbitu();
                     break;
                 default:
                     garbitu();
                     System.out.println("Aukera okerra. Saiatu berriz.");
             }
-        } while (aukera != 5);
+        } while (!aukera.equals("5"));
     }
 
     private static void datuakInportatu() {
-        int aukera;
+        String aukera;
         do {
             System.out.println("\nZer nahi duzu inportatu?");
             System.out.println("1.- Produktu bat");
             System.out.println("2.- Produktu lista");
             System.out.println("3.- Atzera");
             System.out.print("Aukeratu zenbaki bat: ");
-            aukera = in.nextInt();
+            aukera = in.nextLine();
             switch (aukera) {
-                case 1:
+                case "1":
                     garbitu();
                     ProduktuBatInportatu.produktuaInportatu();
                     break;
-                case 2:
+                case "2":
                     garbitu();
                     ProduktuListaInportatu.listaInportatu();
                     break;
-                case 3:
+                case "3":
                     garbitu();
                     break;
                 default:
                     garbitu();
                     System.out.println("Aukera okerra. Saiatu berriz.");
             }
-        } while (aukera != 3);
+        } while (!aukera.equals("3"));
     }
 
     private static void produktuakEditatu() {
-        int aukera;
+        String aukera;
         do {
             System.out.println("\nZer nahi duzu editatu?");
             System.out.println("1.- Produktu bat");
             System.out.println("2.- Produktu denak");
             System.out.println("3.- Atzera");
             System.out.print("Aukeratu zenbaki bat: ");
-            aukera = in.nextInt();
+            aukera = in.nextLine();
             switch (aukera) {
-                case 1:
+                case "1":
                     garbitu();
                     ProduktuBatAldatu.produktuaAldatu();
                     break;
-                case 2:
+                case "2":
                     garbitu();
                     ProduktuListaAldatu.produktuListaAldatu();
                     break;
-                case 3:
+                case "3":
                     garbitu();
                     break;
                 default:
                     garbitu();
                     System.out.println("Aukera okerra. Saiatu berriz.");
             }
-        } while (aukera != 3);
+        } while (!aukera.equals("3"));
     }
 
     private static void produktuakEzabatu() {
-        int aukera;
+        String aukera;
         do {
             System.out.println("\nZer nahi duzu ezabatu?");
             System.out.println("1.- Produktu bat");
             System.out.println("2.- Produktu denak");
             System.out.println("3.- Atzera");
             System.out.print("Aukeratu zenbaki bat: ");
-            aukera = in.nextInt();
+            aukera = in.nextLine();
             switch (aukera) {
-                case 1:
+                case "1":
                     garbitu();
                     ProduktuBatEzabatu.produktuaEzabatu();
                     break;
-                case 2:
+                case "2":
                     garbitu();
                     GarbituTaulak.garbitu();
                     break;
-                case 3:
+                case "3":
                     garbitu();
                     break;
                 default:
                     garbitu();
                     System.out.println("Aukera okerra. Saiatu berriz.");
             }
-        } while (aukera != 3);
+        } while (!aukera.equals("3"));
     }
 
     private static void garbitu() {

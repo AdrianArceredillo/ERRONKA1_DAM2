@@ -13,35 +13,45 @@ public class ProduktuBatInportatu {
 
     public static void produktuaInportatu() {
 
-        String izena, deskripzioa, barraKodea, erantzuna, lehentasuna;
-        float prezioa, bolumena, pisua, stocka;
+        String izena = "", deskripzioa = "", barraKodea = "", erantzuna = "", lehentasuna = "";
+        float prezioa = 0, bolumena = 0, pisua = 0, stocka = 0;
         boolean besteBat = true;
         in = new Scanner(System.in);
         do {
             garbitu();
-            System.out.println("Produktua gehitzeko sartu hurrengo datuak:");
-            System.out.print("Izena: ");
-            izena = in.nextLine();
-            System.out.print("Deskripzioa: ");
-            deskripzioa = in.nextLine();
-            System.out.print("Prezioa: ");
-            prezioa = in.nextFloat();
-            System.out.print("Stocka: ");
-            stocka = in.nextFloat();
-            System.out.print("Bolumena (m\u00B3): ");
-            bolumena = in.nextFloat();
-            System.out.print("Pisua (Kg): ");
-            pisua = in.nextFloat();
-            System.out.print("Barra-kodea: ");
-            barraKodea = in.next();
-            System.out.print("Lehentasuna (Bai/Ez): ");
-            erantzuna = in.next();
-            if (erantzuna.toLowerCase().equals("bai") || erantzuna.equals("b") || erantzuna.equals("1")) {
-                lehentasuna = "Bai";
-            } else {
-                lehentasuna = "Ez";
+            boolean ondo = false;
+            while (!ondo){
+                try {
+                    System.out.println("Produktua gehitzeko sartu hurrengo datuak:");
+                    System.out.print("Izena: ");
+                    izena = in.nextLine();
+                    System.out.print("Deskripzioa: ");
+                    deskripzioa = in.nextLine();
+                    System.out.print("Prezioa: ");
+                    prezioa = in.nextFloat();
+                    System.out.print("Stocka: ");
+                    stocka = in.nextFloat();
+                    System.out.print("Bolumena (m\u00B3): ");
+                    bolumena = in.nextFloat();
+                    System.out.print("Pisua (Kg): ");
+                    pisua = in.nextFloat();
+                    System.out.print("Barra-kodea: ");
+                    barraKodea = in.next();
+                    System.out.print("Lehentasuna (Bai/Ez): ");
+                    erantzuna = in.next();
+                    if (erantzuna.toLowerCase().equals("bai") || erantzuna.equals("b") || erantzuna.equals("1")) {
+                        lehentasuna = "Bai";
+                    } else {
+                        lehentasuna = "Ez";
+                    }
+                    ondo = true;
+                } catch (Exception e) {
+                    garbitu();
+                    System.out.println("Datu bat formatu desegokian sartu duzu, saiatu berriro");
+                    System.out.println("Zenbakietan erabili ',' eta ez '.'");
+                    in.nextLine();
+                }
             }
-
             garbitu();
             System.out.print("Sartutako datuak:\nIzena: " + izena + "\nDeskripzioa: " + deskripzioa + "\nPrezioa: "
                     + prezioa
@@ -64,7 +74,7 @@ public class ProduktuBatInportatu {
             }
             System.out.println("Nahi duzu beste produktu bat inportatu? (Bai/Ez)");
             erantzuna = in.next();
-            if(erantzuna.toLowerCase().equals("bai") ||erantzuna.toLowerCase().equals("b")){
+            if (erantzuna.toLowerCase().equals("bai") || erantzuna.toLowerCase().equals("b")) {
                 besteBat = true;
             } else {
                 besteBat = false;
@@ -85,9 +95,9 @@ public class ProduktuBatInportatu {
                 id = rs.getInt(1);
             }
         } catch (Exception ex) {
-            //System.out.println("Exception (PT id): " + ex);
+            // System.out.println("Exception (PT id): " + ex);
         }
-        //System.out.println("Lortutako PT id-a: " + id);
+        // System.out.println("Lortutako PT id-a: " + id);
         return id;
     }
 
@@ -101,9 +111,9 @@ public class ProduktuBatInportatu {
                 id = rs.getInt(1);
             }
         } catch (Exception ex) {
-            //System.out.println("Exception (PP id): " + ex);
+            // System.out.println("Exception (PP id): " + ex);
         }
-        //System.out.println("Lortutako PP id-a: " + id);
+        // System.out.println("Lortutako PP id-a: " + id);
         return id;
     }
 
@@ -117,9 +127,9 @@ public class ProduktuBatInportatu {
                 id = rs.getInt(1);
             }
         } catch (Exception ex) {
-            //System.out.println("Exception (SQ id): " + ex);
+            // System.out.println("Exception (SQ id): " + ex);
         }
-        //System.out.println("Lortutako SQ id-a: " + id);
+        // System.out.println("Lortutako SQ id-a: " + id);
         return id;
     }
 
