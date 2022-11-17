@@ -33,10 +33,10 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.graf12 = new Graf1.Graf1();
             this.graf31 = new Graf3.Graf3();
+            this.btnStockarenInformazioa = new System.Windows.Forms.Button();
+            this.graf12 = new Graf1.Graf1();
             this.graf21 = new Graf2.Graf2();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,19 +85,30 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "URTEAK";
             // 
-            // graf12
-            // 
-            this.graf12.Location = new System.Drawing.Point(124, 185);
-            this.graf12.Name = "graf12";
-            this.graf12.Size = new System.Drawing.Size(700, 400);
-            this.graf12.TabIndex = 4;
-            // 
             // graf31
             // 
             this.graf31.Location = new System.Drawing.Point(124, 637);
             this.graf31.Name = "graf31";
             this.graf31.Size = new System.Drawing.Size(700, 400);
             this.graf31.TabIndex = 8;
+            // 
+            // btnStockarenInformazioa
+            // 
+            this.btnStockarenInformazioa.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStockarenInformazioa.Location = new System.Drawing.Point(1386, 794);
+            this.btnStockarenInformazioa.Name = "btnStockarenInformazioa";
+            this.btnStockarenInformazioa.Size = new System.Drawing.Size(203, 87);
+            this.btnStockarenInformazioa.TabIndex = 9;
+            this.btnStockarenInformazioa.Text = "IKUSI STOCKAREN INFORMAZIOA";
+            this.btnStockarenInformazioa.UseVisualStyleBackColor = true;
+            this.btnStockarenInformazioa.Click += new System.EventHandler(this.btnStockarenInformazioa_Click);
+            // 
+            // graf12
+            // 
+            this.graf12.Location = new System.Drawing.Point(124, 185);
+            this.graf12.Name = "graf12";
+            this.graf12.Size = new System.Drawing.Size(700, 400);
+            this.graf12.TabIndex = 4;
             // 
             // graf21
             // 
@@ -108,24 +119,13 @@
             this.graf21.TabIndex = 1;
             this.graf21.Load += new System.EventHandler(this.graf21_Load);
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1369, 789);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(203, 87);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "IKUSI STOCKAREN INFORMAZIOA";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1924, 1061);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnStockarenInformazioa);
             this.Controls.Add(this.graf31);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
@@ -133,8 +133,13 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.graf21);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "HJAA Enpresa";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -149,7 +154,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private Graf3.Graf3 graf31;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnStockarenInformazioa;
     }
 }
 

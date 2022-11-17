@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Grafikoak_Joseba.Models
 {
-    internal class purchase_order
+    public class purchase_order
     {
         [Key]
         public int id { get; set; }

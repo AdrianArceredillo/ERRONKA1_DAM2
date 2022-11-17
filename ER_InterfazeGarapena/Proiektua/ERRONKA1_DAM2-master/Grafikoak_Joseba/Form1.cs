@@ -76,7 +76,8 @@ namespace Grafikoak_Joseba
                     .Include("Workers")
                     //.Where(b => b.create_date.Year.ToString() == comboBox1.Text)
                     .GroupBy(b => b.Workers.login)
-                    .ToDictionary(g => g.Key, g => g.Sum(b => b.untaxed_amount_invoiced));
+                    //.ToDictionary(g => g.Key, g => g.Sum(b => b.untaxed_amount_invoiced));
+                    .ToDictionary(g => g.Key, g => g.Sum(b => b.price_total));
 
                 if (workersData != null)
                 {
@@ -215,7 +216,8 @@ namespace Grafikoak_Joseba
                     .Include("Workers")
                     .Where(b => b.create_date.Year.ToString() == comboBox1.Text)
                     .GroupBy(b => b.Workers.login)
-                    .ToDictionary(g => g.Key, g => g.Sum(b => b.untaxed_amount_invoiced));
+                    //.ToDictionary(g => g.Key, g => g.Sum(b => b.untaxed_amount_invoiced));
+                    .ToDictionary(g => g.Key, g => g.Sum(b => b.price_total));
 
                     if (workersData != null)
                     {
@@ -265,11 +267,14 @@ namespace Grafikoak_Joseba
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnStockarenInformazioa_Click(object sender, EventArgs e)
         {
-            HJAA_Grafikoak_HaritzOtero.Form1 frmHaritz = new HJAA_Grafikoak_HaritzOtero.Form1();
-            frmHaritz.Show();
+            frmHaritzOtero _frmHaritzOtero = new frmHaritzOtero();
+            _frmHaritzOtero.ShowDialog();
         }
     }
 }
+
+
+
 

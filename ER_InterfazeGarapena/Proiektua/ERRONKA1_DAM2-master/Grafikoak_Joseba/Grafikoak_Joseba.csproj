@@ -159,6 +159,10 @@
       <Project>{617e3d42-0098-468a-a546-ac5a7d00d176}</Project>
       <Name>HJAA_Grafikoak_HaritzOtero</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PruebaErronkaDll\PruebaErronkaDll.csproj">
+      <Project>{F4873146-19D0-4E23-88F7-28116B3C9B04}</Project>
+      <Name>PruebaErronkaDll</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

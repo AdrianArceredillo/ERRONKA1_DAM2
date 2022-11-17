@@ -14,9 +14,9 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace HJAA_Grafikoak_HaritzOtero
 {
-    public partial class Form1 : Form
+    public partial class frmHaritzOtero : Form
     {
-        public Form1()
+        public frmHaritzOtero()
         {
             InitializeComponent();
         }

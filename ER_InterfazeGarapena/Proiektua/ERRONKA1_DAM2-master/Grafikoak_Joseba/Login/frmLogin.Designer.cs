@@ -259,6 +259,7 @@
             this.Controls.Add(this.txtLoginUsername);
             this.Controls.Add(this.txtLoginPassword);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ongi etorri!";

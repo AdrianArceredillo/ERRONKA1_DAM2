@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Grafikoak_Joseba.Models
 {
-    internal class res_partner
+    public class res_partner
     {
         public int id { get; set; }
         public string name { get; set; }
