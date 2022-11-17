@@ -84,7 +84,7 @@ public class ProduktuListaAldatu {
         String inputa;
         float prezioa, prezioaGehitu = 0;
         int id;
-        System.out.print("Zenbat gaitik nahi duzu gehitu prezioak?");
+        System.out.print("Zenbat gaitik nahi duzu gehitu prezioak? ");
         in = new Scanner(System.in);
         boolean ondo = false;
         while (!ondo) {
@@ -94,7 +94,7 @@ public class ProduktuListaAldatu {
                 ondo = true;
             } catch (Exception e) {
                 System.out.println("Sartutako datua ez da zuzena. Erabili zenbakiak eta '.'");
-                System.out.print("Zenbat gaitik nahi duzu gehitu prezioak?");
+                System.out.print("Zenbat gaitik nahi duzu gehitu prezioak? ");
             }
         }
 
@@ -123,7 +123,7 @@ public class ProduktuListaAldatu {
         String inputa;
         float prezioa, prezioaBiderkatu = 0;
         int id;
-        System.out.print("Zenbat gaitik nahi duzu biderkatu prezioak?");
+        System.out.print("Zenbat gaitik nahi duzu biderkatu prezioak? ");
         in = new Scanner(System.in);
         boolean ondo = false;
         while (!ondo) {
@@ -133,7 +133,7 @@ public class ProduktuListaAldatu {
                 ondo = true;
             } catch (Exception e) {
                 System.out.println("Sartutako datua ez da zuzena. Erabili zenbakiak eta '.'");
-                System.out.print("Zenbat gaitik nahi duzu biderkatu prezioak?");
+                System.out.print("Zenbat gaitik nahi duzu biderkatu prezioak? ");
             }
         }
 
@@ -182,7 +182,7 @@ public class ProduktuListaAldatu {
         float stockaGehitu = 0;
         int idPT = 0;
         int idPP = 0;
-        System.out.println("Zenbat gaitik nahi duzu gehitu stocka?");
+        System.out.println("Zenbat gaitik nahi duzu gehitu stocka? ");
         in = new Scanner(System.in);
         boolean ondo = false;
         while (!ondo) {
@@ -192,7 +192,7 @@ public class ProduktuListaAldatu {
                 ondo = true;
             } catch (Exception e) {
                 System.out.println("Sartutako datua ez da zuzena. Erabili zenbakiak eta '.'");
-                System.out.println("Zenbat gaitik nahi duzu gehitu stocka?");
+                System.out.println("Zenbat gaitik nahi duzu gehitu stocka? ");
             }
         }
 
@@ -248,7 +248,7 @@ public class ProduktuListaAldatu {
         float stockaBiderkatu = 0;
         int idPT = 0;
         int idPP = 0;
-        System.out.println("Zenbat gaitik nahi duzu biderkatu stocka?");
+        System.out.println("Zenbat gaitik nahi duzu biderkatu stocka? ");
         in = new Scanner(System.in);
         boolean ondo = false;
         while (!ondo) {
@@ -258,7 +258,7 @@ public class ProduktuListaAldatu {
                 ondo = true;
             } catch (Exception e) {
                 System.out.println("Sartutako datua ez da zuzena. Erabili zenbakiak eta '.'");
-                System.out.println("Zenbat gaitik nahi duzu biderkatu stocka?");
+                System.out.println("Zenbat gaitik nahi duzu biderkatu stocka? ");
             }
         }
 
