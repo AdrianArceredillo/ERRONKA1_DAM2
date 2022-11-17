@@ -1,0 +1,12 @@
+C:\Users\otero.haritz\Desktop\InterfaceFinal\ERRONKA1_DAM2\Graf2\bin\Release\Graf2.dll
+C:\Users\otero.haritz\Desktop\InterfaceFinal\ERRONKA1_DAM2\Graf2\bin\Release\Graf2.pdb
+C:\Users\otero.haritz\Desktop\InterfaceFinal\ERRONKA1_DAM2\Graf2\bin\Release\Graf1.dll
+C:\Users\otero.haritz\Desktop\InterfaceFinal\ERRONKA1_DAM2\Graf2\bin\Release\Graf1.pdb
+C:\Users\otero.haritz\Desktop\InterfaceFinal\ERRONKA1_DAM2\Graf2\bin\Release\Graf1.dll.config
+C:\Users\otero.haritz\Desktop\InterfaceFinal\ERRONKA1_DAM2\Graf2\obj\Release\GrafikoaErosketak.csproj.AssemblyReference.cache
+C:\Users\otero.haritz\Desktop\InterfaceFinal\ERRONKA1_DAM2\Graf2\obj\Release\Graf2.Graf2.resources
+C:\Users\otero.haritz\Desktop\InterfaceFinal\ERRONKA1_DAM2\Graf2\obj\Release\GrafikoaErosketak.csproj.GenerateResource.cache
+C:\Users\otero.haritz\Desktop\InterfaceFinal\ERRONKA1_DAM2\Graf2\obj\Release\GrafikoaErosketak.csproj.CoreCompileInputs.cache
+C:\Users\otero.haritz\Desktop\InterfaceFinal\ERRONKA1_DAM2\Graf2\obj\Release\GrafikoaErosketak.csproj.CopyComplete
+C:\Users\otero.haritz\Desktop\InterfaceFinal\ERRONKA1_DAM2\Graf2\obj\Release\Graf2.dll
+C:\Users\otero.haritz\Desktop\InterfaceFinal\ERRONKA1_DAM2\Graf2\obj\Release\Graf2.pdb

@@ -1,0 +1,8 @@
+C:\Users\otero.haritz\Desktop\InterfaceFinal\ERRONKA1_DAM2\Grafikoa1\bin\Release\Grafikoa1.dll
+C:\Users\otero.haritz\Desktop\InterfaceFinal\ERRONKA1_DAM2\Grafikoa1\bin\Release\Grafikoa1.pdb
+C:\Users\otero.haritz\Desktop\InterfaceFinal\ERRONKA1_DAM2\Grafikoa1\obj\Release\GrafikoaProductuenStock.csproj.AssemblyReference.cache
+C:\Users\otero.haritz\Desktop\InterfaceFinal\ERRONKA1_DAM2\Grafikoa1\obj\Release\Grafikoa1.UserControl1.resources
+C:\Users\otero.haritz\Desktop\InterfaceFinal\ERRONKA1_DAM2\Grafikoa1\obj\Release\GrafikoaProductuenStock.csproj.GenerateResource.cache
+C:\Users\otero.haritz\Desktop\InterfaceFinal\ERRONKA1_DAM2\Grafikoa1\obj\Release\GrafikoaProductuenStock.csproj.CoreCompileInputs.cache
+C:\Users\otero.haritz\Desktop\InterfaceFinal\ERRONKA1_DAM2\Grafikoa1\obj\Release\Grafikoa1.dll
+C:\Users\otero.haritz\Desktop\InterfaceFinal\ERRONKA1_DAM2\Grafikoa1\obj\Release\Grafikoa1.pdb
