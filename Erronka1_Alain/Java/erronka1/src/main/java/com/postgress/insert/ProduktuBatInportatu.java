@@ -60,6 +60,7 @@ public class ProduktuBatInportatu {
                 InsertProduktua.produktuaGehitu(idPT, idPP, idSQ, izena, deskripzioa, barraKodea, prezioa, bolumena,
                         pisua,
                         stocka, lehentasuna);
+                System.out.println("Produktua ondo inportatu da");
             }
             System.out.println("Nahi duzu beste produktu bat inportatu? (Bai/Ez)");
             erantzuna = in.next();
@@ -71,7 +72,7 @@ public class ProduktuBatInportatu {
             in.nextLine();
 
         } while (besteBat);
-        in.close();
+        garbitu();
     }
 
     public static int idLortuPT() {
@@ -84,9 +85,9 @@ public class ProduktuBatInportatu {
                 id = rs.getInt(1);
             }
         } catch (Exception ex) {
-            System.out.println("Exception (PT id): " + ex);
+            //System.out.println("Exception (PT id): " + ex);
         }
-        System.out.println("Lortutako PT id-a: " + id);
+        //System.out.println("Lortutako PT id-a: " + id);
         return id;
     }
 
@@ -100,9 +101,9 @@ public class ProduktuBatInportatu {
                 id = rs.getInt(1);
             }
         } catch (Exception ex) {
-            System.out.println("Exception (PP id): " + ex);
+            //System.out.println("Exception (PP id): " + ex);
         }
-        System.out.println("Lortutako PP id-a: " + id);
+        //System.out.println("Lortutako PP id-a: " + id);
         return id;
     }
 
@@ -116,9 +117,9 @@ public class ProduktuBatInportatu {
                 id = rs.getInt(1);
             }
         } catch (Exception ex) {
-            System.out.println("Exception (SQ id): " + ex);
+            //System.out.println("Exception (SQ id): " + ex);
         }
-        System.out.println("Lortutako SQ id-a: " + id);
+        //System.out.println("Lortutako SQ id-a: " + id);
         return id;
     }
 

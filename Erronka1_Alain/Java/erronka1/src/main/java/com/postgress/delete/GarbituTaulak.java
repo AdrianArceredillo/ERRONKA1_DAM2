@@ -28,7 +28,7 @@ public class GarbituTaulak {
             st = konexioa.connectDatabase().createStatement();
             st.executeQuery(sql);
         } catch (Exception ex) {
-            System.out.println(ex);
+            //System.out.println(ex);
         }
 
         sql = "delete from public.product_product";
@@ -36,7 +36,7 @@ public class GarbituTaulak {
             st = konexioa.connectDatabase().createStatement();
             st.executeQuery(sql);
         } catch (Exception ex) {
-            System.out.println(ex);
+            //System.out.println(ex);
         }
 
         sql = "delete from public.product_template";
@@ -44,7 +44,7 @@ public class GarbituTaulak {
             st = konexioa.connectDatabase().createStatement();
             st.executeQuery(sql);
         } catch (Exception ex) {
-            System.out.println(ex);
+            //System.out.println(ex);
         }
 
         System.out.print("\033[H\033[2J");

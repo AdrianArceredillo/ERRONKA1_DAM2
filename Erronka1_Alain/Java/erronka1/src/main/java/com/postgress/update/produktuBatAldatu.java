@@ -45,6 +45,7 @@ public class ProduktuBatAldatu {
                 bestebat = false;
             }
         } while (bestebat);
+        garbitu();
         
     }
 
@@ -132,6 +133,7 @@ public class ProduktuBatAldatu {
                     System.out.println("Aukera okerra. Saiatu berriz.");
             }
         } while (egin);
+        garbitu();
 
     }
 
@@ -302,7 +304,7 @@ public class ProduktuBatAldatu {
         return quant;
     }
 
-    private static void garbitu() {
+    public static void garbitu() {
         System.out.print("\033[H\033[2J");
         System.out.flush();
     }

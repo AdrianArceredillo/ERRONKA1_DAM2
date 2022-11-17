@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 import com.konexioa.Konexioa;
 import com.postgress.ProduktuakJavaObjetura;
+import com.postgress.update.ProduktuBatAldatu;
 
 public class ProduktuBatEzabatu {
     public static Konexioa konexioa = new Konexioa();
@@ -42,6 +43,7 @@ public class ProduktuBatEzabatu {
                 bestebat = false;
             }
         } while (bestebat);
+        ProduktuBatAldatu.garbitu();
     }
 
     public static void produktuaEzabatu(int idPT) {
@@ -54,7 +56,7 @@ public class ProduktuBatEzabatu {
                 idPP = rs.getInt(1);
             }
         } catch (Exception ex) {
-            System.out.println("Exception (PP): " + ex);
+            //System.out.println("Exception (PP): " + ex);
         }
 
         sql = "delete from public.stock_quant where product_id = " + idPP;
@@ -65,7 +67,8 @@ public class ProduktuBatEzabatu {
 
         sql = "delete from public.product_template where id = " + idPT;
         exekutatu(sql);
-
+        
+        ProduktuBatAldatu.garbitu();
     }
 
     public static String izenaLortu(int id) {
@@ -79,7 +82,7 @@ public class ProduktuBatEzabatu {
                 izena = rs.getString(1);
             }
         } catch (Exception ex) {
-            System.out.println("Exception (TP id): " + ex);
+            //System.out.println("Exception (TP id): " + ex);
         }
         return izena;
 
@@ -90,7 +93,7 @@ public class ProduktuBatEzabatu {
             st = konexioa.connectDatabase().createStatement();
             st.executeQuery(sql);
         } catch (Exception ex) {
-            System.out.println(ex);
+            //System.out.println(ex);
         }
     }
 }

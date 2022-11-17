@@ -60,6 +60,7 @@ public class Menua {
                     System.out.println("Aukera okerra. Saiatu berriz.");
             }
         } while (aukera != 6);
+        in.close();
     }
 
     private static void datuakEsportatu() {

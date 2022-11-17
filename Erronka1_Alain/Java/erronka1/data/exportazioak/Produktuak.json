@@ -1,1 +1,90 @@
-[{"id":1,"izena":"Intel Core i5-11400F 2.6 GHz","deskripzioa":"<p><br></p>","prezioa":169.99000549316406,"stocka":196.0,"bolumena":0.0,"pisua":169.99000549316406,"barraKodea":"null","lehentasuna":"Ez"},{"id":2,"izena":"AMD Ryzen 5 5600X 3.7GHz","deskripzioa":"<p><br></p>","prezioa":250.0,"stocka":179.0,"bolumena":0.0,"pisua":250.0,"barraKodea":"null","lehentasuna":"Ez"},{"id":3,"izena":"Kingston FURY Beast RGB DDR4 3200 MHz 16GB 2x8GB CL16","deskripzioa":"<p><br></p>","prezioa":78.98999786376953,"stocka":100.0,"bolumena":0.0,"pisua":78.98999786376953,"barraKodea":"null","lehentasuna":"Ez"},{"id":4,"izena":"Acer Nitro 5 AN515-58-7571 Intel Core i7-12700H/16GB/512GB SSD/RTX 3060/15.6\"","deskripzioa":"<p><br></p>","prezioa":1149.0,"stocka":170.0,"bolumena":0.0,"pisua":1149.0,"barraKodea":"null","lehentasuna":"Ez"},{"id":5,"izena":"Apple Magic Mouse Plata","deskripzioa":"<p><br></p>","prezioa":72.98999786376953,"stocka":156.0,"bolumena":1.0,"pisua":72.98999786376953,"barraKodea":"28137469123784","lehentasuna":"Bai"},{"id":6,"izena":"Logitech G413 TKL SE Teclado Gaming Mecánico Retroiluminado","deskripzioa":"<p><br></p>","prezioa":69.97000122070312,"stocka":128.0,"bolumena":0.0,"pisua":69.97000122070312,"barraKodea":"null","lehentasuna":"Ez"},{"id":8,"izena":"PcCom Basic Intel Core i5 10400/16GB/500GB SSD","deskripzioa":"<p><br></p>","prezioa":618.0,"stocka":115.0,"bolumena":0.0,"pisua":618.0,"barraKodea":"null","lehentasuna":"Ez"}]
+[
+    {
+        "id": 1,
+        "izena": "Intel Core i5-11400F 2.6 GHz",
+        "deskripzioa": "<p><br></p>",
+        "prezioa": 169.99000549316406,
+        "stocka": 196.0,
+        "bolumena": 0.0,
+        "pisua": 169.99000549316406,
+        "barraKodea": "null",
+        "lehentasuna": "Ez"
+    },
+    {
+        "id": 2,
+        "izena": "AMD Ryzen 5 5600X 3.7GHz",
+        "deskripzioa": "<p><br></p>",
+        "prezioa": 250.0,
+        "stocka": 179.0,
+        "bolumena": 0.0,
+        "pisua": 250.0,
+        "barraKodea": "null",
+        "lehentasuna": "Ez"
+    },
+    {
+        "id": 3,
+        "izena": "Kingston FURY Beast RGB DDR4 3200 MHz 16GB 2x8GB CL16",
+        "deskripzioa": "<p><br></p>",
+        "prezioa": 78.98999786376953,
+        "stocka": 100.0,
+        "bolumena": 0.0,
+        "pisua": 78.98999786376953,
+        "barraKodea": "null",
+        "lehentasuna": "Ez"
+    },
+    {
+        "id": 4,
+        "izena": "Acer Nitro 5 AN515-58-7571 Intel Core i7-12700H/16GB/512GB SSD/RTX 3060/15.6\"",
+        "deskripzioa": "<p><br></p>",
+        "prezioa": 1149.0,
+        "stocka": 170.0,
+        "bolumena": 0.0,
+        "pisua": 1149.0,
+        "barraKodea": "null",
+        "lehentasuna": "Ez"
+    },
+    {
+        "id": 5,
+        "izena": "Apple Magic Mouse Plata",
+        "deskripzioa": "<p><br></p>",
+        "prezioa": 72.98999786376953,
+        "stocka": 156.0,
+        "bolumena": 1.0,
+        "pisua": 72.98999786376953,
+        "barraKodea": "28137469123784",
+        "lehentasuna": "Bai"
+    },
+    {
+        "id": 6,
+        "izena": "Logitech G413 TKL SE Teclado Gaming Mecánico Retroiluminado",
+        "deskripzioa": "<p><br></p>",
+        "prezioa": 69.97000122070312,
+        "stocka": 128.0,
+        "bolumena": 0.0,
+        "pisua": 69.97000122070312,
+        "barraKodea": "null",
+        "lehentasuna": "Ez"
+    },
+    {
+        "id": 8,
+        "izena": "PcCom Basic Intel Core i5 10400/16GB/500GB SSD",
+        "deskripzioa": "<p><br></p>",
+        "prezioa": 618.0,
+        "stocka": 115.0,
+        "bolumena": 0.0,
+        "pisua": 618.0,
+        "barraKodea": "null",
+        "lehentasuna": "Ez"
+    },
+    {
+        "id": 9,
+        "izena": "Proba",
+        "deskripzioa": "deskripzioa",
+        "prezioa": 123.0,
+        "stocka": 312.0,
+        "bolumena": 345.0,
+        "pisua": 123.0,
+        "barraKodea": "345345m3453",
+        "lehentasuna": "Bai"
+    }
+]

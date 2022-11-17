@@ -44,6 +44,7 @@ public class ProduktuListaAldatu {
                         default:
                             break;
                     }
+                    garbitu();
                     System.out.println("Hemen produktu guztien lista berria:");
                     System.out.println(
                             "Produktua[id, izena, deskripzioa, prezioa, stocka, bolumena, pisua, barraKodea, lehentasuna]");
@@ -59,7 +60,7 @@ public class ProduktuListaAldatu {
                 bestebat = false;
             }
         } while (bestebat);
-        in.close();
+        garbitu();
     }
 
     public static void listaAldatuPrezioa() {
@@ -296,7 +297,7 @@ public class ProduktuListaAldatu {
             st = konexioa.connectDatabase().createStatement();
             st.executeQuery(sql);
         } catch (Exception ex) {
-            System.out.println(ex);
+            //System.out.println(ex);
         }
     }
 

@@ -77,4 +77,15 @@
         <Barra_Kodea>null</Barra_Kodea>
         <Lehentasuna>Ez</Lehentasuna>
     </Produktua>
+    <Produktua>
+        <Id>9</Id>
+        <Izena>Proba</Izena>
+        <Deskripzioa>deskripzioa</Deskripzioa>
+        <Prezioa>123.0</Prezioa>
+        <Stocka>312.0</Stocka>
+        <Bolumena>345.0</Bolumena>
+        <Pisua>123.0</Pisua>
+        <Barra_Kodea>345345m3453</Barra_Kodea>
+        <Lehentasuna>Bai</Lehentasuna>
+    </Produktua>
 </Produktuak>
