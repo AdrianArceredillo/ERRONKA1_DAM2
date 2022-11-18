@@ -229,13 +229,6 @@ namespace PruebaGrafico0.AtalNagusiaForm
             string usb_F = this.filtroUsb();
             string todos_F = this.filtroVerTodos();
 
-            //this.refrescarGraficoProductos(
-            //    this.filtroTeclado(),
-            //    this.filtroMonitor(),
-            //    this.filtroUsb(),
-            //    this.filtroVerTodos()
-            //    );
-
             this.refrescarGraficoProductos(teclado_F, monitor_F, usb_F, todos_F);
         }
 

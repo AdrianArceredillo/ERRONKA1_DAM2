@@ -41,8 +41,6 @@
             this.lblVerCurrentTab = new System.Windows.Forms.Label();
             this.lblVerConsultaActual = new System.Windows.Forms.Label();
             this.tabBezeroak = new System.Windows.Forms.TabPage();
-            this.clienteHistorialCompraGrafico = new BezeroBakoitzarenErosketak.BezeroBakoitzarenErosketak();
-            this.totalGastoClienteGrafico = new BezeroBakoitzarenGastuakDLL.bezeroenGastuakChart();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnEsconderGraficoClientes = new System.Windows.Forms.Button();
             this.btnVerGraficoClientes = new System.Windows.Forms.Button();
@@ -79,6 +77,8 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.totalGastoClienteGrafico = new BezeroBakoitzarenGastuakDLL.bezeroenGastuakChart();
+            this.clienteHistorialCompraGrafico = new BezeroBakoitzarenErosketak.BezeroBakoitzarenErosketak();
             this.gbDatuMota.SuspendLayout();
             this.tabBezeroak.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -229,20 +229,6 @@
             this.tabBezeroak.TabIndex = 1;
             this.tabBezeroak.Text = "Bezeroak";
             this.tabBezeroak.UseVisualStyleBackColor = true;
-            // 
-            // clienteHistorialCompraGrafico
-            // 
-            this.clienteHistorialCompraGrafico.Location = new System.Drawing.Point(262, 169);
-            this.clienteHistorialCompraGrafico.Name = "clienteHistorialCompraGrafico";
-            this.clienteHistorialCompraGrafico.Size = new System.Drawing.Size(331, 178);
-            this.clienteHistorialCompraGrafico.TabIndex = 14;
-            // 
-            // totalGastoClienteGrafico
-            // 
-            this.totalGastoClienteGrafico.Location = new System.Drawing.Point(6, 361);
-            this.totalGastoClienteGrafico.Name = "totalGastoClienteGrafico";
-            this.totalGastoClienteGrafico.Size = new System.Drawing.Size(470, 173);
-            this.totalGastoClienteGrafico.TabIndex = 13;
             // 
             // panel4
             // 
@@ -639,6 +625,20 @@
             this.label14.TabIndex = 2;
             this.label14.Text = "Azalpen laburra:";
             // 
+            // totalGastoClienteGrafico
+            // 
+            this.totalGastoClienteGrafico.Location = new System.Drawing.Point(6, 361);
+            this.totalGastoClienteGrafico.Name = "totalGastoClienteGrafico";
+            this.totalGastoClienteGrafico.Size = new System.Drawing.Size(470, 173);
+            this.totalGastoClienteGrafico.TabIndex = 13;
+            // 
+            // clienteHistorialCompraGrafico
+            // 
+            this.clienteHistorialCompraGrafico.Location = new System.Drawing.Point(262, 169);
+            this.clienteHistorialCompraGrafico.Name = "clienteHistorialCompraGrafico";
+            this.clienteHistorialCompraGrafico.Size = new System.Drawing.Size(331, 178);
+            this.clienteHistorialCompraGrafico.TabIndex = 14;
+            // 
             // frmAtalNagusia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -694,8 +694,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TabPage tabBezeroak;
-        private BezeroBakoitzarenErosketak.BezeroBakoitzarenErosketak clienteHistorialCompraGrafico;
-        private BezeroBakoitzarenGastuakDLL.bezeroenGastuakChart totalGastoClienteGrafico;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnEsconderGraficoClientes;
         private System.Windows.Forms.Button btnVerGraficoClientes;
@@ -732,5 +730,7 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label lblAukeraturikoEpea;
         private SalmentakDenboraTarteanDLL.SalmentakDenboraTarteanDll salmentakDenboraTarteanDll1;
+        private BezeroBakoitzarenErosketak.BezeroBakoitzarenErosketak clienteHistorialCompraGrafico;
+        private BezeroBakoitzarenGastuakDLL.bezeroenGastuakChart totalGastoClienteGrafico;
     }
 }
