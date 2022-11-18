@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="93cm" height="57cm" viewBox="-13 29 1848 1125" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="-7.136" y="615.577" width="303" height="293"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-7.136" y="615.577" width="303" height="293"/>
+    <rect style="fill: #ffffff" x="-7.136" y="595.577" width="50.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-7.136" y="595.577" width="50.2" height="20"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-5.136" y="609.577">Pojoak</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="4.864" y="622.577" width="171.7" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="4.864" y="622.577" width="171.7" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="90.714" y="642.577">Produktua</text>
+    <rect style="fill: #ffffff" x="4.864" y="650.577" width="171.7" height="148"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="4.864" y="650.577" width="171.7" height="148"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="7.864" y="663.777">+id: int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="7.864" y="679.777">+izena: String</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="7.864" y="695.777">+deskripzioa: String</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="7.864" y="711.777">+barraKodea: String</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="7.864" y="727.777">+stocka: float</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="7.864" y="743.777">+prezioa: float</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="7.864" y="759.777">+bolumena: float</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="7.864" y="775.777">+pisua: float</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="7.864" y="791.777">+lehentasuna: boolean</text>
+    <rect style="fill: #ffffff" x="4.864" y="798.577" width="171.7" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="4.864" y="798.577" width="171.7" height="8"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="6.864" y="824.577" width="225.6" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="6.864" y="824.577" width="225.6" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="119.664" y="844.577">Produktuak</text>
+    <rect style="fill: #ffffff" x="6.864" y="852.577" width="225.6" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="6.864" y="852.577" width="225.6" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="9.864" y="865.777">+produktuak: List&lt;Produktua&gt;</text>
+    <rect style="fill: #ffffff" x="6.864" y="872.577" width="225.6" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="6.864" y="872.577" width="225.6" height="8"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="-11.1793" y="85.8701" width="402" height="489.75"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-11.1793" y="85.8701" width="402" height="489.75"/>
+    <rect style="fill: #ffffff" x="-11.1793" y="65.8701" width="96.4" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-11.1793" y="65.8701" width="96.4" height="20"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="-9.17934" y="79.8701">atzipenekoak</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="8.82066" y="103.87" width="364.2" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="8.82066" y="103.87" width="364.2" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="190.921" y="123.87">Csva</text>
+    <rect style="fill: #ffffff" x="8.82066" y="131.87" width="364.2" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="8.82066" y="131.87" width="364.2" height="52"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="11.8207" y="145.07">+produktuak: Produktuak</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="11.8207" y="161.07">+strFileIn: String</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="11.8207" y="177.07">+strFileOut: String</text>
+    <rect style="fill: #ffffff" x="8.82066" y="183.87" width="364.2" height="68"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="8.82066" y="183.87" width="364.2" height="68"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="11.8207" y="197.07">+Csva(strFileIn:String)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="11.8207" y="213.07">+Csva(produktuak:Produktuak,strFileOut:String)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="11.8207" y="229.07">+irakurri(): Produktuak</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="11.8207" y="245.07">+idatzi(): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="9.82066" y="274.62" width="371.9" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="9.82066" y="274.62" width="371.9" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="195.771" y="294.62">Jsona</text>
+    <rect style="fill: #ffffff" x="9.82066" y="302.62" width="371.9" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="9.82066" y="302.62" width="371.9" height="52"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="12.8207" y="315.82">+produktuak: Produktuak</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="12.8207" y="331.82">+strFileOut: String</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="12.8207" y="347.82">+strFileIn: String</text>
+    <rect style="fill: #ffffff" x="9.82066" y="354.62" width="371.9" height="68"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="9.82066" y="354.62" width="371.9" height="68"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="12.8207" y="367.82">+Jsona(strFileIn:String)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="12.8207" y="383.82">+Jsona(produktuak:Produktuak,strFileOut:String)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="12.8207" y="399.82">+irakurri(): Produktuak</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="12.8207" y="415.82">+idatzi(): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="10.8207" y="447.62" width="364.2" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="10.8207" y="447.62" width="364.2" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="192.921" y="467.62">Xmla</text>
+    <rect style="fill: #ffffff" x="10.8207" y="475.62" width="364.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="10.8207" y="475.62" width="364.2" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="13.8207" y="488.82">+produktuak: Produktuak</text>
+    <rect style="fill: #ffffff" x="10.8207" y="495.62" width="364.2" height="68"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="10.8207" y="495.62" width="364.2" height="68"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="13.8207" y="508.82">+Xmla(strFile:String)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="13.8207" y="524.82">+Xmla(produktuak:Produktuak,strFileOut:String)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="13.8207" y="540.82">+irakurri(): Produktuak</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="13.8207" y="556.82">+idatzi(): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="452.131" y="111.879" width="282.24" height="94.8697"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="452.131" y="111.879" width="282.24" height="94.8697"/>
+    <rect style="fill: #ffffff" x="452.131" y="91.8785" width="65.6" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="452.131" y="91.8785" width="65.6" height="20"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="454.131" y="105.879">konexioa</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="474.736" y="130.43" width="241" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="474.736" y="130.43" width="241" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="595.236" y="150.43">Konexia</text>
+    <rect style="fill: #ffffff" x="474.736" y="158.43" width="241" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="474.736" y="158.43" width="241" height="8"/>
+    <rect style="fill: #ffffff" x="474.736" y="166.43" width="241" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="474.736" y="166.43" width="241" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="477.736" y="179.63">+connectDatabase(): Connection</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="464.348" y="320.731" width="271.543" height="339.008"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="464.348" y="320.731" width="271.543" height="339.008"/>
+    <rect style="fill: #ffffff" x="464.348" y="300.731" width="42.5" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="464.348" y="300.731" width="42.5" height="20"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="466.348" y="314.731">menua</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="479.77" y="342.322" width="225.6" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="479.77" y="342.322" width="225.6" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="592.57" y="362.322">DatuakEsportatu</text>
+    <rect style="fill: #ffffff" x="479.77" y="370.322" width="225.6" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="479.77" y="370.322" width="225.6" height="8"/>
+    <rect style="fill: #ffffff" x="479.77" y="378.322" width="225.6" height="84"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="479.77" y="378.322" width="225.6" height="84"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="482.77" y="391.522">+produktuakImprimatu(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="482.77" y="407.522">+produktuakCsvra(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="482.77" y="423.522">+produktuakXmlra(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="482.77" y="439.522">+produktuakJsonera(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="482.77" y="455.522">+produktuakDenetara(): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="487.481" y="487.289" width="210.2" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="487.481" y="487.289" width="210.2" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="592.581" y="507.289">Menua</text>
+    <rect style="fill: #ffffff" x="487.481" y="515.289" width="210.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="487.481" y="515.289" width="210.2" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="490.481" y="528.489">+in: Scanner</text>
+    <rect style="fill: #ffffff" x="487.481" y="535.289" width="210.2" height="100"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="487.481" y="535.289" width="210.2" height="100"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="490.481" y="548.489">+main()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="490.481" y="564.489">+datuakEsportatu(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="490.481" y="580.489">+datuakInportatu(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="490.481" y="596.489">+produktuakEditatu(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="490.481" y="612.489">+produktuakEzabatu(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="490.481" y="628.489">+garbitu(): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="842" y="50.1648" width="992.767" height="1102.89"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="842" y="50.1648" width="992.767" height="1102.89"/>
+    <rect style="fill: #ffffff" x="842" y="30.1648" width="73.3" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="842" y="30.1648" width="73.3" height="20"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="844" y="44.1648">postgress</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="1378.32" y="104.029" width="315.998" height="290.998"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1378.32" y="104.029" width="315.998" height="290.998"/>
+    <rect style="fill: #ffffff" x="1378.32" y="84.0293" width="50.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1378.32" y="84.0293" width="50.2" height="20"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1380.32" y="98.0293">delete</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="1393.32" y="119.711" width="287.2" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1393.32" y="119.711" width="287.2" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1536.92" y="139.711">GarbituTaulak</text>
+    <rect style="fill: #ffffff" x="1393.32" y="147.711" width="287.2" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1393.32" y="147.711" width="287.2" height="52"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1396.32" y="160.911">+konexioa: Konexioa = new Konexioa()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1396.32" y="176.911">+st: Statement</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1396.32" y="192.911">+in: Scanner</text>
+    <rect style="fill: #ffffff" x="1393.32" y="199.711" width="287.2" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1393.32" y="199.711" width="287.2" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1396.32" y="212.911">+garbitu(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1396.32" y="228.911">+garbiketa(): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="1393.32" y="252.029" width="264.1" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1393.32" y="252.029" width="264.1" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1525.37" y="272.029">ProduktuBatEzabatu</text>
+    <rect style="fill: #ffffff" x="1393.32" y="280.029" width="264.1" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1393.32" y="280.029" width="264.1" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1396.32" y="293.229">+konexioa: Konexia = new Konexioa</text>
+    <rect style="fill: #ffffff" x="1393.32" y="300.029" width="264.1" height="68"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1393.32" y="300.029" width="264.1" height="68"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1396.32" y="313.229">+produktuaEzabatu(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1396.32" y="329.229">+produktuaEzabatu(idPT:int): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1396.32" y="345.229">+izenaLortu(id:int): String</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1396.32" y="361.229">+exekutatu(sql:String): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="860.635" y="377.939" width="478.997" height="623.499"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="860.635" y="377.939" width="478.997" height="623.499"/>
+    <rect style="fill: #ffffff" x="860.635" y="357.939" width="50.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="860.635" y="357.939" width="50.2" height="20"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="862.635" y="371.939">insert</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="877.635" y="398.939" width="448.9" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="877.635" y="398.939" width="448.9" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1102.08" y="418.939">InsertProduktua</text>
+    <rect style="fill: #ffffff" x="877.635" y="426.939" width="448.9" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="877.635" y="426.939" width="448.9" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="880.635" y="440.139">+konexioa: Konexioa = new Konexioa;</text>
+    <rect style="fill: #ffffff" x="877.635" y="446.939" width="448.9" height="164"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="877.635" y="446.939" width="448.9" height="164"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="880.635" y="460.139">+produktuaGehitu(idPT:int,idPP:int,idSQ:int,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="880.635" y="476.139">                 izena:String,deskripzioa:String,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="880.635" y="492.139">                 barraKodea:String,prezioa:Float,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="880.635" y="508.139">                 bolumena:Float,pisua:Float,</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="880.635" y="524.139">                 stocka:Float,lehentasuna:String): String</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="880.635" y="540.139">+exekuzioa(sql:String,taula:String): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="880.635" y="556.139">+idLortuPT(): int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="880.635" y="572.139">+idLortuPP(): int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="880.635" y="588.139">+idLortuSQ(): int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="880.635" y="604.139">+garbitu(): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="881.137" y="629.529" width="287.2" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="881.137" y="629.529" width="287.2" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1024.74" y="649.529">ProduktuBatInportatu</text>
+    <rect style="fill: #ffffff" x="881.137" y="657.529" width="287.2" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="881.137" y="657.529" width="287.2" height="52"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="884.137" y="670.729">+in: Scanner</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="884.137" y="686.729">+konexioa: Konexioa = new Konexioa()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="884.137" y="702.729">+st: Statement</text>
+    <rect style="fill: #ffffff" x="881.137" y="709.529" width="287.2" height="84"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="881.137" y="709.529" width="287.2" height="84"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="884.137" y="722.729">+produktuaInportatu(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="884.137" y="738.729">+idLortuPT(): int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="884.137" y="754.729">+idLortuPP(): int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="884.137" y="770.729">+idLortuSQ(): int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="884.137" y="786.729">+garbitu(): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="884.705" y="817.422" width="402.7" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="884.705" y="817.422" width="402.7" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1086.05" y="837.422">ProduktuListaInportatu</text>
+    <rect style="fill: #ffffff" x="884.705" y="845.422" width="402.7" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="884.705" y="845.422" width="402.7" height="52"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="887.705" y="858.622">+in: Scanner</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="887.705" y="874.622">+konexioa: Konexioa = new Konexioa()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="887.705" y="890.622">+st: Stament</text>
+    <rect style="fill: #ffffff" x="884.705" y="897.422" width="402.7" height="84"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="884.705" y="897.422" width="402.7" height="84"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="887.705" y="910.622">+listaInportatu(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="887.705" y="926.622">+produktuenListaObjetura(FileIn:String): Produktuak</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="887.705" y="942.622">+idLortuPT(): int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="887.705" y="958.622">+idLortuPP(): int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="887.705" y="974.622">+idLortuSQ(): int</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="1369.02" y="442.338" width="434.438" height="686.224"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1369.02" y="442.338" width="434.438" height="686.224"/>
+    <rect style="fill: #ffffff" x="1369.02" y="422.338" width="50.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1369.02" y="422.338" width="50.2" height="20"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1371.02" y="436.338">update</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="1382.94" y="469.393" width="402.7" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1382.94" y="469.393" width="402.7" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1584.29" y="489.393">ProduktuBatAldatu</text>
+    <rect style="fill: #ffffff" x="1382.94" y="497.393" width="402.7" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1382.94" y="497.393" width="402.7" height="52"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1385.94" y="510.593">+konexioa: Konexioa = new Konexioa()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1385.94" y="526.593">+st: Statement</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1385.94" y="542.593">+in: Scanner</text>
+    <rect style="fill: #ffffff" x="1382.94" y="549.393" width="402.7" height="260"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1382.94" y="549.393" width="402.7" height="260"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1385.94" y="562.593">+produktuaAldatu(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1385.94" y="578.593">+produktuaEditatu(idPT:int): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1385.94" y="594.593">+izenaAldatu(name:String,id:int): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1385.94" y="610.593">+deskripzioaAldatu(description:String,id:int): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1385.94" y="626.593">+prezioaAldatu(list_price:float,id:int): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1385.94" y="642.593">+stockaAldatu(quant:float,id:int): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1385.94" y="658.593">+bolumenaAldatu(volume:float,id:int): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1385.94" y="674.593">+pisuaAldatu(weight:float,id:int): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1385.94" y="690.593">+barraKodeaAldatu(barcode:String,id:int): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1385.94" y="706.593">+lehentasunaAldatu(priority:String,id:int): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1385.94" y="722.593">+exekutatu(sql:String): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1385.94" y="738.593">+izenaLortu(id:int): String</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1385.94" y="754.593">+irakurriTaulaPT(id:int): ArrayList&lt;String&gt;</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1385.94" y="770.593">+irakurriTaulaPP(id:int): String</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1385.94" y="786.593">+irakurriTaulaSQ(id:int): float</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1385.94" y="802.593">+garbitu(): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="1389.77" y="822.835" width="287.2" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1389.77" y="822.835" width="287.2" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1533.37" y="842.835">ProduktuListaAldatu</text>
+    <rect style="fill: #ffffff" x="1389.77" y="850.835" width="287.2" height="52"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1389.77" y="850.835" width="287.2" height="52"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1392.77" y="864.035">+konexioa: Konexioa = new Konexioa()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1392.77" y="880.035">+st: Statement</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1392.77" y="896.035">+in: Scanner</text>
+    <rect style="fill: #ffffff" x="1389.77" y="902.835" width="287.2" height="196"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1389.77" y="902.835" width="287.2" height="196"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1392.77" y="916.035">+produktuListaAldatu(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1392.77" y="932.035">+listaAldatuPrezioa(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1392.77" y="948.035">+listaAldatuPrezioaGehitu(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1392.77" y="964.035">+listaAldatuPrezioaBiderkatu(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1392.77" y="980.035">+listaAldatuStocka(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1392.77" y="996.035">+listaAldatuStockaGehitu(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1392.77" y="1012.04">+listaAldatuStockaBiderkatu(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1392.77" y="1028.04">+listaAldatuLehentasuna(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1392.77" y="1044.04">+listaAldatuLehentasunaBai(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1392.77" y="1060.04">+listaAldatuLehentasunaEz(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1392.77" y="1076.04">+exekutatu(sql:String): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1392.77" y="1092.04">+garbitu(): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="887.449" y="112.614" width="387.3" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="887.449" y="112.614" width="387.3" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="1081.1" y="132.614">ProduktuakJavaObjetura</text>
+    <rect style="fill: #ffffff" x="887.449" y="140.614" width="387.3" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="887.449" y="140.614" width="387.3" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="890.449" y="153.814">+konexioa: Konexioa = new Konexioa()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="890.449" y="169.814">+st: Statement</text>
+    <rect style="fill: #ffffff" x="887.449" y="176.614" width="387.3" height="68"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="887.449" y="176.614" width="387.3" height="68"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="890.449" y="189.814">+produktuenJavaObjetua(): Produktuak</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="890.449" y="205.814">+irakurriTaulaPT(taula:String): ArrayList&lt;String&gt;</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="890.449" y="221.814">+irakurriTaulaPP(taula:String): ArrayList&lt;String&gt;</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="890.449" y="237.814">+irakurriTaulaSQ(taula:String): ArrayList&lt;String&gt;</text>
+  </g>
+</svg>
