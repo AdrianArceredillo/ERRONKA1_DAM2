@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.text.Html;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -19,10 +18,11 @@ import java.util.ArrayList;
 
 public class VentasListado extends AppCompatActivity {
 
+
     private LinearLayout lytListadoVentas, lytSalmentakOrdenatuta;
-    private Spinner spinnerElegirVentas;
-    private TextView txtVentasSeleccionado, txtFiltroarenAzalpena;
     private Button btnMenuDesdeVentas, btnSalmentakOrdenatuta;
+    private Spinner spinnerElegirVentas;
+    private TextView txtFiltroarenAzalpena;
     private ScrollView scrollViewSalmentaGuztiak, scrollViewSalmentakOrdenatuta;
 
     ArrayList<String> bezeroenIzenak = new ArrayList<>();
@@ -35,18 +35,22 @@ public class VentasListado extends AppCompatActivity {
         this.setTitle("HJAA - Salmentak");
 
         Database db = new Database();
-        SalmentaIkusiHaria salmentaIkusi = new SalmentaIkusiHaria(db.getExtraConnection());
-        salmentaIkusi.start();
+        SalmentaIkusi salmenta_Zerrenda = new SalmentaIkusi(db.getExtraConnection());
+        salmenta_Zerrenda.start();
 
         try {
-            salmentaIkusi.join();
+            salmenta_Zerrenda.join();
 
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-        ArrayList<Salmenta> listaVentas = salmentaIkusi.getSalmentaGuztiak();
-        ArrayList<Salmenta> ventas_HT = salmentaIkusi.getSalmentakOrdenatuta_HT();
+        ArrayList<Salmenta> listaVentas = salmenta_Zerrenda.getSalmentaGuztiak();
+        ArrayList<Salmenta> ventas_HT = salmenta_Zerrenda.getSalmentakOrdenatuta_HT();
+
+        lytListadoVentas = findViewById(R.id.lytListadoVentas);
+        lytSalmentakOrdenatuta = findViewById(R.id.lytSalmentakOrdenatuta);
+        lytSalmentakOrdenatuta.setVisibility(View.INVISIBLE);
 
         //ScrollView SUPERIOR (ver todas las ventas) - siempre estará visible
         scrollViewSalmentaGuztiak = findViewById(R.id.scrollViewSalmentaGuztiak);
@@ -56,40 +60,28 @@ public class VentasListado extends AppCompatActivity {
         scrollViewSalmentakOrdenatuta = findViewById(R.id.scrollViewSalmentakOrdenatuta);
         scrollViewSalmentakOrdenatuta.setVisibility(View.INVISIBLE);
 
-
-        lytListadoVentas = findViewById(R.id.lytListadoVentas);
-        lytSalmentakOrdenatuta = findViewById(R.id.lytSalmentakOrdenatuta);
-        lytSalmentakOrdenatuta.setVisibility(View.INVISIBLE);
-
-
         for (int i = 0; i < listaVentas.size(); i++) {
             //bezero desberdinen id-ak eta izenak spinner-aren barruan gorde
-            String bezero_Bakoitza = salmentaIkusi.getSalmentaGuztiak().get(i).getOrder_partner_id() + " - " +
-                    salmentaIkusi.getSalmentaGuztiak().get(i).getDescripcion_Cliente();
+            String bezero_Bakoitza =
+                    salmenta_Zerrenda.getSalmentaGuztiak().get(i).getOrder_partner_id() + " - " +
+                            salmenta_Zerrenda.getSalmentaGuztiak().get(i).getDescripcion_Cliente();
 
             if (!bezeroenIzenak.contains(bezero_Bakoitza)) {
                 bezeroenIzenak.add(bezero_Bakoitza);
             }
 
-//            bezeroenIzenak.add(
-//                    String.valueOf(salmentaIkusi.getSalmentaGuztiak().get(i).getId()) + ".- " +
-//                            salmentaIkusi.getSalmentaGuztiak().get(i).getDescripcion_Cliente()
-//            );
-
-
             //salmenta guztiak ikusarazi gohiko ScrollView-ean
             TextView textView = new TextView(getApplicationContext());
             textView.setGravity(Gravity.FILL_HORIZONTAL);
-            //textView.setText(salmentaIkusi.getSalmentaGuztiak().get(i).toString());
-            textView.setText(salmentaIkusi.getSalmentaGuztiak().get(i).toStringSalmentak());
+            textView.setText(salmenta_Zerrenda.getSalmentaGuztiak().get(i).toStringSalmentak());
             lytListadoVentas.addView(textView);
         }
 
 
-        for (int i = 0; i < ventas_HT.size(); i++)     //bezero bakoitzak egindako erosketa handiena ikusarazi (handienetik-txikienera ordenaturik)
-        {
+        //bezero bakoitzak egindako erosketa handiena ikusarazi (handienetik-txikienera ordenaturik)
+        for (int i = 0; i < ventas_HT.size(); i++) {
             TextView textView_Ordenatuta = new TextView(getApplicationContext());
-            textView_Ordenatuta.setText(salmentaIkusi.getSalmentakOrdenatuta_HT().get(i).toStringTxikia());
+            textView_Ordenatuta.setText(salmenta_Zerrenda.getSalmentakOrdenatuta_HT().get(i).toStringTxikia());
             lytSalmentakOrdenatuta.addView(textView_Ordenatuta);
         }
 
@@ -106,7 +98,6 @@ public class VentasListado extends AppCompatActivity {
 
                 if (scrollViewSalmentakOrdenatuta.getVisibility() != View.VISIBLE) {
                     txtFiltroarenAzalpena.setVisibility(View.VISIBLE);                              //hacer visible la explicación del contenido del ScrollView inferior
-                    //txtFiltroarenAzalpena.setTextColor(getResources().getColor(R.color.myGreen));   //poner en verde el contenido del TextView
                     scrollViewSalmentakOrdenatuta.setVisibility(View.VISIBLE);                      //hacer visible el ScrollView INFERIOR
                     lytSalmentakOrdenatuta.setVisibility(View.VISIBLE);                             //hacer visible el Layout del ScrollView INFERIOR
 
@@ -128,6 +119,7 @@ public class VentasListado extends AppCompatActivity {
                     btnSalmentakOrdenatuta.setText(R.string.btn_Ocultar_MejorCompraClientes);
                     btnSalmentakOrdenatuta.setTextColor(Color.parseColor("#FF1919"));
                     btnSalmentakOrdenatuta.setBackgroundColor(Color.parseColor("#FFFFFF"));
+
                 } else {
                     txtFiltroarenAzalpena.setVisibility(View.INVISIBLE);
                     scrollViewSalmentakOrdenatuta.setVisibility(View.INVISIBLE);
@@ -137,8 +129,6 @@ public class VentasListado extends AppCompatActivity {
                     btnSalmentakOrdenatuta.setTextColor(Color.parseColor("#FFFFFF"));
                     btnSalmentakOrdenatuta.setBackgroundColor(Color.parseColor("#FF1919"));
                 }
-
-
             }
         });
 
@@ -155,6 +145,4 @@ public class VentasListado extends AppCompatActivity {
 
 
     }
-
-
 }

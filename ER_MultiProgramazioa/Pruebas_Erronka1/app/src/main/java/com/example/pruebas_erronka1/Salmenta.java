@@ -1,8 +1,6 @@
 package com.example.pruebas_erronka1;
 
 
-import java.time.LocalDateTime;
-
 public class Salmenta {
 
     /*
@@ -11,8 +9,9 @@ public class Salmenta {
      *   Compra 1:
      *       - producto 1
      *       - producto 2
-     * Tanto Odoo como PostgreSQL entienden que se han realizado dos ventas  (Venta 1 - prod 1 / Venta 2 - prod 2), pero como se han
-     * vendido a la vez, ambos productos hacen referencia a "la misma" venta:
+     * Tanto Odoo como PostgreSQL entienden que se han realizado dos ventas  (Venta 1 - prod 1 / Venta 2 - prod 2), pero como
+     * se han vendido a la vez, ambos productos hacen referencia a "la misma" venta. Es por eso que los datos varían en función
+     * de la tabla que consultemos:
      *   - El producto 1 pertenece a la venta 1
      *   - El producto 2 también pertenece a la venta 1
      * */
@@ -140,10 +139,8 @@ public class Salmenta {
                 "Data: " + data + "\n";
     }
 
-
     public String toStringSalmentak() {
-        return /*"- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n\n" +*/
-                "Salmenta: \t\t\t\t\t" + id + "\n" +
+        return "Salmenta: \t\t\t\t\t" + id + "\n" +
                 "Produktua: \t\t\t\t" + name + " \n" +
                 "\t\t\t\t\t\t\t\t\t\t\t\t\tUds.: " + product_uom_qty + " unitate\n" +
                 "Bezeroa: \t\t\t\t\t\t" + "Id: " + order_partner_id + "\n" +
@@ -157,8 +154,9 @@ public class Salmenta {
         return "Bezeroa: " + descripcion_Cliente + ". Prezioa: " + price_total + " €\n";
     }
 
-    //INFO INTERNET:
-    //TimeStamp without time zone: - https://stackoverflow.com/questions/8655442/create-a-timestamp-without-timezone
-
+    /*
+     * INFO INTERNET:
+     * - TimeStamp without time zone: - https://stackoverflow.com/questions/8655442/create-a-timestamp-without-timezone
+     */
 
 }

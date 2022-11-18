@@ -3,8 +3,6 @@ package com.example.pruebas_erronka1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.res.Resources;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +13,6 @@ public class MenuOpciones extends AppCompatActivity {
 
     private Button btnSalmentak, btnKatalogoa, btnHasiera;
     private TextView txtUsuarioRecibido;
-    private Toolbar toolbarMenuOpciones;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +20,6 @@ public class MenuOpciones extends AppCompatActivity {
         setContentView(R.layout.activity_menu_opciones);
 
         this.setTitle("Zer egin nahi duzu?");
-
-
 
         Intent intent = getIntent();
         txtUsuarioRecibido = findViewById(R.id.txtUsuarioRecibido);

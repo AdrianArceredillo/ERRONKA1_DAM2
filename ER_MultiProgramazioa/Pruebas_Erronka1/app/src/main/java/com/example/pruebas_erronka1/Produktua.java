@@ -1,8 +1,5 @@
 package com.example.pruebas_erronka1;
 
-import java.time.LocalDateTime;
-import java.util.TimeZone;
-
 public class Produktua {
     int id;
     String name;

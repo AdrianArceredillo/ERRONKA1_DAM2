@@ -15,13 +15,11 @@ import java.util.ArrayList;
 
 public class CatalogoProductos extends AppCompatActivity {
 
-    private LinearLayout linearLayout, lytProductoInfoCompleta;
     private Spinner spinnerElegirProductos;
+    private LinearLayout linearLayout;
     private Button btnMenuraBueltatu;
 
     private Produktua prod_Sel = new Produktua();
-
-    String[] produktuenIzenak_A = {};
     ArrayList<String> produktuenIzenak = new ArrayList<>();
 
     @Override
@@ -32,25 +30,24 @@ public class CatalogoProductos extends AppCompatActivity {
         this.setTitle("HJAA - Produktuen Katalogoa");
 
         Database db = new Database();
-        ProduktuaIkusiHaria produktuakIkusi = new ProduktuaIkusiHaria(db.getExtraConnection());
-        produktuakIkusi.start();
+        ProduktuaIkusi katalogoaIkusi = new ProduktuaIkusi(db.getExtraConnection());
+        katalogoaIkusi.start();
 
         try {
-            produktuakIkusi.join();
+            katalogoaIkusi.join();
 
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-        ArrayList<Produktua> listaProductos = produktuakIkusi.getProduktuGuztiak();
+        ArrayList<Produktua> listaProductos = katalogoaIkusi.getProduktuGuztiak();
         linearLayout = findViewById(R.id.lytProductos);
 
-        for( int i = 0; i < listaProductos.size(); i++ )
-        {
-            produktuenIzenak.add(produktuakIkusi.getProduktuGuztiak().get(i).getName());
+        for (int i = 0; i < listaProductos.size(); i++) {
+            produktuenIzenak.add(katalogoaIkusi.getProduktuGuztiak().get(i).getName());
 
             TextView textView = new TextView(getApplicationContext());
-            textView.setText(produktuakIkusi.getProduktuGuztiak().get(i).toStringDefinitivo());
+            textView.setText(katalogoaIkusi.getProduktuGuztiak().get(i).toStringDefinitivo());
             linearLayout.addView(textView);
         }
 
@@ -66,7 +63,6 @@ public class CatalogoProductos extends AppCompatActivity {
                 finish();
             }
         });
-
 
 
     }

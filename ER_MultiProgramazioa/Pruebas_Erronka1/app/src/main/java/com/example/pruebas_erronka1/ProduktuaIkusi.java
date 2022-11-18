@@ -1,19 +1,19 @@
 package com.example.pruebas_erronka1;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-public class ProduktuaIkusiHaria extends Thread {
+//ProduktuaIkusiHaria
+public class ProduktuaIkusi extends Thread {
     Connection conn;
     private int prod_Id;
     public static ArrayList<Produktua> produktuGuztiak = new ArrayList<>();
     public Produktua productoSeleccionado = new Produktua();
 
 
-    public ProduktuaIkusiHaria(Connection conn) {
+    public ProduktuaIkusi(Connection conn) {
         this.conn = conn;
     }
 

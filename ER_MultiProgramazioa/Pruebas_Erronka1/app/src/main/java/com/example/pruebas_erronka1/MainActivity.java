@@ -8,35 +8,25 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
-import java.sql.Connection;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    MainActivity binding;
-
-    private Connection connection = null;
-    private static final String LOG_TAG = MainActivity.class.getSimpleName();   // Class name for Log tag
     public static final String NOMBRE_USUARIO = "Usuario";
 
-    private String nombreUsuario;
-    private String usuarioCorrecto = "adrian";
-    private String contraseña_Correcta = "password";
-    public static final int TEXT_REQUEST = 1;   // Unique tag for the intent reply
-
-    private static final ArrayList<Produktua> catalogo_Productos = null;
-
-    private Toolbar toolbarLogin;
     public EditText mUsuario, mContraseña;
-    public Button btnSartu;
-    public Button btnAplikazioaItxi;
+    public Button btnSartu, btnAplikazioaItxi;
+
+    private String nombreUsuario;
+    private String usuarioCorrecto = "HjaaEmpresa";
+    private String contraseña_Correcta = "password";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         this.setTitle("HJAA Denda");
 
         //asignar los elementos de la actividad
@@ -49,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 MainActivity.this.finishAffinity(); //FINALIZAR POR COMPLETO la activadad
-                System.exit(0); //SALIR de la actividad - dejar de ejecutar la aplicación
+                System.exit(0); //SALIR de la actividad -> DETENER LA EJECUCIÓN de la aplicación
             }
         });
 
